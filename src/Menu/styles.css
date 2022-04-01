@@ -10,6 +10,6 @@
   opacity: 1;
   transform: none;
   visibility: visible;
-  transition: 600ms ease-in-out;
+  transition: 400ms ease-in-out;
   transition-property: transform, visibility;
 }
