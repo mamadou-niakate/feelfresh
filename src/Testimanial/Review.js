@@ -1,5 +1,5 @@
-import { Paper, Typography } from '@mui/material'
-import React from 'react'
+import { Paper, Rating, Typography } from '@mui/material'
+import React, { useEffect, useState } from 'react'
 import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles({
@@ -7,10 +7,10 @@ const useStyles = makeStyles({
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'flex-start',
-        alignItems: 'flex-start',
-        minHeight: 500,
-        width: 400,
-        backgroundColor: '#FFF7E8',
+        alignItems: 'fcenter',
+        minHeight: 300,
+        width: '50%',
+        margin: 'auto',
         padding: 20,
     }
 });
@@ -18,11 +18,21 @@ const useStyles = makeStyles({
 const Review = ({review}) => {
     const classes = useStyles();
     const { rating, text } = review
+
     return (
-        <Paper className={classes.root} elevation={1}>
+        <Paper className={classes.root} elevation={0}>
             <Typography component={'h4'} variant='h4'>{text?.substr(0,25)}</Typography>
-            <Typography>{rating}</Typography>
-            <Typography>{text}</Typography>
+            <Typography component={'h6'} variant='h6'>
+                {rating && (
+                    <Rating
+                        name="simple-controlled"
+                        value={parseInt(rating)}
+                        alignSelf={'center'}
+                        readOnly
+                    /> 
+                )}   
+            </Typography>
+            <Typography component={'q'} variant="q" style={{ fontStyle: 'italic' }}>{text}</Typography>
         </Paper>
     )
 }
