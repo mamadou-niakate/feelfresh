@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Grid, Paper, Toolbar, Typography } from '@mui/material'
+import { Box, Paper, Toolbar, Typography } from '@mui/material'
 import { testimonials } from '../data'
 import Review from './Review'
 import { makeStyles } from '@mui/styles';

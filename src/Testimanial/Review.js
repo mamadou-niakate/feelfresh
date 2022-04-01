@@ -1,5 +1,5 @@
 import { Paper, Rating, Typography } from '@mui/material'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles({
