@@ -6,10 +6,9 @@ const useStyles = makeStyles({
    root: {
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'flex-start',
+        justifyContent: 'center',
         alignItems: 'fcenter',
-        minHeight: 300,
-        width: '50%',
+        width: '100%',
         margin: 'auto',
         padding: 20,
     }

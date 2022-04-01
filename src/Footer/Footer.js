@@ -6,9 +6,9 @@ import { Typography } from '@mui/material'
 const useStyles = makeStyles({
    root: {
         display: 'flex',
-        justifyContent: 'space-around',
+        justifyContent: 'space-between',
         alignItems: 'flex-start',
-        height: 200,
+        height: 'auto',
         backgroundColor: '#361D31',
         padding: 20
     },
@@ -30,7 +30,7 @@ const Footer = () => {
     return (
         <Box className={classes.root}>
             <div style={{ display:'flex', flexDirection:'column'}}>
-                <Typography variant='h4' style={{ color: '#fff', textAlign:'left'}}>
+                <Typography variant='h5' style={{ color: '#fff', textAlign:'left'}}>
                     Follow us on social media
                 </Typography>
                 <div className={classes.socialNetwork}>
@@ -57,7 +57,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className={classes.infoUtil}>
-                <Typography variant='h4' style={{ color: '#fff', textAlign:'left'}}>
+                <Typography variant='h5' style={{ color: '#fff', textAlign:'left'}}>
                     Infos Utils
                 </Typography>
                 <p style={{ color: '#fff', textAlign:'left'}}> Témoignages de nos clients  </p>
@@ -66,7 +66,7 @@ const Footer = () => {
                 <p style={{ color: '#fff', textAlign:'left'}}> Contacter le développeur </p>
             </div>
             <div>
-                <Typography variant='h4' style={{ color: '#fff', textAlign:'left'}}>
+                <Typography variant='h5' style={{ color: '#fff', textAlign:'left'}}>
                     Où Nous Trouver  ?
                 </Typography>
                 <p style={{ color: '#fff', textAlign:'left'}}> <strong>Adresse : </strong>  Rue 413 Entre Le Palais Des Sports Et La Place Can Proche De Guaduman, Bamako Mali </p>
