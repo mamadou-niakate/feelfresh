@@ -25,8 +25,8 @@ const Figure = () => {
     const classes = useStyles();
     return (
         <Grid container className={classes.root}>
-            {figures.map(({number, title}) => (
-                <Grid item xs={12} sm={3}>
+            {figures.map(({id, number, title}) => (
+                <Grid key={id} item xs={12} sm={3}>
                     <Typography variant='h4' className={classes.singleFigureNumber}>{number}</Typography>
                     <Typography variant='h6' className={classes.singleFigureTitle}>{title}</Typography>
                 </Grid>

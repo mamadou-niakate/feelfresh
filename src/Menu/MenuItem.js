@@ -1,12 +1,13 @@
 import { Button, Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material';
-import React from 'react';
+import React, { useEffect } from 'react';
 import './styles.css';
+
 
 export function FadeInSection({ menuItem }) {
   const [isVisible, setVisible] = React.useState(false);
   const domRef = React.useRef();
 
-  React.useEffect(() => {
+  useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => setVisible(entry.isIntersecting));
     });

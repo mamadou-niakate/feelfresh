@@ -6,7 +6,7 @@ import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles({
    testimonial: {
-        minHeight: 700,
+        minHeight: 500,
         padding:40,
         backgroundColor: '#FFF',
         '& > *': {

@@ -12,7 +12,7 @@ export const LocationDetails = () => {
           </ListItem>
           <ListItem divider>
             <p>
-              <Typography component={'strong'} variant='strong'>Adresse : </Typography>
+              <Typography component={'strong'} variant='strong'>Adresse : </Typography><br/>
               <Typography component={'span'} variant='span'>
                 Rue 413 Entre Le Palais Des Sports Et La Place Can Proche De Guaduman, Bamako Mali
               </Typography>
