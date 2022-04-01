@@ -5,7 +5,10 @@ import { figures } from '../data';
 
 const useStyles = makeStyles({
    root: {
-        height: 400,
+         display: 'flex',
+         alignItems: 'center',
+        height: 500,
+        margin: 'auto',
         backgroundColor: '#FFFFF',
         padding: 20,
     },
@@ -21,9 +24,9 @@ const useStyles = makeStyles({
 const Figure = () => {
     const classes = useStyles();
     return (
-        <Grid container justifyContent={'center'} alignItems='center' spacing={2} className={classes.root}>
+        <Grid container className={classes.root}>
             {figures.map(({number, title}) => (
-                <Grid item>
+                <Grid item xs={12} sm={3}>
                     <Typography variant='h4' className={classes.singleFigureNumber}>{number}</Typography>
                     <Typography variant='h6' className={classes.singleFigureTitle}>{title}</Typography>
                 </Grid>

@@ -15,7 +15,7 @@ const useStyles = makeStyles({
         textAlign: 'left'
     },
     image: {
-        position: 'relative',
+        // position: 'relative',
         width:'100%',
         height: 'auto',
         objectFit: 'cover',
@@ -60,7 +60,7 @@ const AboutInfo = () => {
                     </Button>
                 </div>
             </Grid>
-            <Grid item xs={12} md={8}>
+            <Grid item xs={12} md={6}>
                 <img className={classes.image} src='/images/burger.svg' alt='random' />
             </Grid>
         </Grid>

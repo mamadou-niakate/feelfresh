@@ -10,7 +10,7 @@ const useStyles = makeStyles({
         alignItems: 'fcenter',
         width: '100%',
         margin: 'auto',
-        padding: 20,
+        padding: 'auto'
     }
 });
 
