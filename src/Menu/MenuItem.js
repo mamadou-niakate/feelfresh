@@ -11,7 +11,9 @@ export function FadeInSection({ menuItem }) {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => setVisible(entry.isIntersecting));
     });
-    observer.observe(domRef.current);
+    const { current } = domRef;
+    observer.observe(current);
+    return () => observer.unobserve(current);
   }, []);
 
   return (

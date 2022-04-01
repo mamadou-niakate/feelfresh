@@ -38,7 +38,7 @@ const AboutInfo = () => {
     const classes = useStyles();
     return (
         <Grid container justifyContent={'center'} alignItems='center' wrap='wrap'>
-            <Grid item xs={12} md={3}>
+            <Grid item xs={12} md={4}>
                 <div>
                     <div className={classes.aboutText}>
                         <Typography component={'h1'} variant='h1' className={classes.aboutTitle}> 
