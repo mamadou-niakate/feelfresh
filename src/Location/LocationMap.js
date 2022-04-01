@@ -3,15 +3,15 @@ import GoogleMapReact from 'google-map-react';
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
-const LocationMap = () => {
-    const [locationCordinates, setLocationCordinates] = React.useState({
-        center: {
-            lat: -34.397,
-            lng: 150.644
-        },
-        zoom: 11
-    });
+const locationCordinates = {
+    center: {
+        lat: -34.397,
+        lng: 150.644
+    },
+    zoom: 11
+};
 
+const LocationMap = () => {
     return (
         <div style={{ height: '100%', width: '50%' }}>
             <GoogleMapReact
