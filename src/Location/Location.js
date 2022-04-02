@@ -3,6 +3,8 @@ import { makeStyles } from '@mui/styles';
 import { Box, Typography } from '@mui/material';
 // import LocationMap from './LocationMap';
 import { LocationDetails } from './LocationDetails';
+import SectionTitle from '../shared/SectionTitle';
+import SectionSubtitle from '../shared/SectionSubtitle';
 
 const useStyles = makeStyles({
     root: {
@@ -32,10 +34,8 @@ const Location = () => {
     return (
         <Box className={classes.root}>
             <div className={classes.locationTitleContainer}>
-                <Typography component='h4' variant='h4'>Emplacement</Typography>
-                <Typography component='h6' variant='h6' className={classes.locationTitle}>
-                    Nous sommes à Bamako dans le quartier chic de l'ACI 2000
-                </Typography>
+                <SectionTitle title={'Emplacement'} />
+                <SectionSubtitle subTitle={'Nous sommes à Bamako dans le quartier chic de l\'ACI 2000'} />
             </div>
             <Box className={classes.location}>
                 {/* <LocationMap /> */}

@@ -3,6 +3,8 @@ import { Box, Paper, Toolbar, Typography } from '@mui/material'
 import { testimonials } from '../data'
 import Review from './Review'
 import { makeStyles } from '@mui/styles';
+import SectionTitle from '../shared/SectionTitle';
+import SectionSubtitle from '../shared/SectionSubtitle';
 
 const useStyles = makeStyles({
    testimonial: {
@@ -63,9 +65,8 @@ export const Testimonial = () => {
 
     return (
         <div className={classes.testimonial}>
-            <Typography variant='h4' style={{ textAlign: 'center' }} className={classes.sectionTitle}>
-                What our customers say
-            </Typography>
+            <SectionTitle title={'Témoignages'} />
+            <SectionSubtitle subTitle={'Nos clients nous font confiance pourquoi pas vous aussi !'} />
             <Toolbar
                 component="nav"
                 variant="dense"
@@ -91,26 +92,6 @@ export const Testimonial = () => {
                 ))}
             </Toolbar>
             <Review review={review} />
-            {/* <Grid container justifyContent={'center'} alignItems={"center"} spacing={4}>
-                <Grid item>
-                    <Grid container flexDirection={'column'} spacing={3}>
-                        {testimonials.map((testimonial) => (
-                            <Grid item xs={12} sm={6} onClick={() => handleReviewChange(testimonial)} key={testimonial.id}>
-                                <Paper 
-                                    className={classes.authorDiv} 
-                                    elevation={selectedAuthor === testimonial.author ? 10 : 0}
-                                >
-                                    <img className={classes.avatar} src={'https://cdn-icons-png.flaticon.com/512/147/147144.png'} alt={testimonial.author} />
-                                    <Typography variant='h5'>{testimonial.author}</Typography>
-                                </Paper>
-                            </Grid>
-                        ))}
-                    </Grid>
-                </Grid>
-                <Grid item>
-                    <Review review={review} />
-                </Grid>
-            </Grid>   */}
         </div>
   )
 }
