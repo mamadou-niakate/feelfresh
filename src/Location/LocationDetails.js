@@ -3,7 +3,7 @@ import React from 'react'
 
 export const LocationDetails = () => {
   return (
-    <Paper elevation={10} style={{ width: 400, height: 'auto', alignSelf: 'center', borderRadius: 20, backgroundColor: 'transparent'}}>
+    <Paper elevation={10} style={{ width: '90%', height: 'auto', margin:'auto', alignSelf: 'center', borderRadius: 20, backgroundColor: 'transparent'}}>
         <List>
           <ListItem divider>
             <Typography variant="h4">
