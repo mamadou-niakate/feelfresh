@@ -5,7 +5,7 @@ import './styles.css';
 
 export function FadeInSection({ menuItem }) {
   const [isVisible, setVisible] = React.useState(false);
-  const domRef = React.useRef();
+  const domRef = React.useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
