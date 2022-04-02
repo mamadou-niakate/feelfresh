@@ -6,7 +6,7 @@ import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles({
    testimonial: {
-        width: '50%',
+        width: '75%',
         margin: 'auto',
         minHeight: 500,
         padding:40,
