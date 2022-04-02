@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Paper, Toolbar, Typography } from '@mui/material'
+import { Box, Grid, Paper, Toolbar, Typography } from '@mui/material'
 import { testimonials } from '../data'
 import Review from './Review'
 import { makeStyles } from '@mui/styles';
@@ -8,14 +8,14 @@ import SectionSubtitle from '../shared/SectionSubtitle';
 
 const useStyles = makeStyles({
    testimonial: {
-        width: '75%',
-        margin: 'auto',
+        // width: '75%',
+        // margin: 'auto',
         minHeight: 500,
-        padding:40,
+        // padding:40,
         backgroundColor: '#FFF',
-        '& > *': {
-            margin: 20,
-        }
+        // '& > *': {
+        //     margin: 20,
+        // }
     },
     authorDiv: {
         display: 'flex',
@@ -64,34 +64,36 @@ export const Testimonial = () => {
     }, []);
 
     return (
-        <div className={classes.testimonial}>
-            <SectionTitle title={'Témoignages'} />
-            <SectionSubtitle subTitle={'Nos clients nous font confiance pourquoi pas vous aussi !'} />
-            <Toolbar
-                component="nav"
-                variant="dense"
-                sx={{ justifyContent: 'space-between', overflowX: 'auto' }}
-            >
-                {testimonials.map((testimonial) => (
-                    <Box
-                        color="inherit"
-                        noWrap
-                        key={testimonial._id}
-                        variant="body2"
-                        sx={{ p: 1, flexShrink: 0 }}
-                        onClick={() => handleReviewChange(testimonial)}
-                    >
-                        <Paper 
-                            className={classes.authorDiv} 
-                            elevation={selectedAuthor === testimonial.author ? 10 : 0}
+        <Grid container justifyContent={'center'} alignItems='center' wrap='wrap' className={classes.testimonial}>
+            <Grid item xs={12} lg={6} md={6}>
+                <SectionTitle title={'Témoignages'} />
+                <SectionSubtitle subTitle={'Nos clients nous font confiance pourquoi pas vous aussi !'} />
+                <Toolbar
+                    component="nav"
+                    variant="dense"
+                    sx={{ justifyContent: 'space-between', overflowX: 'auto' }}
+                >
+                    {testimonials.map((testimonial) => (
+                        <Box
+                            color="inherit"
+                            noWrap
+                            key={testimonial._id}
+                            variant="body2"
+                            sx={{ p: 1, flexShrink: 0 }}
+                            onClick={() => handleReviewChange(testimonial)}
                         >
-                            <img className={classes.avatar} src={'https://cdn-icons-png.flaticon.com/512/147/147144.png'} alt={testimonial.author} />
-                            <Typography variant='h5'>{testimonial.author}</Typography>
-                        </Paper>
-                    </Box>
-                ))}
-            </Toolbar>
-            <Review review={review} />
-        </div>
+                            <Paper 
+                                className={classes.authorDiv} 
+                                elevation={selectedAuthor === testimonial.author ? 10 : 0}
+                            >
+                                <img className={classes.avatar} src={'https://cdn-icons-png.flaticon.com/512/147/147144.png'} alt={testimonial.author} />
+                                <Typography variant='h5'>{testimonial.author}</Typography>
+                            </Paper>
+                        </Box>
+                    ))}
+                </Toolbar>
+                <Review review={review} />
+            </Grid>
+        </Grid>
   )
 }
