@@ -20,13 +20,12 @@ const Review = ({review}) => {
 
     return (
         <Paper className={classes.root} elevation={0}>
-            <Typography component={'h4'} variant='h4'>{text?.substr(0,25)}</Typography>
+            {/* <Typography component={'h4'} variant='h4'>{text?.substr(0,25)}</Typography> */}
             <Typography component={'h6'} variant='h6'>
                 {rating && (
                     <Rating
                         name="simple-controlled"
                         value={parseInt(rating)}
-                        alignSelf={'center'}
                         readOnly
                     /> 
                 )}   

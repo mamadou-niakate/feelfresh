@@ -11,8 +11,32 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 // import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
+import { HashLink as Link } from 'react-router-hash-link';
 
-const pages = ['About', 'Menu', 'Contact'];
+
+
+const pages = [
+  {
+    pathName: 'About',
+    hash: '#about',
+    title: 'À Propos',
+  },
+  {
+    pathName: 'Contact',
+    hash: '#contact',
+    title: 'Contact',
+  },
+  {
+    pathName: 'Menu',
+    hash: '#menu',
+    title: 'Menu',
+  },
+  {
+    pathName: 'Location',
+    hash: '#location',
+    title: 'Emplacement',
+  },
+];
 // const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const ResponsiveAppBar = () => {
@@ -35,7 +59,7 @@ const ResponsiveAppBar = () => {
   // };
 
   return (
-    <AppBar position="static" color='transparent' elevation={0}>
+    <AppBar position="fixed" color='transparent' elevation={0} style={{ backgroundColor: '#FFF7E8'}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -47,7 +71,7 @@ const ResponsiveAppBar = () => {
             <img 
               src='https://bkoeat.com/wp-content/uploads/2021/09/IMG-20201203-WA0003-300x300.jpg' 
               alt=''
-              style={{ width: '40px', height: '40px', borderRadius: '50%' }}
+              style={{ width: '60px', height: '60px', borderRadius: '50%' }}
             />
           </Typography>
 
@@ -80,9 +104,14 @@ const ResponsiveAppBar = () => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center" color={'GrayText'}>{page}</Typography>
+              {pages.map(({id, pathName,hash,title}) => (
+                <MenuItem key={id} onClick={handleCloseNavMenu}>
+                  <Link 
+                    to={`${pathName}${hash}`} 
+                    style={{ my: 2, color: 'GrayText', display: 'block', textDecoration: 'none' }}
+                  >
+                    <Typography textAlign="center" color={'GrayText'}>{ title }</Typography>
+                  </Link>
                 </MenuItem>
               ))}
             </Menu>
@@ -93,16 +122,25 @@ const ResponsiveAppBar = () => {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
           >
-            LOGO
+            <img 
+              src='https://bkoeat.com/wp-content/uploads/2021/09/IMG-20201203-WA0003-300x300.jpg' 
+              alt=''
+              style={{ width: '60px', height: '60px', borderRadius: '50%' }}
+            />
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
+            {pages.map(({id, pathName,hash,title}) => (
+             
               <Button
-                key={page}
+                key={id}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'GrayText', display: 'block' }}
               >
-                {page}
+                <Link 
+                  to={`${pathName}${hash}`} 
+                  style={{ my: 2, color: 'GrayText', display: 'block', textDecoration: 'none' }}
+                >
+                    {title}
+                </Link>
               </Button>
             ))}
           </Box>

@@ -2,7 +2,7 @@ import React from 'react'
 import { Box } from '@mui/material'
 import { makeStyles } from '@mui/styles';
 import { Typography } from '@mui/material'
-
+import { FaSnapchat, FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
 const useStyles = makeStyles({
    root: {
         display: 'flex',
@@ -15,15 +15,42 @@ const useStyles = makeStyles({
     },
     socialNetwork: {
         display: 'flex',
+        flexDirection: 'column',
         justifyContent: 'flex-start',
-        alignItems: 'center',
+        alignItems: 'flex-start',
+        '& > * a': {
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
+            width: '100%',
+        }
     },
     infoUtil: {
         '& > *': {
             textAlign: 'center',
         }
+    },
+    link: {
+        textDecoration: 'none',
+        color: '#fff', 
+        textAlign:'left',
+    },
+    text: {
+        color: '#fff', 
+        textAlign:'left',
+        wordBreak: 'break-all',
+    },
+    footerSectionTitle: {
+        color: '#fff',
+        fontWeight: 'bold',
+        textAlign: 'left',
+        margin: '20px 0 20px 0 !important',
+    },
+    socialNetworkIcon: {
+        color: '#fff',
+        fontSize: '2rem',
+        padding: '10px 10px 10px 0px ',
     }
-
 });
 
 const Footer = () => {
@@ -31,52 +58,56 @@ const Footer = () => {
     return (
         <Box className={classes.root}>
             <div style={{ display:'flex', flexDirection:'column'}}>
-                <Typography variant='h5' style={{ color: '#fff', textAlign:'left'}}>
-                    Follow us on social media
+                <Typography variant='h4' className={classes.footerSectionTitle}>
+                    Suivez-nous sur les réseaux sociaux
                 </Typography>
                 <div className={classes.socialNetwork}>
-                    <p>
-                        <a href="https://www.facebook.com/">
-                            <img src="https://img.icons8.com/color/48/000000/facebook-new.png" alt="facebook" />
+                    <Typography component={'h6'} variant='h6'>
+                        <a href="https://www.facebook.com/" className={classes.link} target='_blank' rel='noreferrer'>
+                            <FaFacebook  className={classes.socialNetworkIcon}/>
+                            <span> Facebook </span>
                         </a>
-                    </p>
-                    <p>
-                        <a href="https://www.instagram.com/">
-                            <img src="https://img.icons8.com/color/48/000000/instagram-new.png" alt="instagram" />
+                    </Typography>
+                    <Typography component={'h6'} variant='h6'>
+                        <a href="https://www.instagram.com/" className={classes.link} target='_blank' rel='noreferrer'>
+                            <FaInstagram className={classes.socialNetworkIcon}/>
+                            <span> Instagram </span>
                         </a>
-                    </p>
-                    <p>
-                        <a href="https://www.twitter.com/">
-                            <img src="https://img.icons8.com/color/48/000000/twitter.png" alt="twitter" />
+                    </Typography>
+                    <Typography component={'h6'} variant='h6'>
+                        <a href="https://www.twitter.com/" className={classes.link} target='_blank' rel='noreferrer'>
+                            <FaTwitter className={classes.socialNetworkIcon}/>
+                            <span> Twitter </span>
                         </a>
-                    </p>
-                    <p>
-                        <a href="https://wwww.snapchat.com/">
-                            <img src="https://img.icons8.com/color/48/000000/snapchat.png" alt="snapchat" />
+                    </Typography>
+                    <Typography component={'h6'} variant='h6'>
+                        <a href="https://wwww.snapchat.com/" className={classes.link} target='_blank' rel='noreferrer'>
+                            <FaSnapchat className={classes.socialNetworkIcon}/>
+                            <span> Snapchat </span>
                         </a>
-                    </p>
+                    </Typography>
                 </div>
             </div>
             <div className={classes.infoUtil}>
-                <Typography variant='h5' style={{ color: '#fff', textAlign:'left'}}>
+                <Typography variant='h4' className={classes.footerSectionTitle}>
                     Infos Utils
                 </Typography>
-                <p style={{ color: '#fff', textAlign:'left'}}> Témoignages de nos clients  </p>
-                <p style={{ color: '#fff', textAlign:'left'}}>  A Propos de nous </p>
-                <p style={{ color: '#fff', textAlign:'left'}}> Nos Plats </p>
-                <p style={{ color: '#fff', textAlign:'left'}}> Contacter le développeur </p>
+                <Typography className={classes.text} component='h6' variant='h6'> Témoignages de nos clients  </Typography>
+                <Typography className={classes.text} component='h6' variant='h6'>  A Propos de nous </Typography>
+                <Typography className={classes.text} component='h6' variant='h6'> Nos Plats </Typography>
+                <Typography className={classes.text} component='h6' variant='h6'> Contacter le développeur </Typography>
             </div>
             <div>
-                <Typography variant='h5' style={{ color: '#fff', textAlign:'left'}}>
+                <Typography variant='h4' className={classes.footerSectionTitle}>
                     Où Nous Trouver  ?
                 </Typography>
-                <p style={{ color: '#fff', textAlign:'left'}}> <strong>Adresse : </strong>  Rue 413 Entre Le Palais Des Sports Et La Place Can Proche De Guaduman, Bamako Mali </p>
-                <p style={{ color: '#fff', textAlign:'left'}}> 
+                <Typography className={classes.text} component='h6' variant='h6'> <strong>Adresse : </strong>  Rue 413 Entre Le Palais Des Sports Et La Place Can Proche De Guaduman, Bamako Mali </Typography>
+                <Typography className={classes.text} component='h6' variant='h6'> 
                     <strong>Horraire : </strong>  <br/>
                     Lundi - Vendredi : 9:00 - 18:00 <br/>
                     Samedi : 9:00 - 14:00 <br/>
                     Dimanche : Fermé
-                </p>
+                </Typography>
             </div>
         </Box>
     )

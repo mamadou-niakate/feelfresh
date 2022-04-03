@@ -4,11 +4,7 @@ import { Typography, Button, Grid } from '@mui/material';
 
 const useStyles = makeStyles({
    root: {
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        height: '100%',
-        padding: '0 5% 0 5%',
+        paddingTop:65,
     },
     aboutTitle: {
         fontWeight: 'bold',
@@ -37,7 +33,7 @@ const useStyles = makeStyles({
 const AboutInfo = () => {
     const classes = useStyles();
     return (
-        <Grid container justifyContent={'center'} alignItems='center' wrap='wrap'>
+        <Grid container justifyContent={'center'} alignItems='center' wrap='wrap' className={classes.root}>
             <Grid item xs={12} md={4}>
                 <div>
                     <div className={classes.aboutText}>
@@ -54,9 +50,16 @@ const AboutInfo = () => {
                         variant='contained' 
                         className={classes.moreBtn}
                         elevation={2}
-                        style={{ backgroundColor: '#fff', color:'GrayText', borderRadius: 20, height: 50, margin: 20}}
+                        style={{ 
+                            background: 'rgb(97,171,67)',
+                            backgroundColor: 'linear-gradient(0deg, rgba(97,171,67,1) 0%, rgba(253,187,45,1) 100%)',
+                            color:'#fff', 
+                            borderRadius: 20, 
+                            height: 50, 
+                            margin: 20
+                        }}
                     >
-                        Learn More
+                        Learn More 
                     </Button>
                 </div>
             </Grid>
@@ -64,7 +67,7 @@ const AboutInfo = () => {
                 <img className={classes.image} src='/images/burger.svg' alt='random' />
             </Grid>
         </Grid>
-    )
+    ) 
 }
 
 export default AboutInfo

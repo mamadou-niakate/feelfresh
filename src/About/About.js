@@ -13,7 +13,7 @@ const useStyles = makeStyles({
 const About = () => {
     const classes = useStyles();
     return (
-        <Box className={classes.root}>
+        <Box className={classes.root} id='about'>
             <Header />
             <AboutInfo />
         </Box>

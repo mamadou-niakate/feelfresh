@@ -13,7 +13,7 @@ const useStyles = makeStyles({
         backgroundColor: '#F2F2F2',
     },
    location: {
-        height: 650,
+        height: '100%',
     },
     locationTitleContainer: {
         padding: 20
@@ -28,7 +28,7 @@ const useStyles = makeStyles({
 const Location = () => {
     const classes = useStyles();
     return (
-        <Box className={classes.root}>
+        <Box className={classes.root} id='location'>
             <div className={classes.locationTitleContainer}>
                 <SectionTitle title={'Emplacement'} />
                 <SectionSubtitle subTitle={'Nous sommes à Bamako dans le quartier chic de l\'ACI 2000'} />

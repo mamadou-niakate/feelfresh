@@ -1,3 +1,4 @@
+import React from 'react';
 import About from './About/About';
 import './App.css';
 import Figure from './Figure/Figure';

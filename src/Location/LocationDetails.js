@@ -3,28 +3,71 @@ import React from 'react'
 
 export const LocationDetails = () => {
   return (
-    <Paper elevation={10} style={{ width: '90%', height: 'auto', margin:'auto', alignSelf: 'center', borderRadius: 20, backgroundColor: 'transparent'}}>
+    <Paper 
+      elevation={0} 
+      style={{ 
+        width: '90%', 
+        height: '100%', 
+        margin:'auto', 
+        alignSelf: 'center', 
+        borderRadius: 20, 
+        backgroundColor: 'transparent'
+      }}
+    >
         <List>
           <ListItem divider>
             <Typography variant="h4">
-              Feel Fresh
+              <span>Venez nous faire un tour !</span> 
             </Typography>
           </ListItem>
           <ListItem divider>
-            <p>
-              <Typography component={'strong'} variant='strong'>Adresse : </Typography><br/>
-              <Typography component={'span'} variant='span'>
-                Rue 413 Entre Le Palais Des Sports Et La Place Can Proche De Guaduman, Bamako Mali
-              </Typography>
-            </p>
+            <List>
+              <ListItem>
+                <Typography component={'h4'} variant='h4'><strong>Adresse :</strong> </Typography>
+              </ListItem>
+              <ListItem>
+                <Typography component={'h6'} variant='h6'>
+                  <strong>Pays :</strong> Mali
+                </Typography>
+              </ListItem>
+              <ListItem>
+                <Typography component={'h6'} variant='h6'>
+                  <strong>Ville :</strong> Bamako
+                </Typography>
+              </ListItem>
+              <ListItem>
+                <Typography component={'h6'} variant='h6'>
+                  <strong>Quartier :</strong> ACI 2000
+                </Typography>
+              </ListItem>
+              <ListItem>
+                <Typography component={'h6'} variant='h6'>
+                  <strong>Rue :</strong> Rue 413 Entre Le Palais Des Sports Et La Place Can Proche De Guaduman, Bamako Mali
+                </Typography>
+              </ListItem>
+            </List>
           </ListItem>
           <ListItem>
-            <p>
-              <Typography component={'strong'} variant='strong'>Horraire : </Typography>
-              <Typography>Lundi - Vendredi : 9:00 - 18:00</Typography>
-              <Typography>Samedi : 9:00 - 14:00</Typography>
-              <Typography>Dimanche : Fermé</Typography>
-            </p>
+              <List>
+                <ListItem>
+                  <Typography component={'h4'} variant='h4'><strong>Horaires d'ouverture :</strong> </Typography>
+                </ListItem>
+                <ListItem>
+                  <Typography component={'h6'} variant='h6'>
+                    Lundi - Vendredi : 9h - 18h
+                  </Typography>
+                </ListItem>
+                <ListItem>
+                  <Typography component={'h6'} variant='h6'>
+                    Samedi : 9h - 14h
+                  </Typography>
+                </ListItem>
+                <ListItem>
+                  <Typography component={'h6'} variant='h6'>
+                    Dimanche : Fermé
+                  </Typography>
+                </ListItem>
+              </List>
           </ListItem>
         </List>
     </Paper>

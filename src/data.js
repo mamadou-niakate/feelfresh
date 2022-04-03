@@ -1,5 +1,6 @@
 export const data = [
   {
+    "id":0,
     "name": "Crock Pot Roast",
     "ingredients": [
       {
@@ -47,6 +48,7 @@ export const data = [
     "originalURL": "http://www.food.com/recipe/to-die-for-crock-pot-roast-27208"
   },
   {
+    "id":1,
     "name": "Roasted Asparagus",
     "ingredients": [
       {
@@ -96,54 +98,7 @@ export const data = [
     "originalURL": "http://www.food.com/recipe/roasted-asparagus-50847"
   },
   {
-    "name": "Curried Lentils and Rice",
-    "ingredients": [
-      {
-        "quantity": "1 quart",
-        "name": "beef broth",
-        "type": "Misc"
-      },
-      {
-        "quantity": "1 cup",
-        "name": "dried green lentils",
-        "type": "Misc"
-      },
-      {
-        "quantity": "1/2 cup",
-        "name": "basmati rice",
-        "type": "Misc"
-      },
-      {
-        "quantity": "1 tsp",
-        "name": "curry powder",
-        "type": "Condiments"
-      },
-      {
-        "quantity": "1 tsp",
-        "name": "salt",
-        "type": "Condiments"
-      }
-    ],
-    pictures: [
-
-    ],
-    "steps": [
-      "Bring broth to a low boil.",
-      "Add curry powder and salt.",
-      "Cook lentils for 20 minutes.",
-      "Add rice and simmer for 20 minutes.",
-      "Enjoy!"
-    ],
-    "timers": [
-      0,
-      0,
-      20,
-      20,
-      0
-    ],
-    "imageURL": "http://dagzhsfg97k4.cloudfront.net/wp-content/uploads/2012/05/lentils3.jpg"
-  },
-  {
+    "id":2,
     "name": "Big Night Pizza",
     "ingredients": [
       {
@@ -211,6 +166,7 @@ export const data = [
     "imageURL": "http://upload.wikimedia.org/wikipedia/commons/c/c7/Spinach_pizza.jpg"
   },
   {
+    "id":3,
     "name": "Cranberry and Apple Stuffed Acorn Squash Recipe",
     "ingredients": [
       {
@@ -271,6 +227,7 @@ export const data = [
     "originalURL": ""
   },
   {
+    "id":4,
     "name": "Mic's Yorkshire Puds",
     "ingredients": [
       {
@@ -323,6 +280,7 @@ export const data = [
     "originalURL": "http://upload.wikimedia.org/wikipedia/commons/f/f9/Yorkshire_Pudding.jpg"
   },
   {
+    "id":5,
     "name": "Old-Fashioned Oatmeal Cookies",
     "ingredients": [
       {
@@ -417,6 +375,7 @@ export const data = [
     "originalURL": "#"
   },
   {
+    "id":6,
     "name": "Blueberry Oatmeal Squares",
     "ingredients": [
       {
@@ -493,10 +452,11 @@ export const data = [
       0,
       0
     ],
-    "imageURL": "http://www.canadianliving.com/img/photos/biz/blueberry-oatmeal-squares5801359401371.jpg",
+    "imageURL": "https://media.istockphoto.com/photos/juicy-hamburger-on-white-background-picture-id1206323282?k=20&m=1206323282&s=612x612&w=0&h=yatlq6BHRCCvoTzFZLSwaJc0O8Quct_tRPWtH0dj9Fc=",
     "originalURL": "http://www.canadianliving.com/food/blueberry_oatmeal_squares.php"
   },
   {
+    "id":7,
     "name": "Curried chicken salad",
     "ingredients": [
       {
