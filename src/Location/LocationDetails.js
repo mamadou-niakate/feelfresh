@@ -17,7 +17,7 @@ export const LocationDetails = () => {
         <List>
           <ListItem divider>
             <Typography variant="h4">
-              <span>Venez nous faire un tour !</span> 
+              <span>Venez faire un tour 😉</span> 
             </Typography>
           </ListItem>
           <ListItem divider>

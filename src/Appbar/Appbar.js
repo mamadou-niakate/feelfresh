@@ -12,7 +12,13 @@ import Button from '@mui/material/Button';
 // import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import { HashLink as Link } from 'react-router-hash-link';
+import { makeStyles } from '@mui/styles'
 
+const useStyles = makeStyles(({
+  active: {
+    borderBottom: '2px solid #61AB43',
+  },
+}));
 
 
 const pages = [
@@ -20,11 +26,6 @@ const pages = [
     pathName: 'About',
     hash: '#about',
     title: 'À Propos',
-  },
-  {
-    pathName: 'Contact',
-    hash: '#contact',
-    title: 'Contact',
   },
   {
     pathName: 'Menu',
@@ -40,6 +41,8 @@ const pages = [
 // const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const ResponsiveAppBar = () => {
+  const classes = useStyles();
+  const [activeLink, setActiveLink] = React.useState(0);
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   // const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -57,6 +60,10 @@ const ResponsiveAppBar = () => {
   // const handleCloseUserMenu = () => {
   //   setAnchorElUser(null);
   // };
+
+  const handleActiveLink = (index) => {
+    setActiveLink(index);
+  };
 
   return (
     <AppBar position="fixed" color='transparent' elevation={0} style={{ backgroundColor: '#FFF7E8'}}>
@@ -107,6 +114,8 @@ const ResponsiveAppBar = () => {
               {pages.map(({id, pathName,hash,title}) => (
                 <MenuItem key={id} onClick={handleCloseNavMenu}>
                   <Link 
+                    onClick={() => handleActiveLink(title)}
+                    className={activeLink === title ? classes.active : ''}
                     to={`${pathName}${hash}`} 
                     style={{ my: 2, color: 'GrayText', display: 'block', textDecoration: 'none' }}
                   >
@@ -130,18 +139,21 @@ const ResponsiveAppBar = () => {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map(({id, pathName,hash,title}) => (
-             
-              <Button
-                key={id}
-                onClick={handleCloseNavMenu}
+              <Link 
+                onClick={() => handleActiveLink(title)}
+                className={activeLink === title ? classes.active : ''}
+                to={`${pathName}${hash}`} 
+                style={{ my: 2, textDecoration: 'none' }}
               >
-                <Link 
-                  to={`${pathName}${hash}`} 
-                  style={{ my: 2, color: 'GrayText', display: 'block', textDecoration: 'none' }}
+                <Button 
+                  key={id} 
+                  onClick={handleCloseNavMenu} 
+                  style={{ textTransform: 'none' }} 
+                  sx={{ color: 'GrayText', display: 'block', textDecoration: 'none', fontWeight: 'bold' }}
                 >
-                    {title}
-                </Link>
-              </Button>
+                  {title}
+                </Button>
+              </Link>
             ))}
           </Box>
 

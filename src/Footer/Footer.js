@@ -1,17 +1,17 @@
 import React from 'react'
-import { Box } from '@mui/material'
+import { Grid } from '@mui/material'
 import { makeStyles } from '@mui/styles';
 import { Typography } from '@mui/material'
 import { FaSnapchat, FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
 const useStyles = makeStyles({
    root: {
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'flex-start',
-        flexWrap: 'wrap',
+        // display: 'flex',
+        // justifyContent: 'space-evenly',
+        // alignItems: 'flex-start',
+        // flexWrap: 'wrap',
         height: 'auto',
         backgroundColor: '#361D31',
-        padding: 20
+        padding: '0 50px 20px 50px',
     },
     socialNetwork: {
         display: 'flex',
@@ -56,8 +56,8 @@ const useStyles = makeStyles({
 const Footer = () => {
     const classes = useStyles()
     return (
-        <Box className={classes.root}>
-            <div style={{ display:'flex', flexDirection:'column'}}>
+        <Grid container justifyContent={'center'} alignItems='flex-start' className={classes.root}>
+            <Grid item xs={12} md={4} style={{ display:'flex', flexDirection:'column'}}>
                 <Typography variant='h4' className={classes.footerSectionTitle}>
                     Suivez-nous sur les réseaux sociaux
                 </Typography>
@@ -87,8 +87,8 @@ const Footer = () => {
                         </a>
                     </Typography>
                 </div>
-            </div>
-            <div className={classes.infoUtil}>
+            </Grid>
+            <Grid item xs={12} md={4} className={classes.infoUtil}>
                 <Typography variant='h4' className={classes.footerSectionTitle}>
                     Infos Utils
                 </Typography>
@@ -96,20 +96,23 @@ const Footer = () => {
                 <Typography className={classes.text} component='h6' variant='h6'>  A Propos de nous </Typography>
                 <Typography className={classes.text} component='h6' variant='h6'> Nos Plats </Typography>
                 <Typography className={classes.text} component='h6' variant='h6'> Contacter le développeur </Typography>
-            </div>
-            <div>
+            </Grid>
+            <Grid item xs={12} md={4}>
                 <Typography variant='h4' className={classes.footerSectionTitle}>
                     Où Nous Trouver  ?
                 </Typography>
-                <Typography className={classes.text} component='h6' variant='h6'> <strong>Adresse : </strong>  Rue 413 Entre Le Palais Des Sports Et La Place Can Proche De Guaduman, Bamako Mali </Typography>
+                <Typography className={classes.text} component='h6' variant='h6'> 
+                    <strong>Adresse : </strong>  
+                    <span>Rue 413 Entre Le Palais Des Sports Et La Place Can Proche De Guaduman </span>
+                </Typography>
                 <Typography className={classes.text} component='h6' variant='h6'> 
                     <strong>Horraire : </strong>  <br/>
                     Lundi - Vendredi : 9:00 - 18:00 <br/>
                     Samedi : 9:00 - 14:00 <br/>
                     Dimanche : Fermé
                 </Typography>
-            </div>
-        </Box>
+            </Grid>
+        </Grid>
     )
 }
 
