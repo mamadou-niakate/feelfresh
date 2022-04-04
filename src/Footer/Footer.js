@@ -1,5 +1,5 @@
 import React from 'react'
-import { Divider, Grid } from '@mui/material'
+import { Grid } from '@mui/material'
 import { makeStyles } from '@mui/styles';
 import { Typography } from '@mui/material'
 import { FaSnapchat, FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
