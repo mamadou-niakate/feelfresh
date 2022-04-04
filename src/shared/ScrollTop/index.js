@@ -5,11 +5,8 @@ import { FaArrowCircleUp } from 'react-icons/fa';
 const useStyles = makeStyles({
     scrollTop: {
         position:'fixed',
-        width: 50,
-        height: 40,
+        fontSize: 30,
         cursor: "pointer",
-        animation: 'fadeIn 0.3s',
-        transition: 'opacity 0.4s',
         bottom: 20,
         left:'80%',
         color: '#2EB086',
