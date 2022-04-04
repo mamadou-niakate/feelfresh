@@ -6,6 +6,7 @@ import Footer from './Footer/Footer';
 import Location from './Location/Location';
 import Menu from './Menu/Menu';
 import { Testimonial } from './Testimanial/Testimonial';
+import ScrollTop from './shared/ScrollTop/';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Testimonial />
       <Location />
       <Footer />
+      <ScrollTop />
     </div>
   );
 }
