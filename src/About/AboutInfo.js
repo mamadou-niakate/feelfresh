@@ -40,7 +40,7 @@ const AboutInfo = () => {
                 <div>
                     <div className={classes.aboutText}>
                         <Typography component={'h1'} variant='h1' className={classes.aboutTitle}> 
-                            Feel Fresh 
+                            <span style={{ color: 'orange'}}> Feel </span> <span>Fresh</span> 
                         </Typography>
                         <Typography component={'h5'} variant='h5' style={{ textAlign: 'left', color: '#686D76'}}>
                             We are a team of three developers who are passionate about

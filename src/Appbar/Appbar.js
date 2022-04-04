@@ -23,21 +23,31 @@ const useStyles = makeStyles(({
 
 const pages = [
   {
+    id: 0,
     pathName: 'About',
     hash: '#about',
     title: 'À Propos',
   },
   {
+    id:1,
     pathName: 'Menu',
     hash: '#menu',
     title: 'Menu',
   },
   {
-    pathName: 'Location',
+    id: 2,
+    pathName: 'location',
     hash: '#location',
     title: 'Emplacement',
   },
+  {
+    id: 3,
+    pathName: 'testimonials',
+    hash: '#testimonials',
+    title: 'Témoignages',
+  }
 ];
+
 // const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const ResponsiveAppBar = () => {

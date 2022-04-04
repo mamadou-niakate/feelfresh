@@ -64,7 +64,7 @@ export const Testimonial = () => {
     }, []);
 
     return (
-        <Grid container justifyContent={'center'} alignItems='center' wrap='wrap' className={classes.testimonial}>
+        <Grid container justifyContent={'center'} alignItems='center' wrap='wrap' className={classes.testimonial} id='testimonials'>
             <Grid item xs={12} lg={6} md={6}>
                 <SectionTitle title={'Témoignages'} />
                 <SectionSubtitle subTitle={'Nos clients nous font confiance pourquoi pas vous aussi !'} />

@@ -2,6 +2,7 @@ import React from 'react'
 import { makeStyles } from '@mui/styles';
 import { Box, Container, Grid } from '@mui/material';
 import { data } from '../data';
+import { menus } from '../jsonfile';
 import FadeInSection from './MenuItem';
 import SectionTitle from '../shared/SectionTitle';
 import SectionSubtitle from '../shared/SectionSubtitle';
@@ -16,6 +17,7 @@ const useStyles = makeStyles({
 
 const Menu = () => {
     const classes = useStyles();
+    console.log(menus);
     return (
         <Box className={classes.root} id='menu'>
             <SectionTitle title={'Nos Menus'} />
