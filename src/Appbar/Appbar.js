@@ -48,9 +48,8 @@ const ResponsiveAppBar = () => {
     setActiveLink(index);
   };
 
-  const scrollToSection = (sectionPosition) => {
-    sectionPosition.scrollIntoView({behavior: 'smooth', block: 'start'})
-    // ({top: Math.ceil(sectionPosition), behavior:'smooth'})
+  const scrollToSection = (sectionElementNode) => {
+    sectionElementNode.scrollIntoView({behavior: 'smooth', block: 'start', inline: "start"})
   }
 
   return (
