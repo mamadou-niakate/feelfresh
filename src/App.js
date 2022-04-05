@@ -16,6 +16,10 @@ function App() {
   const menuRef = useRef(null)
   const testimonialRef = useRef(null)
   const locationRef = useRef(null)
+
+  useEffect(() => {
+    window.scrollTo({top:0, behavior:'smooth'})
+  },[])
   
   useEffect(() => {
     dispatch({ type: 'SET_LOCATION_POSITION', payload: getOffsetY(locationRef.current)})

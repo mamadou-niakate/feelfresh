@@ -8,7 +8,9 @@ import SectionSubtitle from '../shared/SectionSubtitle';
 
 const useStyles = makeStyles({
    testimonial: {
-        height: '100%',
+        margin: 0,
+        padding:0,
+        height: 500,
         backgroundColor: '#FFF',
     },
     authorDiv: {

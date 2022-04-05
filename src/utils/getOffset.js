@@ -1,4 +1,5 @@
 
 export function getOffsetY( element ) {
-    return  element.offsetTop - 10
+    const rect = element.getBoundingClientRect();
+    return  rect.top + document.body.scrollTop  + window.pageYOffset;
 }
