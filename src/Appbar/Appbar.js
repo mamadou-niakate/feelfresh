@@ -139,9 +139,14 @@ const ResponsiveAppBar = () => {
                   }}
                   style={{ textTransform: 'none' }} 
                   sx={{ color: 'GrayText', display: 'block', textDecoration: 'none', fontWeight: 'bold' }}
-                  className={activeLink === path ? classes.active : ''}
                 >
-                  { sectionName }
+                  <Typography 
+                    className={activeLink === path ? classes.active : ''} 
+                    textAlign="center"
+                    color={'GrayText'}
+                  >
+                    { sectionName }
+                  </Typography>
                 </Button>
             ))}
           </Box>
