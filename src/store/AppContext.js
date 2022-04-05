@@ -11,26 +11,22 @@ const AppContext = createContext()
 const initialState = [
     {
         id: 0,
-        sectionName: 'about',
-        title: 'À Propos',
+        sectionName: 'À Propos',
         offsetTop: 0,
     },
     {
         id:1,
         sectionName: 'menu',
-        title: 'Menu',
         offsetTop: 0,
     },
     {
         id: 2,
         sectionName: 'location',
-        title: 'Emplacement',
         offsetTop: 0,
     },
     {
         id: 3,
         sectionName: 'testimonials',
-        title: 'Témoignages',
     }
 ]
 
@@ -45,7 +41,6 @@ const reducer = (state, action) => {
                 }
                 return section
             })
-            console.log(newState);
             return newState;
         }
         case SET_TESTIMONIALS_POSITION :
@@ -57,7 +52,6 @@ const reducer = (state, action) => {
                 }
                 return section
             })
-            console.log(newState);
             return newState;
         }
         case SET_LOCATION_POSITION :
@@ -69,7 +63,6 @@ const reducer = (state, action) => {
                 }
                 return section
             })
-            console.log(newState);
             return newState;
         }
         case SET_ABOUT_POSITION :
@@ -81,7 +74,6 @@ const reducer = (state, action) => {
                 }
                 return section
             })
-            console.log(newState);
             return newState;
         }
         default: return state;

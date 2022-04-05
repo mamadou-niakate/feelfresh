@@ -32,8 +32,10 @@ const Location = () => {
     const  locationRef = useRef(null)
 
     useEffect(() => {
+        const bodyRect = document.body.getBoundingClientRect();
         const { top } = locationRef.current.getBoundingClientRect()
-        dispatch({ type: 'SET_LOCATION_POSITION', payload:top + window.scrollY})
+        const offset   = top - bodyRect.top;
+        dispatch({ type: 'SET_LOCATION_POSITION', payload: offset})
     },[dispatch])
 
     return (

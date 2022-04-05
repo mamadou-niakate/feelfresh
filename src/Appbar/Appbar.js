@@ -98,19 +98,19 @@ const ResponsiveAppBar = () => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map(({id, title, offsetTop}) => (
+              {pages.map(({id, sectionName, offsetTop}) => (
                 <MenuItem key={id} onClick={() => {
                     handleCloseNavMenu()
                     scrollToSection(offsetTop)
-                    handleActiveLink(title)
+                    handleActiveLink(sectionName)
                   }}
                 >
                   <Typography 
-                    className={activeLink === title ? classes.active : ''} 
+                    className={activeLink === sectionName ? classes.active : ''} 
                     textAlign="center"
                     color={'GrayText'}
                   >
-                    { title }
+                    { sectionName }
                   </Typography>
                 </MenuItem>
               ))}
@@ -129,19 +129,19 @@ const ResponsiveAppBar = () => {
             />
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map(({id, title, offsetTop}) => (
+            {pages.map(({id, sectionName, offsetTop}) => (
                 <Button 
                   key={id} 
                   onClick={() => {
                     scrollToSection(offsetTop)
                     handleCloseNavMenu();
-                    handleActiveLink(title)
+                    handleActiveLink(sectionName)
                   }}
                   style={{ textTransform: 'none' }} 
                   sx={{ color: 'GrayText', display: 'block', textDecoration: 'none', fontWeight: 'bold' }}
-                  className={activeLink === title ? classes.active : ''}
+                  className={activeLink === sectionName ? classes.active : ''}
                 >
-                  {title}
+                  {sectionName}
                 </Button>
             ))}
           </Box>

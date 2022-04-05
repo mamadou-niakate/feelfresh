@@ -18,8 +18,10 @@ const About = () => {
     const  aboutRef = useRef(null)
 
     useEffect(() => {
+        const bodyRect = document.body.getBoundingClientRect();
         const { top } = aboutRef.current.getBoundingClientRect()
-        dispatch({ type: 'SET_ABOUT_POSITION', payload:top + window.scrollY})
+        const offset   = top - bodyRect.top;
+        dispatch({ type: 'SET_ABOUT_POSITION', payload: offset})
     },[dispatch])
 
     return (
