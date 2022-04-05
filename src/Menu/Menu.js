@@ -8,7 +8,6 @@ import SectionSubtitle from '../shared/SectionSubtitle';
 
 const useStyles = makeStyles({
    root: {
-        minHeight: 700,
         padding:40,
         backgroundColor: '#FFF7E8',
     }

@@ -1,11 +1,12 @@
 export function getOffsetY(el) {
-    return el.offsetTop + window.scrollTo
+    return el.offsetTop
 }
 
 export function getAbsoluteOffsetY(element){
+    console.log(element);
     let top = 0;
     let bound = element.getBoundingClientRect();
-    
+
     do {
         bound = element.getBoundingClientRect();
         top += bound.top;

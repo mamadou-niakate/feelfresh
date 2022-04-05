@@ -8,7 +8,7 @@ import Menu from './Menu/Menu';
 import { Testimonial } from './Testimanial/Testimonial';
 import ScrollTop from './shared/ScrollTop/';
 import { useAppContext } from './store/AppContext';
-import { getAbsoluteOffsetY } from './utils/getOffset';
+import { getOffsetY } from './utils/getOffset';
 
 function App() {
   const { dispatch } = useAppContext()
@@ -18,10 +18,10 @@ function App() {
   const locationRef = useRef(null)
   
   useEffect(() => {
-    dispatch({ type: 'SET_LOCATION_POSITION', payload: getAbsoluteOffsetY(locationRef.current)})
-    dispatch({ type: 'SET_ABOUT_POSITION', payload: getAbsoluteOffsetY(aboutRef.current)})
-    dispatch({ type: 'SET_TESTIMONIALS_POSITION', payload: getAbsoluteOffsetY(testimonialRef.current)})
-    dispatch({ type: 'SET_MENU_POSITION', payload: getAbsoluteOffsetY(menuRef.current)})
+    dispatch({ type: 'SET_LOCATION_POSITION', payload: getOffsetY(locationRef.current)})
+    dispatch({ type: 'SET_ABOUT_POSITION', payload: getOffsetY(aboutRef.current)})
+    dispatch({ type: 'SET_TESTIMONIALS_POSITION', payload: getOffsetY(testimonialRef.current)})
+    dispatch({ type: 'SET_MENU_POSITION', payload: getOffsetY(menuRef.current)})
   },[dispatch])
 
   return (
