@@ -8,14 +8,8 @@ import SectionSubtitle from '../shared/SectionSubtitle';
 
 const useStyles = makeStyles({
    testimonial: {
-        // width: '75%',
-        // margin: 'auto',
-        minHeight: 500,
-        // padding:40,
+        height: '100%',
         backgroundColor: '#FFF',
-        // '& > *': {
-        //     margin: 20,
-        // }
     },
     authorDiv: {
         display: 'flex',
