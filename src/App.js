@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import About from './About/About';
 import './App.css';
 import Figure from './Figure/Figure';
@@ -7,22 +7,34 @@ import Location from './Location/Location';
 import Menu from './Menu/Menu';
 import { Testimonial } from './Testimanial/Testimonial';
 import ScrollTop from './shared/ScrollTop/';
-import { ContextProvider } from './store/AppContext';
+import { useAppContext } from './store/AppContext';
+import { getAbsoluteOffsetY } from './utils/getOffset';
 
 function App() {
+  const { dispatch } = useAppContext()
+  const aboutRef = useRef(null)
+  const menuRef = useRef(null)
+  const testimonialRef = useRef(null)
+  const locationRef = useRef(null)
+  
+  useEffect(() => {
+    dispatch({ type: 'SET_LOCATION_POSITION', payload: getAbsoluteOffsetY(locationRef.current)})
+    dispatch({ type: 'SET_ABOUT_POSITION', payload: getAbsoluteOffsetY(aboutRef.current)})
+    dispatch({ type: 'SET_TESTIMONIALS_POSITION', payload: getAbsoluteOffsetY(testimonialRef.current)})
+    dispatch({ type: 'SET_MENU_POSITION', payload: getAbsoluteOffsetY(menuRef.current)})
+  },[dispatch])
+
   return (
-    <ContextProvider>
-      <div className="App">
-        <About />
-        <Figure />
-        <Menu />
-        <Testimonial />
-        <Location />
-        <Footer />
-        <ScrollTop />
-      </div>
-    </ContextProvider>
-  );
+    <div className="App">
+      <About ref={aboutRef} />
+      <Figure />
+      <Menu ref={ menuRef } />
+      <Testimonial ref={testimonialRef} />
+      <Location ref={locationRef} />
+      <Footer />
+      <ScrollTop />
+    </div>
+  )
 }
 
 export default App;

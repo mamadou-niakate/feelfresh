@@ -1,11 +1,9 @@
-import React, { useEffect, useRef } from 'react'
+import React from 'react'
 import { makeStyles } from '@mui/styles';
 import { Box, Grid } from '@mui/material';
 import { LocationDetails } from './LocationDetails';
 import SectionTitle from '../shared/SectionTitle';
 import SectionSubtitle from '../shared/SectionSubtitle';
-import { useAppContext } from '../store/AppContext';
-import { getAbsoluteOffsetY } from '../utils/getOffset';
 
 const useStyles = makeStyles({
     root: {
@@ -26,17 +24,10 @@ const useStyles = makeStyles({
         width: '100%',
     }
 });
-const Location = ({ ref }) => {
+const Location =  React.forwardRef((props, ref) => {
     const classes = useStyles();
-    const { dispatch } = useAppContext()
-    const  locationRef = useRef(null)
-
-    useEffect(() => {
-        dispatch({ type: 'SET_LOCATION_POSITION', payload: getAbsoluteOffsetY(locationRef.current)})
-    },[dispatch])
-
     return (
-        <Box ref={locationRef} className={classes.root}>
+        <Box ref={ref} className={classes.root} {...props}>
             <div className={classes.locationTitleContainer}>
                 <SectionTitle title={'Emplacement'} />
                 <SectionSubtitle subTitle={'Nous sommes à Bamako dans le quartier chic de l\'ACI 2000'} />
@@ -51,6 +42,6 @@ const Location = ({ ref }) => {
             </Grid>
         </Box>
     )
-}
+})
 
 export default Location

@@ -1,12 +1,10 @@
-import React, { useEffect, useRef } from 'react'
+import React from 'react'
 import { makeStyles } from '@mui/styles';
 import { Box, Container, Grid } from '@mui/material';
 import { data } from '../data';
 import FadeInSection from './MenuItem';
 import SectionTitle from '../shared/SectionTitle';
 import SectionSubtitle from '../shared/SectionSubtitle';
-import { useAppContext } from '../store/AppContext';
-import { getAbsoluteOffsetY } from '../utils/getOffset';
 
 const useStyles = makeStyles({
    root: {
@@ -16,17 +14,10 @@ const useStyles = makeStyles({
     }
 });
 
-const Menu = () => {
-    const classes = useStyles();
-    const { dispatch } = useAppContext()
-    const  menuRef = useRef(null)
-
-    useEffect(() => {
-        dispatch({ type: 'SET_MENU_POSITION', payload: getAbsoluteOffsetY(menuRef.current)})
-    },[dispatch])
-    
+const Menu =  React.forwardRef((props, ref) => {
+    const classes = useStyles();    
     return (
-        <Box className={classes.root} ref={menuRef}>
+        <Box className={classes.root} ref={ref} {...props}>
             <SectionTitle title={'Nos Menus'} />
             <SectionSubtitle subTitle={'Venez tester la fraicheur de nos sucréries'} />
             <Container>
@@ -40,6 +31,6 @@ const Menu = () => {
             </Container>
         </Box>
     )
-}
+})
 
 export default Menu

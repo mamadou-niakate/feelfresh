@@ -1,12 +1,10 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect } from 'react'
 import { Box, Grid, Paper, Toolbar, Typography } from '@mui/material'
 import { testimonials } from '../data'
 import Review from './Review'
 import { makeStyles } from '@mui/styles';
 import SectionTitle from '../shared/SectionTitle';
 import SectionSubtitle from '../shared/SectionSubtitle';
-import { useAppContext } from '../store/AppContext';
-import { getAbsoluteOffsetY } from '../utils/getOffset';
 
 const useStyles = makeStyles({
    testimonial: {
@@ -50,7 +48,7 @@ const useStyles = makeStyles({
 });
 
 
-export const Testimonial = () => {
+export const Testimonial =  React.forwardRef((props, ref) => {
     const classes = useStyles();
     const [review, setReview] = React.useState('');
     const [selectedAuthor, setSelectedAuthor] = React.useState('');
@@ -60,20 +58,13 @@ export const Testimonial = () => {
         setSelectedAuthor(review.author);
     }
 
-    const { dispatch } = useAppContext()
-    const  testimonialRef = useRef(null)
-
-    useEffect(() => {
-        dispatch({ type: 'SET_TESTIMONIALS_POSITION', payload: getAbsoluteOffsetY(testimonialRef.current)})
-    },[dispatch])
-
     useEffect(() => {
         setReview(testimonials[0]);
         setSelectedAuthor(testimonials[0].author);
     }, []);
 
     return (
-        <Grid ref={testimonialRef} container justifyContent={'center'} alignItems='center' wrap='wrap' className={classes.testimonial}>
+        <Grid ref={ref} {...props} container justifyContent={'center'} alignItems='center' wrap='wrap' className={classes.testimonial}>
             <Grid item xs={12} lg={6} md={6}>
                 <SectionTitle title={'Témoignages'} />
                 <SectionSubtitle subTitle={'Nos clients nous font confiance pourquoi pas vous aussi !'} />
@@ -105,4 +96,4 @@ export const Testimonial = () => {
             </Grid>
         </Grid>
   )
-}
+})

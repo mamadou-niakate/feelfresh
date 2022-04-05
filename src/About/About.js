@@ -1,10 +1,8 @@
-import React, { useEffect, useRef } from 'react'
+import React from 'react'
 import Header from '../Appbar/Appbar'
 import { makeStyles } from '@mui/styles';
 import { Box } from '@mui/material'
 import AboutInfo from './AboutInfo';
-import { useAppContext } from '../store/AppContext';
-import { getAbsoluteOffsetY } from '../utils/getOffset';
 
 const useStyles = makeStyles({
    root: {
@@ -13,21 +11,14 @@ const useStyles = makeStyles({
     }
 });
 
-const About = () => {
+const About = React.forwardRef((props, ref) => {
     const classes = useStyles();
-    const { dispatch } = useAppContext()
-    const  aboutRef = useRef(null)
-
-    useEffect(() => {
-        dispatch({ type: 'SET_ABOUT_POSITION', payload: getAbsoluteOffsetY(aboutRef.current)})
-    },[dispatch])
-
     return (
-        <Box ref={aboutRef} className={classes.root}>
+        <Box ref={ref} {...props} className={classes.root}>
             <Header />
             <AboutInfo />
         </Box>
-  ) 
-}
+    ) 
+})
 
 export default About
