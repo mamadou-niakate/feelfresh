@@ -6,7 +6,7 @@ import { makeStyles } from '@mui/styles';
 import SectionTitle from '../shared/SectionTitle';
 import SectionSubtitle from '../shared/SectionSubtitle';
 import { useAppContext } from '../store/AppContext';
-import { getAbsoluteOffsetY, getOffsetY } from '../utils/getOffset';
+import { getAbsoluteOffsetY } from '../utils/getOffset';
 
 const useStyles = makeStyles({
    testimonial: {

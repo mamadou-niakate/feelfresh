@@ -4,7 +4,7 @@ import { makeStyles } from '@mui/styles';
 import { Box } from '@mui/material'
 import AboutInfo from './AboutInfo';
 import { useAppContext } from '../store/AppContext';
-import { getAbsoluteOffsetY, getOffsetY } from '../utils/getOffset';
+import { getAbsoluteOffsetY } from '../utils/getOffset';
 
 const useStyles = makeStyles({
    root: {

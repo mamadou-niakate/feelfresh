@@ -6,7 +6,7 @@ import FadeInSection from './MenuItem';
 import SectionTitle from '../shared/SectionTitle';
 import SectionSubtitle from '../shared/SectionSubtitle';
 import { useAppContext } from '../store/AppContext';
-import { getAbsoluteOffsetY, getOffsetY } from '../utils/getOffset';
+import { getAbsoluteOffsetY } from '../utils/getOffset';
 
 const useStyles = makeStyles({
    root: {
