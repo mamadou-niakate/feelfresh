@@ -6,6 +6,7 @@ import { makeStyles } from '@mui/styles';
 import SectionTitle from '../shared/SectionTitle';
 import SectionSubtitle from '../shared/SectionSubtitle';
 import { useAppContext } from '../store/AppContext';
+import { getOffsetY } from '../utils/getOffset';
 
 const useStyles = makeStyles({
    testimonial: {
@@ -63,7 +64,7 @@ export const Testimonial = () => {
     const  testimonialRef = useRef(null)
 
     useEffect(() => {
-        dispatch({ type: 'SET_TESTIMONIALS_POSITION', payload: testimonialRef.current})
+        dispatch({ type: 'SET_TESTIMONIALS_POSITION', payload: getOffsetY(testimonialRef.current)})
     },[dispatch])
 
     useEffect(() => {

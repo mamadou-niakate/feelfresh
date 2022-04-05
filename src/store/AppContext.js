@@ -12,25 +12,25 @@ const initialState = [
     {
         id: 0,
         sectionName: 'A Propos',
-        sectionElementNode: 0,
+        offSetY: 0,
         path: 'about'
     },
     {
         id:1,
         sectionName: 'Nos Recettes',
-        sectionElementNode: 0,
+        offSetY: 0,
         path: 'menu'
     },
     {
         id: 2,
         sectionName: 'Témoignages',
-        sectionElementNode: 0,
+        offSetY: 0,
         path: 'testimonials'
     },
     {
         id: 3,
         sectionName: 'Emplacement',
-        sectionElementNode: 0,
+        offSetY: 0,
         path: 'location'
     }
 ]
@@ -41,7 +41,7 @@ const reducer = (state, action) => {
         {       
             const newState = state.map((section) => {
                 if(section.path.toLowerCase().includes('menu')) {
-                    const sectionEdited = {...section, sectionElementNode: action.payload}
+                    const sectionEdited = {...section, offSetY: action.payload}
                     return sectionEdited
                 }
                 return section
@@ -52,7 +52,7 @@ const reducer = (state, action) => {
         {
             const newState = state.map((section) => {
                 if(section.path.toLowerCase().includes('testimonials')) {
-                    const sectionEdited = {...section, sectionElementNode: action.payload}
+                    const sectionEdited = {...section, offSetY: action.payload}
                     return sectionEdited
                 }
                 return section
@@ -63,7 +63,7 @@ const reducer = (state, action) => {
         {
             const newState = state.map((section) => {
                 if(section.path.toLowerCase().includes('location')) {
-                    const sectionEdited = {...section, sectionElementNode: action.payload}
+                    const sectionEdited = {...section, offSetY: action.payload}
                     return sectionEdited
                 }
                 return section
@@ -74,7 +74,7 @@ const reducer = (state, action) => {
         {
             const newState = state.map((section) => {
                 if(section.path.toLowerCase().includes('about')) {
-                    const sectionEdited = {...section, sectionElementNode: action.payload}
+                    const sectionEdited = {...section, offSetY: action.payload}
                     return sectionEdited
                 }
                 return section

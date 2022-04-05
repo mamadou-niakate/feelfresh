@@ -5,6 +5,7 @@ import { LocationDetails } from './LocationDetails';
 import SectionTitle from '../shared/SectionTitle';
 import SectionSubtitle from '../shared/SectionSubtitle';
 import { useAppContext } from '../store/AppContext';
+import { getOffsetY } from '../utils/getOffset';
 
 const useStyles = makeStyles({
     root: {
@@ -31,7 +32,7 @@ const Location = () => {
     const  locationRef = useRef(null)
 
     useEffect(() => {
-        dispatch({ type: 'SET_LOCATION_POSITION', payload: locationRef.current})
+        dispatch({ type: 'SET_LOCATION_POSITION', payload: getOffsetY(locationRef.current)})
     },[dispatch])
 
     return (

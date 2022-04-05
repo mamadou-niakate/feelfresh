@@ -22,7 +22,7 @@ const useStyles = makeStyles(({
 
 // const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
-const ResponsiveAppBar = () => {
+const ResponsiveAppBar = ({ appOffsetY }) => {
   const classes = useStyles();
   const { state:pages } = useAppContext()
   const [activeLink, setActiveLink] = React.useState(0);
@@ -48,8 +48,8 @@ const ResponsiveAppBar = () => {
     setActiveLink(index);
   };
 
-  const scrollToSection = (sectionElementNode) => {
-    sectionElementNode.scrollIntoView({behavior: 'smooth', block: 'start', inline: "start"})
+  const scrollToSection = (offSetY) => {
+    window.scroll({ top:parseInt(offSetY), behavior:'smooth' })
   }
 
   return (
@@ -98,10 +98,10 @@ const ResponsiveAppBar = () => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map(({id, path, sectionName, sectionElementNode}) => (
+              {pages.map(({id, path, sectionName, offSetY}) => (
                 <MenuItem key={id} onClick={() => {
                     handleCloseNavMenu()
-                    scrollToSection(sectionElementNode)
+                    scrollToSection(offSetY)
                     handleActiveLink(path)
                   }}
                 >
@@ -129,11 +129,11 @@ const ResponsiveAppBar = () => {
             />
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map(({id, path, sectionName, sectionElementNode}) => (
+            {pages.map(({id, path, sectionName, offSetY}) => (
                 <Button 
                   key={id} 
                   onClick={() => {
-                    scrollToSection(sectionElementNode)
+                    scrollToSection(offSetY)
                     handleCloseNavMenu();
                     handleActiveLink(path)
                   }}
