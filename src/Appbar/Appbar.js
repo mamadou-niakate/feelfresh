@@ -49,8 +49,7 @@ const ResponsiveAppBar = ({ appOffsetY }) => {
   };
 
   const scrollToSection = (offSetY) => {
-    // window.scroll({ top:parseInt(offSetY), behavior:'smooth' })
-    window.scrollTo(0, offSetY);
+    window.scrollTo({ top:parseInt(offSetY), behavior:'smooth' })
   }
 
   return (
