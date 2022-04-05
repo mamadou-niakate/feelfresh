@@ -5,7 +5,7 @@ import { LocationDetails } from './LocationDetails';
 import SectionTitle from '../shared/SectionTitle';
 import SectionSubtitle from '../shared/SectionSubtitle';
 import { useAppContext } from '../store/AppContext';
-import { getOffsetY } from '../utils/getOffset';
+import { getAbsoluteOffsetY, getOffsetY } from '../utils/getOffset';
 
 const useStyles = makeStyles({
     root: {
@@ -26,13 +26,13 @@ const useStyles = makeStyles({
         width: '100%',
     }
 });
-const Location = () => {
+const Location = ({ ref }) => {
     const classes = useStyles();
     const { dispatch } = useAppContext()
     const  locationRef = useRef(null)
 
     useEffect(() => {
-        dispatch({ type: 'SET_LOCATION_POSITION', payload: getOffsetY(locationRef.current)})
+        dispatch({ type: 'SET_LOCATION_POSITION', payload: getAbsoluteOffsetY(locationRef.current)})
     },[dispatch])
 
     return (

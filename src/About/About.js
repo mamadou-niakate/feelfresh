@@ -4,7 +4,7 @@ import { makeStyles } from '@mui/styles';
 import { Box } from '@mui/material'
 import AboutInfo from './AboutInfo';
 import { useAppContext } from '../store/AppContext';
-import { getOffsetY } from '../utils/getOffset';
+import { getAbsoluteOffsetY, getOffsetY } from '../utils/getOffset';
 
 const useStyles = makeStyles({
    root: {
@@ -19,7 +19,7 @@ const About = () => {
     const  aboutRef = useRef(null)
 
     useEffect(() => {
-        dispatch({ type: 'SET_ABOUT_POSITION', payload: getOffsetY(aboutRef.current)})
+        dispatch({ type: 'SET_ABOUT_POSITION', payload: getAbsoluteOffsetY(aboutRef.current)})
     },[dispatch])
 
     return (

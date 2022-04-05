@@ -6,7 +6,7 @@ import FadeInSection from './MenuItem';
 import SectionTitle from '../shared/SectionTitle';
 import SectionSubtitle from '../shared/SectionSubtitle';
 import { useAppContext } from '../store/AppContext';
-import { getOffsetY } from '../utils/getOffset';
+import { getAbsoluteOffsetY, getOffsetY } from '../utils/getOffset';
 
 const useStyles = makeStyles({
    root: {
@@ -22,7 +22,7 @@ const Menu = () => {
     const  menuRef = useRef(null)
 
     useEffect(() => {
-        dispatch({ type: 'SET_MENU_POSITION', payload: getOffsetY(menuRef.current)})
+        dispatch({ type: 'SET_MENU_POSITION', payload: getAbsoluteOffsetY(menuRef.current)})
     },[dispatch])
     
     return (
