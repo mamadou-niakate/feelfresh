@@ -11,22 +11,27 @@ const AppContext = createContext()
 const initialState = [
     {
         id: 0,
-        sectionName: 'À Propos',
-        offsetTop: 0,
+        sectionName: 'A Propos',
+        sectionElementNode: 0,
+        path: 'about'
     },
     {
         id:1,
-        sectionName: 'menu',
-        offsetTop: 0,
+        sectionName: 'Nos Recettes',
+        sectionElementNode: 0,
+        path: 'menu'
     },
     {
         id: 2,
-        sectionName: 'location',
-        offsetTop: 0,
+        sectionName: 'Témoignages',
+        sectionElementNode: 0,
+        path: 'testimonials'
     },
     {
         id: 3,
-        sectionName: 'testimonials',
+        sectionName: 'Emplacement',
+        sectionElementNode: 0,
+        path: 'location'
     }
 ]
 
@@ -35,8 +40,8 @@ const reducer = (state, action) => {
         case SET_MENU_POSITION :
         {       
             const newState = state.map((section) => {
-                if(section.sectionName.toLowerCase().includes('menu')) {
-                    const sectionEdited = {...section, offsetTop: action.payload}
+                if(section.path.toLowerCase().includes('menu')) {
+                    const sectionEdited = {...section, sectionElementNode: action.payload}
                     return sectionEdited
                 }
                 return section
@@ -46,8 +51,8 @@ const reducer = (state, action) => {
         case SET_TESTIMONIALS_POSITION :
         {
             const newState = state.map((section) => {
-                if(section.sectionName.toLowerCase().includes('testimonials')) {
-                    const sectionEdited = {...section, offsetTop: action.payload}
+                if(section.path.toLowerCase().includes('testimonials')) {
+                    const sectionEdited = {...section, sectionElementNode: action.payload}
                     return sectionEdited
                 }
                 return section
@@ -57,8 +62,8 @@ const reducer = (state, action) => {
         case SET_LOCATION_POSITION :
         {
             const newState = state.map((section) => {
-                if(section.sectionName.toLowerCase().includes('location')) {
-                    const sectionEdited = {...section, offsetTop: action.payload}
+                if(section.path.toLowerCase().includes('location')) {
+                    const sectionEdited = {...section, sectionElementNode: action.payload}
                     return sectionEdited
                 }
                 return section
@@ -68,8 +73,8 @@ const reducer = (state, action) => {
         case SET_ABOUT_POSITION :
         {
             const newState = state.map((section) => {
-                if(section.sectionName.toLowerCase().includes('about')) {
-                    const sectionEdited = {...section, offsetTop: action.payload}
+                if(section.path.toLowerCase().includes('about')) {
+                    const sectionEdited = {...section, sectionElementNode: action.payload}
                     return sectionEdited
                 }
                 return section

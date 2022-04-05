@@ -63,10 +63,7 @@ export const Testimonial = () => {
     const  testimonialRef = useRef(null)
 
     useEffect(() => {
-        const bodyRect = document.body.getBoundingClientRect();
-        const { top } = testimonialRef.current.getBoundingClientRect()
-        const offset   = top - bodyRect.top;
-        dispatch({ type: 'SET_TESTIMONIALS_POSITION', payload: offset})
+        dispatch({ type: 'SET_TESTIMONIALS_POSITION', payload: testimonialRef.current})
     },[dispatch])
 
     useEffect(() => {

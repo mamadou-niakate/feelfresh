@@ -49,7 +49,8 @@ const ResponsiveAppBar = () => {
   };
 
   const scrollToSection = (sectionPosition) => {
-    window.scrollTo({top: Math.ceil(sectionPosition), behavior:'smooth'})
+    sectionPosition.scrollIntoView({behavior: 'smooth', block: 'start'})
+    // ({top: Math.ceil(sectionPosition), behavior:'smooth'})
   }
 
   return (
@@ -98,15 +99,15 @@ const ResponsiveAppBar = () => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map(({id, sectionName, offsetTop}) => (
+              {pages.map(({id, path, sectionName, sectionElementNode}) => (
                 <MenuItem key={id} onClick={() => {
                     handleCloseNavMenu()
-                    scrollToSection(offsetTop)
-                    handleActiveLink(sectionName)
+                    scrollToSection(sectionElementNode)
+                    handleActiveLink(path)
                   }}
                 >
                   <Typography 
-                    className={activeLink === sectionName ? classes.active : ''} 
+                    className={activeLink === path ? classes.active : ''} 
                     textAlign="center"
                     color={'GrayText'}
                   >
@@ -129,19 +130,19 @@ const ResponsiveAppBar = () => {
             />
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map(({id, sectionName, offsetTop}) => (
+            {pages.map(({id, path, sectionName, sectionElementNode}) => (
                 <Button 
                   key={id} 
                   onClick={() => {
-                    scrollToSection(offsetTop)
+                    scrollToSection(sectionElementNode)
                     handleCloseNavMenu();
-                    handleActiveLink(sectionName)
+                    handleActiveLink(path)
                   }}
                   style={{ textTransform: 'none' }} 
                   sx={{ color: 'GrayText', display: 'block', textDecoration: 'none', fontWeight: 'bold' }}
-                  className={activeLink === sectionName ? classes.active : ''}
+                  className={activeLink === path ? classes.active : ''}
                 >
-                  {sectionName}
+                  { sectionName }
                 </Button>
             ))}
           </Box>

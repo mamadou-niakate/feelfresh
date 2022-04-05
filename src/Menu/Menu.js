@@ -21,10 +21,7 @@ const Menu = () => {
     const  menuRef = useRef(null)
 
     useEffect(() => {
-        const bodyRect = document.body.getBoundingClientRect();
-        const { top } = menuRef.current.getBoundingClientRect()
-        const offset   = top - bodyRect.top;
-        dispatch({ type: 'SET_MENU_POSITION', payload: offset})
+        dispatch({ type: 'SET_MENU_POSITION', payload: menuRef.current})
     },[dispatch])
     
     return (
