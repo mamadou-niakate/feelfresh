@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import { makeStyles } from '@mui/styles';
 import { Box, Grid } from '@mui/material';
-// import LocationMap from './LocationMap';
 import { LocationDetails } from './LocationDetails';
 import SectionTitle from '../shared/SectionTitle';
 import SectionSubtitle from '../shared/SectionSubtitle';
@@ -45,7 +44,6 @@ const Location = () => {
                 <SectionSubtitle subTitle={'Nous sommes à Bamako dans le quartier chic de l\'ACI 2000'} />
             </div>
             <Grid container justifyContent={'space-evenly'} alignItems='center' className={classes.location}>
-                {/* <LocationMap /> */}
                 <Grid item xs={12} sm={5}>
                     <LocationDetails />
                 </Grid>
