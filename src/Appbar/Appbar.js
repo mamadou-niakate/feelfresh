@@ -11,8 +11,8 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 // import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import { HashLink as Link } from 'react-router-hash-link';
 import { makeStyles } from '@mui/styles'
+import { useAppContext } from '../store/AppContext';
 
 const useStyles = makeStyles(({
   active: {
@@ -20,38 +20,11 @@ const useStyles = makeStyles(({
   },
 }));
 
-
-const pages = [
-  {
-    id: 0,
-    pathName: 'About',
-    hash: '#about',
-    title: 'À Propos',
-  },
-  {
-    id:1,
-    pathName: 'Menu',
-    hash: '#menu',
-    title: 'Menu',
-  },
-  {
-    id: 2,
-    pathName: 'location',
-    hash: '#location',
-    title: 'Emplacement',
-  },
-  {
-    id: 3,
-    pathName: 'testimonials',
-    hash: '#testimonials',
-    title: 'Témoignages',
-  }
-];
-
 // const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const ResponsiveAppBar = () => {
   const classes = useStyles();
+  const { state:pages } = useAppContext()
   const [activeLink, setActiveLink] = React.useState(0);
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   // const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -74,6 +47,10 @@ const ResponsiveAppBar = () => {
   const handleActiveLink = (index) => {
     setActiveLink(index);
   };
+
+  const scrollToSection = (sectionPosition) => {
+    window.scrollTo({top: Math.ceil(sectionPosition), behavior:'smooth'})
+  }
 
   return (
     <AppBar position="fixed" color='transparent' elevation={0} style={{ backgroundColor: '#FFF7E8'}}>
@@ -121,16 +98,20 @@ const ResponsiveAppBar = () => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map(({id, pathName,hash,title}) => (
-                <MenuItem key={id} onClick={handleCloseNavMenu}>
-                  <Link 
-                    onClick={() => handleActiveLink(title)}
-                    className={activeLink === title ? classes.active : ''}
-                    to={`${pathName}${hash}`} 
-                    style={{ my: 2, color: 'GrayText', display: 'block', textDecoration: 'none' }}
+              {pages.map(({id, title, offsetTop}) => (
+                <MenuItem key={id} onClick={() => {
+                    handleCloseNavMenu()
+                    scrollToSection(offsetTop)
+                    handleActiveLink(title)
+                  }}
+                >
+                  <Typography 
+                    className={activeLink === title ? classes.active : ''} 
+                    textAlign="center"
+                    color={'GrayText'}
                   >
-                    <Typography textAlign="center" color={'GrayText'}>{ title }</Typography>
-                  </Link>
+                    { title }
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -148,22 +129,20 @@ const ResponsiveAppBar = () => {
             />
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map(({id, pathName,hash,title}) => (
-              <Link 
-                onClick={() => handleActiveLink(title)}
-                className={activeLink === title ? classes.active : ''}
-                to={`${pathName}${hash}`} 
-                style={{ my: 2, textDecoration: 'none' }}
-              >
+            {pages.map(({id, title, offsetTop}) => (
                 <Button 
                   key={id} 
-                  onClick={handleCloseNavMenu} 
+                  onClick={() => {
+                    scrollToSection(offsetTop)
+                    handleCloseNavMenu();
+                    handleActiveLink(title)
+                  }}
                   style={{ textTransform: 'none' }} 
                   sx={{ color: 'GrayText', display: 'block', textDecoration: 'none', fontWeight: 'bold' }}
+                  className={activeLink === title ? classes.active : ''}
                 >
                   {title}
                 </Button>
-              </Link>
             ))}
           </Box>
 

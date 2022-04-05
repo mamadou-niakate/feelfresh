@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Box, Grid, Paper, Toolbar, Typography } from '@mui/material'
 import { testimonials } from '../data'
 import Review from './Review'
 import { makeStyles } from '@mui/styles';
 import SectionTitle from '../shared/SectionTitle';
 import SectionSubtitle from '../shared/SectionSubtitle';
+import { useAppContext } from '../store/AppContext';
 
 const useStyles = makeStyles({
    testimonial: {
@@ -58,13 +59,21 @@ export const Testimonial = () => {
         setSelectedAuthor(review.author);
     }
 
-    React.useEffect(() => {
+    const { dispatch } = useAppContext()
+    const  testimonialRef = useRef(null)
+
+    useEffect(() => {
+        const { top } = testimonialRef.current.getBoundingClientRect()
+        dispatch({ type: 'SET_TESTIMONIALS_POSITION', payload:top + window.scrollY})
+    },[dispatch])
+
+    useEffect(() => {
         setReview(testimonials[0]);
         setSelectedAuthor(testimonials[0].author);
     }, []);
 
     return (
-        <Grid container justifyContent={'center'} alignItems='center' wrap='wrap' className={classes.testimonial} id='testimonials'>
+        <Grid ref={testimonialRef} container justifyContent={'center'} alignItems='center' wrap='wrap' className={classes.testimonial}>
             <Grid item xs={12} lg={6} md={6}>
                 <SectionTitle title={'Témoignages'} />
                 <SectionSubtitle subTitle={'Nos clients nous font confiance pourquoi pas vous aussi !'} />

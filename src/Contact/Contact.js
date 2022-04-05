@@ -14,7 +14,7 @@ const useStyles = makeStyles({
 export const Contact = () => {
   const classes = useStyles();
   return (
-    <Box className={classes.root} id='contact'>
+    <Box className={classes.root}>
       <SectionTitle title={'Contact'} />
       <SectionSubtitle subTitle={'N\'hésitez pas à nous contacter'} />
     </Box>

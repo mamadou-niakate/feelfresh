@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { makeStyles } from '@mui/styles';
 import { Box, Container, Grid } from '@mui/material';
 import { data } from '../data';
-import { menus } from '../jsonfile';
 import FadeInSection from './MenuItem';
 import SectionTitle from '../shared/SectionTitle';
 import SectionSubtitle from '../shared/SectionSubtitle';
+import { useAppContext } from '../store/AppContext';
 
 const useStyles = makeStyles({
    root: {
@@ -17,9 +17,16 @@ const useStyles = makeStyles({
 
 const Menu = () => {
     const classes = useStyles();
-    console.log(menus);
+    const { dispatch } = useAppContext()
+    const  menuRef = useRef(null)
+
+    useEffect(() => {
+        const { top } = menuRef.current.getBoundingClientRect()
+        dispatch({ type: 'SET_MENU_POSITION', payload:top + window.scrollY})
+    },[dispatch])
+    
     return (
-        <Box className={classes.root} id='menu'>
+        <Box className={classes.root} ref={menuRef}>
             <SectionTitle title={'Nos Menus'} />
             <SectionSubtitle subTitle={'Venez tester la fraicheur de nos sucréries'} />
             <Container>

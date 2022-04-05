@@ -7,18 +7,21 @@ import Location from './Location/Location';
 import Menu from './Menu/Menu';
 import { Testimonial } from './Testimanial/Testimonial';
 import ScrollTop from './shared/ScrollTop/';
+import { ContextProvider } from './store/AppContext';
 
 function App() {
   return (
-    <div className="App">
-      <About />
-      <Figure />
-      <Menu />
-      <Testimonial />
-      <Location />
-      <Footer />
-      <ScrollTop />
-    </div>
+    <ContextProvider>
+      <div className="App">
+        <About />
+        <Figure />
+        <Menu />
+        <Testimonial />
+        <Location />
+        <Footer />
+        <ScrollTop />
+      </div>
+    </ContextProvider>
   );
 }
 

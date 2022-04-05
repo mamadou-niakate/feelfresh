@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { makeStyles } from '@mui/styles';
 import { Box, Grid } from '@mui/material';
 // import LocationMap from './LocationMap';
 import { LocationDetails } from './LocationDetails';
 import SectionTitle from '../shared/SectionTitle';
 import SectionSubtitle from '../shared/SectionSubtitle';
+import { useAppContext } from '../store/AppContext';
 
 const useStyles = makeStyles({
     root: {
@@ -27,8 +28,16 @@ const useStyles = makeStyles({
 });
 const Location = () => {
     const classes = useStyles();
+    const { dispatch } = useAppContext()
+    const  locationRef = useRef(null)
+
+    useEffect(() => {
+        const { top } = locationRef.current.getBoundingClientRect()
+        dispatch({ type: 'SET_LOCATION_POSITION', payload:top + window.scrollY})
+    },[dispatch])
+
     return (
-        <Box className={classes.root} id='location'>
+        <Box ref={locationRef} className={classes.root}>
             <div className={classes.locationTitleContainer}>
                 <SectionTitle title={'Emplacement'} />
                 <SectionSubtitle subTitle={'Nous sommes à Bamako dans le quartier chic de l\'ACI 2000'} />
