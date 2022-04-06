@@ -1,5 +1,4 @@
 import React from 'react'
-import Header from '../Appbar/Appbar'
 import { makeStyles } from '@mui/styles';
 import { Box } from '@mui/material'
 import AboutInfo from './AboutInfo';
@@ -11,11 +10,11 @@ const useStyles = makeStyles({
     }
 });
 
-const About = React.forwardRef((props, ref) => {
+const About = React.forwardRef(() => {
     const classes = useStyles();
+    
     return (
-        <Box ref={ref} {...props} className={classes.root}>
-            <Header />
+        <Box className={classes.root} name='about'>
             <AboutInfo />
         </Box>
     ) 

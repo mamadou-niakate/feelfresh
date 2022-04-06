@@ -13,10 +13,10 @@ const useStyles = makeStyles({
     }
 });
 
-const Menu =  React.forwardRef((props, ref) => {
+const Menu =  React.forwardRef(() => {
     const classes = useStyles();    
     return (
-        <Box className={classes.root} ref={ref} {...props}>
+        <Box className={classes.root} name='menu'>
             <SectionTitle title={'Nos Menus'} />
             <SectionSubtitle subTitle={'Venez tester la fraicheur de nos sucréries'} />
             <Container>

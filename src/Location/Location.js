@@ -7,8 +7,6 @@ import SectionSubtitle from '../shared/SectionSubtitle';
 
 const useStyles = makeStyles({
     root: {
-        height: '100%',
-        width: '100%',
         backgroundColor: '#F2F2F2',
     },
    location: {
@@ -24,10 +22,10 @@ const useStyles = makeStyles({
         width: '100%',
     }
 });
-const Location =  React.forwardRef((props, ref) => {
+const Location =  React.forwardRef(() => {
     const classes = useStyles();
     return (
-        <Box ref={ref} className={classes.root} {...props}>
+        <Box className={classes.root} name='location'>
             <div className={classes.locationTitleContainer}>
                 <SectionTitle title={'Emplacement'} />
                 <SectionSubtitle subTitle={'Nous sommes à Bamako dans le quartier chic de l\'ACI 2000'} />

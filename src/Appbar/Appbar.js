@@ -7,12 +7,11 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-// import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-// import Tooltip from '@mui/material/Tooltip';
+import MuiButton from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import { makeStyles } from '@mui/styles'
 import { useAppContext } from '../store/AppContext';
+import { Link } from 'react-scroll'
 
 const useStyles = makeStyles(({
   active: {
@@ -20,37 +19,18 @@ const useStyles = makeStyles(({
   },
 }));
 
-// const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
-
-const ResponsiveAppBar = ({ appOffsetY }) => {
+const ResponsiveAppBar = () => {
   const classes = useStyles();
-  const { state:pages } = useAppContext()
-  const [activeLink, setActiveLink] = React.useState(0);
+  const { state:{ navLinks } } = useAppContext()
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  // const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  // const handleOpenUserMenu = (event) => {
-  //   setAnchorElUser(event.currentTarget);
-  // };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
-
-  // const handleCloseUserMenu = () => {
-  //   setAnchorElUser(null);
-  // };
-
-  const handleActiveLink = (index) => {
-    setActiveLink(index);
-  };
-
-  const scrollToSection = (offSetY) => {
-    window.scrollTo({ top:parseInt(offSetY), behavior:'smooth' })
-  }
 
   return (
     <AppBar position="fixed" color='transparent' elevation={0} style={{ backgroundColor: '#FFF7E8'}}>
@@ -98,20 +78,18 @@ const ResponsiveAppBar = ({ appOffsetY }) => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map(({id, path, sectionName, offSetY}) => (
-                <MenuItem key={id} onClick={() => {
-                    handleCloseNavMenu()
-                    scrollToSection(offSetY)
-                    handleActiveLink(path)
-                  }}
+              {navLinks.map(({id, path, sectionName}) => (
+                <MenuItem key={id} onClick={handleCloseNavMenu}
                 >
-                  <Typography 
-                    className={activeLink === path ? classes.active : ''} 
-                    textAlign="center"
-                    color={'GrayText'}
-                  >
-                    { sectionName }
-                  </Typography>
+                  <Link to={path} spy={true} smooth={true}>
+                    <Typography 
+                      activeClass={classes.active}
+                      textAlign="center"
+                      color={'GrayText'}
+                    >
+                      { sectionName }
+                    </Typography>
+                  </Link>
                 </MenuItem>
               ))}
             </Menu>
@@ -129,57 +107,26 @@ const ResponsiveAppBar = ({ appOffsetY }) => {
             />
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map(({id, path, sectionName, offSetY}) => (
-                <Button 
+            {navLinks.map(({id, path, sectionName}) => (
+                <MuiButton 
                   key={id} 
-                  onClick={() => {
-                    scrollToSection(offSetY)
-                    handleCloseNavMenu();
-                    handleActiveLink(path)
-                  }}
+                  onClick={handleCloseNavMenu}
                   style={{ textTransform: 'none' }} 
                   sx={{ color: 'GrayText', display: 'block', textDecoration: 'none', fontWeight: 'bold' }}
                 >
-                  <Typography 
-                    className={activeLink === path ? classes.active : ''} 
-                    textAlign="center"
-                    color={'GrayText'}
-                  >
-                    { sectionName }
-                  </Typography>
-                </Button>
+                  <Link to={path} spy={true} smooth={true}>
+                    <Typography 
+                      activeClass={classes.active}
+                      textAlign="center"
+                      color={'GrayText'}
+                    >
+                      { sectionName }
+                    </Typography>
+                  </Link>
+                  <Typography />
+                </MuiButton>
             ))}
           </Box>
-
-          {/* <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box> */}
         </Toolbar>
       </Container>
     </AppBar>

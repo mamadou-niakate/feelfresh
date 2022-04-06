@@ -10,7 +10,6 @@ const useStyles = makeStyles({
    testimonial: {
         margin: 0,
         padding:0,
-        height: 500,
         backgroundColor: '#FFF',
     },
     authorDiv: {
@@ -44,7 +43,7 @@ const useStyles = makeStyles({
 });
 
 
-export const Testimonial =  React.forwardRef((props, ref) => {
+export const Testimonial =  React.forwardRef(() => {
     const classes = useStyles();
     const [review, setReview] = React.useState('');
     const [selectedAuthor, setSelectedAuthor] = React.useState('');
@@ -60,7 +59,14 @@ export const Testimonial =  React.forwardRef((props, ref) => {
     }, []);
 
     return (
-        <Grid ref={ref} {...props} container justifyContent={'center'} alignItems='center' wrap='wrap' className={classes.testimonial}>
+        <Grid
+            container 
+            justifyContent={'center'} 
+            alignItems='center' 
+            wrap='wrap' 
+            className={classes.testimonial} 
+            name='testimonials'
+        >
             <Grid item xs={12} lg={6} md={6}>
                 <SectionTitle title={'Témoignages'} />
                 <SectionSubtitle subTitle={'Nos clients nous font confiance pourquoi pas vous aussi !'} />
