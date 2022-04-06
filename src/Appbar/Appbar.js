@@ -79,11 +79,11 @@ const ResponsiveAppBar = () => {
               }}
             >
               {navLinks.map(({id, path, sectionName}) => (
-                <MenuItem key={id} onClick={handleCloseNavMenu}
+                <MenuItem key={id}
                 >
-                  <Link to={path} spy={true} smooth={true}>
+                  <Link to={path} spy={true} smooth={true}  onClick={handleCloseNavMenu}>
                     <Typography 
-                      activeClass={classes.active}
+                      activeClass='active'
                       textAlign="center"
                       color={'GrayText'}
                     >
@@ -110,13 +110,13 @@ const ResponsiveAppBar = () => {
             {navLinks.map(({id, path, sectionName}) => (
                 <MuiButton 
                   key={id} 
-                  onClick={handleCloseNavMenu}
                   style={{ textTransform: 'none' }} 
                   sx={{ color: 'GrayText', display: 'block', textDecoration: 'none', fontWeight: 'bold' }}
                 >
-                  <Link to={path} spy={true} smooth={true}>
+                  <Link to={path} spy={true} smooth={true} 
+                  onClick={handleCloseNavMenu}>
                     <Typography 
-                      activeClass={classes.active}
+                      activeClass='active'
                       textAlign="center"
                       color={'GrayText'}
                     >
