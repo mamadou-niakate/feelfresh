@@ -2,6 +2,7 @@ import React from 'react'
 import { makeStyles } from '@mui/styles';
 import { Typography, Button, Grid } from '@mui/material';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import { Link } from 'react-scroll';
 
 const useStyles = makeStyles({
    root: {
@@ -46,21 +47,25 @@ const AboutInfo = () => {
                             creating web applications.
                         </Typography>
                     </div>
-                    <Button 
-                        variant='contained' 
-                        className={classes.moreBtn}
-                        elevation={2}
-                        style={{ 
-                            backgroundColor: '#2EB086',
-                            color:'#fff', 
-                            borderRadius: 20, 
-                            height: 50, 
-                            margin: 20,
-                            textTransform: 'none'
-                        }}
-                    >
-                            <LocationOnIcon/> Notre emplacement
-                    </Button>
+                    <Link to='location'  spy={true} smooth={true}>
+                        <Button 
+                            variant='contained' 
+                            className={classes.moreBtn}
+                            elevation={2}
+                            style={{ 
+                                backgroundColor: '#2EB086',
+                                color:'#fff', 
+                                borderRadius: 20, 
+                                height: 50, 
+                                margin: 20,
+                                textTransform: 'none'
+                            }}
+                        >
+                            
+                                <LocationOnIcon/> Notre emplacement
+                            
+                        </Button>
+                    </Link>
                 </div>
             </Grid>
             <Grid item xs={12} md={6}>
