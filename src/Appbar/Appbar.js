@@ -113,10 +113,8 @@ const ResponsiveAppBar = () => {
                   style={{ textTransform: 'none' }} 
                   sx={{ color: 'GrayText', display: 'block', textDecoration: 'none', fontWeight: 'bold' }}
                 >
-                  <Link to={path} spy={true} smooth={true} 
-                  onClick={handleCloseNavMenu}>
+                  <Link to={path} spy={true} smooth={true} activeClass='active' onClick={handleCloseNavMenu} >
                     <Typography 
-                      activeClass='active'
                       textAlign="center"
                       color={'GrayText'}
                     >
