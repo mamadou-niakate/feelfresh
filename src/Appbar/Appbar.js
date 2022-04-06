@@ -78,7 +78,7 @@ const ResponsiveAppBar = () => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {navLinks.map(({id, path, sectionName}) => (
+              {navLinks?.map(({id, path, sectionName}) => (
                 <MenuItem key={id}
                 >
                   <Link to={path} spy={true} smooth={true}  onClick={handleCloseNavMenu}>
@@ -107,7 +107,7 @@ const ResponsiveAppBar = () => {
             />
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {navLinks.map(({id, path, sectionName}) => (
+            {navLinks?.map(({id, path, sectionName}) => (
                 <MuiButton 
                   key={id} 
                   style={{ textTransform: 'none' }} 

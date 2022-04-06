@@ -1,6 +1,10 @@
 
 import React, { createContext, useContext, useReducer } from 'react'
 
+const SET_MENUS = 'SET_MENUS';
+const SET_DATA_TO_DISPLAY = 'SET_DATA_TO_DISPLAY'
+const SET_INITIAL_DATA_TO_DISPLAY = 'SET_INITIAL_DATA_TO_DISPLAY';
+
 const AppContext = createContext()
 
 const initialState = {
@@ -29,10 +33,29 @@ const initialState = {
             offSetY: 0,
             path: 'location'
         }
-    ]
+    ],
+    menus: {},
+    dataToDisplay: []
 }
 const reducer = (state, action) => {
     switch(action.type) {
+        case SET_MENUS : {
+            return {...state, menus:action.payload}
+        }
+        case SET_DATA_TO_DISPLAY : {
+            const selectedFilterKeys = action.payload;
+            const dataToDisplay = Object.entries(state.menus).reduce((menu, [menuName, menuContents]) => {
+                const isKeySelected = selectedFilterKeys.find(key => key?.includes(menuName))
+                if(isKeySelected) {
+                    return [...menu, ...menuContents]
+                }
+                return [...menu]
+            },[])
+            return {...state, dataToDisplay}
+        }
+        case SET_INITIAL_DATA_TO_DISPLAY : {
+            return {...state, dataToDisplay:action.payload}
+        }
         default: return [...state];
     }
 }
