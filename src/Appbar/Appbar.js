@@ -9,18 +9,18 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import MuiButton from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import { makeStyles } from '@mui/styles'
+// import { makeStyles } from '@mui/styles'
 import { useAppContext } from '../store/AppContext';
 import { Link } from 'react-scroll'
 
-const useStyles = makeStyles(({
-  active: {
-    borderBottom: '2px solid #61AB43',
-  },
-}));
+// const useStyles = makeStyles(({
+//   active: {
+//     borderBottom: '2px solid #61AB43',
+//   },
+// }));
 
 const ResponsiveAppBar = () => {
-  const classes = useStyles();
+  // const classes = useStyles();
   const { state:{ navLinks } } = useAppContext()
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
