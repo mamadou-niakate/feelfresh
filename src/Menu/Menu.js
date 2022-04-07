@@ -8,6 +8,7 @@ import SectionTitle from '../shared/SectionTitle';
 import SectionSubtitle from '../shared/SectionSubtitle';
 import { useAppContext } from '../store/AppContext';
 import MenuFilter from './MenuFilter';
+import MenuPagination from './MenuPagination';
 
 const useStyles = makeStyles({
    root: {
@@ -26,10 +27,10 @@ const Menu =  React.forwardRef(() => {
     
     return (
         <Box className={classes.root} name='menu'>
-            <SectionTitle title={'Nos Menus'} />
-            <SectionSubtitle subTitle={'Venez tester la fraicheur de nos sucréries'} />
-            <MenuFilter />
             <Container>
+                <SectionTitle title={'Nos Menus'} />
+                <SectionSubtitle subTitle={'Venez tester la fraicheur de nos sucréries'} />
+                <MenuFilter />
                 <Grid container spacing={4}>
                     {dataToDisplay?.map((menuItem, index) => (
                     <Grid item key={index} xs={12} sm={6} md={4}>
@@ -37,6 +38,7 @@ const Menu =  React.forwardRef(() => {
                     </Grid>
                     ))}
                 </Grid>
+                <MenuPagination />
             </Container>
         </Box>
     )

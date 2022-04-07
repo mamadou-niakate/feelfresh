@@ -8,6 +8,9 @@ const MenuFilter = () => {
 
     const { state: {  menus }, dispatch } = useAppContext();
 
+    /**
+     * Add isFilterKeySelected property to each item and set it to false
+     */
     const getFilterKeys = useCallback(() => {
         const keys = Object.keys(menus);
         const keysSelectabled = keys.reduce((keys, key) => {
