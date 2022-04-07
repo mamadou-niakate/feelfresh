@@ -59,7 +59,7 @@ const Footer = () => {
         <div className={classes.root}>
             <Grid container justifyContent={'center'} alignItems='flex-start'>
                 <Grid item xs={12} md={4} style={{ display:'flex', flexDirection:'column'}}>
-                    <Typography variant='h4' className={classes.footerSectionTitle}>
+                    <Typography variant='h5' className={classes.footerSectionTitle}>
                         Suivez-nous sur les réseaux sociaux
                     </Typography>
                     <div className={classes.socialNetwork}>
@@ -90,7 +90,7 @@ const Footer = () => {
                     </div>
                 </Grid>
                 <Grid item xs={12} md={4} className={classes.infoUtil}>
-                    <Typography variant='h4' className={classes.footerSectionTitle}>
+                    <Typography variant='h5' className={classes.footerSectionTitle}>
                         Infos Utils
                     </Typography>
                     <Typography className={classes.text} component='h6' variant='h6'> Témoignages de nos clients  </Typography>
@@ -99,7 +99,7 @@ const Footer = () => {
                     <Typography className={classes.text} component='h6' variant='h6'> Contacter le développeur </Typography>
                 </Grid>
                 <Grid item xs={12} md={4}>
-                    <Typography variant='h4' className={classes.footerSectionTitle}>
+                    <Typography variant='h5' className={classes.footerSectionTitle}>
                         Où Nous Trouver  ?
                     </Typography>
                     <Typography className={classes.text} component='h6' variant='h6'> 

@@ -6,7 +6,6 @@ import Footer from './Footer/Footer';
 import Location from './Location/Location';
 import Menu from './Menu/Menu';
 import { Testimonial } from './Testimanial/Testimonial';
-import ScrollTop from './shared/ScrollTop/';
 import Header from './Appbar/Appbar'
 
 function App() {
@@ -19,7 +18,6 @@ function App() {
       <Testimonial/>
       <Location/>
       <Footer />
-      <ScrollTop />
     </div>
   )
 }
