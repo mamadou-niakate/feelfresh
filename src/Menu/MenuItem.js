@@ -31,15 +31,15 @@ export default function FadeInSection({ menuItem }) {
           transition: {
             delay: 0.1,
             duration: 0.2,
-            ease: 'easeInOut'
+            ease: 'easeIn'
           }
         },
         hidden: {
           opacity: 0,
-          y: -100,
+          y: -50,
           transition: {
             duration: 0.2,
-            ease: 'easeOut'
+            ease: 'easeIn'
           }
         }
       }}
@@ -55,8 +55,7 @@ export default function FadeInSection({ menuItem }) {
               {menuItem.name}
           </Typography>
           <Typography>
-              This is a media card. You can use this section to describe the
-              content.
+              { menuItem.composants?.join(',') }
           </Typography>
         </CardContent>
         {/* <CardActions>
