@@ -8,7 +8,7 @@ const useStyles = makeStyles({
    root: {
          display: 'flex',
          alignItems: 'center',
-        height: 500,
+        height: 300,
         margin: 'auto',
         backgroundColor: '#FFFFF',
         padding: 20,

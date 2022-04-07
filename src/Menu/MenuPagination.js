@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { Pagination, Stack, Grid } from '@mui/material';
 import { useAppContext } from '../store/AppContext';
 import { makeStyles } from '@mui/styles';
@@ -10,29 +10,31 @@ const useStyles = makeStyles({
      }
  });
 
+const nbItemsPerPage = 4;
 export default function MenuPagination() {
     const classes = useStyles();
-    const [nbItemsPerPage, setNbItemsPerPage] = useState(4);
     const [pages, setPages] = useState();
+    const [currentPage, setCurrentPage] = useState(1)
 
-    const { state:{ dataToDisplay, menus }, dispatch } = useAppContext();
+    const { state:{ dataToDisplay, dataToPaginate }, dispatch } = useAppContext();
     
     const handlePageChange = (_event, page) => {
-        setPageData(page)
+        setCurrentPage(page)
     }
 
-    const setPageData = (page) => {
-       const data =  dataToDisplay.slice((page -1) * nbItemsPerPage, page * nbItemsPerPage);
-       dispatch({type: 'SET_INITIAL_DATA_TO_DISPLAY', payload:data})
-    }
+    const setPageData = useCallback((page) => {
+       const newDataToDisplay =  dataToPaginate.slice((page - 1) * nbItemsPerPage, page * nbItemsPerPage);
+       dispatch({type: 'SET_INITIAL_DATA_TO_DISPLAY', payload:newDataToDisplay});
+    },[dataToPaginate,dispatch])
+    
 
     useEffect(() => {
-        const numberOfAllData = Object.entries(menus).reduce((items, [_key, values]) => {
-            return [...items,...values]
-        },[]);
-        console.log(numberOfAllData.length);
-        setPages(numberOfAllData?.length / nbItemsPerPage);
-    },[dataToDisplay])
+        setPageData(currentPage)
+    },[currentPage, setPageData])
+
+    useEffect(() => {
+        setPages(Math.ceil(dataToPaginate.length / nbItemsPerPage));        
+    },[dataToDisplay,dataToPaginate.length])
 
     return (
         <Grid container justifyContent='center'>
@@ -40,6 +42,7 @@ export default function MenuPagination() {
                 <Stack spacing={2} className={classes.root}>
                     <Pagination 
                         count={pages} 
+                        page={currentPage}
                         onChange={handlePageChange}
                     />
                 </Stack>

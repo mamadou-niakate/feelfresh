@@ -29,7 +29,7 @@ const MenuFilter = () => {
         })
         setFilterKeys(updatedFilterKeys);
         const selectedFilterKeys = updatedFilterKeys.map(ftk => ftk.isFilterKeySelected ? ftk.filterKey : undefined);
-        dispatch({type: 'SET_DATA_TO_DISPLAY', payload:selectedFilterKeys})
+        dispatch({type: 'SET_DATA_TO_DISPLAY', payload:selectedFilterKeys});
         setDisplayAll(false)
     }
 
@@ -41,6 +41,7 @@ const MenuFilter = () => {
             return [...allMenus, ...values];
         },[]);
         dispatch({type: 'SET_INITIAL_DATA_TO_DISPLAY', payload:initialStateData})
+        dispatch({type: 'DATA_TO_PAGINATE', payload:initialStateData})
     },[dispatch, menus, getFilterKeys])
 
     useEffect(() => {

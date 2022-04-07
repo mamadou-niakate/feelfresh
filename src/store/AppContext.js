@@ -4,6 +4,7 @@ import React, { createContext, useContext, useReducer } from 'react'
 const SET_MENUS = 'SET_MENUS';
 const SET_DATA_TO_DISPLAY = 'SET_DATA_TO_DISPLAY'
 const SET_INITIAL_DATA_TO_DISPLAY = 'SET_INITIAL_DATA_TO_DISPLAY';
+const DATA_TO_PAGINATE = 'DATA_TO_PAGINATE';
 
 const AppContext = createContext()
 
@@ -35,7 +36,9 @@ const initialState = {
         }
     ],
     menus: {},
-    dataToDisplay: []
+    dataToDisplay: [],
+    dataToDisplayLength:0,
+    dataToPaginate: []
 }
 const reducer = (state, action) => {
     switch(action.type) {
@@ -51,12 +54,15 @@ const reducer = (state, action) => {
                 }
                 return [...menu]
             },[])
-            return {...state, dataToDisplay}
+            return {...state, dataToDisplay, dataToPaginate:dataToDisplay}
         }
         case SET_INITIAL_DATA_TO_DISPLAY : {
             return {...state, dataToDisplay:action.payload}
         }
-        default: return [...state];
+        case DATA_TO_PAGINATE : {
+            return {...state, dataToPaginate:action.payload}
+        }
+        default: return {...state};
     }
 }
 
