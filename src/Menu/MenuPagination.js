@@ -10,7 +10,7 @@ const useStyles = makeStyles({
      }
  });
 
-const nbItemsPerPage = 4;
+const nbItemsPerPage = 6;
 export default function MenuPagination() {
     const classes = useStyles();
     const [pages, setPages] = useState();

@@ -3,7 +3,7 @@ import React from 'react'
 
 const SectionSubtitle = ({ subTitle }) => {
   return (
-    <Typography variant='h6' gutterBottom sx={{ color: '#686D76', marginBottom: 5 }}>
+    <Typography variant='h6' gutterBottom sx={{ color: '#686D76', marginBottom: 3 }}>
         {subTitle}
     </Typography>
   )

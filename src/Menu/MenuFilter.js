@@ -31,6 +31,12 @@ const MenuFilter = () => {
         const selectedFilterKeys = updatedFilterKeys.map(ftk => ftk.isFilterKeySelected ? ftk.filterKey : undefined);
         dispatch({type: 'SET_DATA_TO_DISPLAY', payload:selectedFilterKeys});
         setDisplayAll(false)
+
+        // check 'Tous' checkbox in case nothing is checked
+        const isNothingChecked = updatedFilterKeys.find(key => key.isFilterKeySelected);
+        if(!isNothingChecked) {
+            handleAllInitialDataToDisplay();
+        }
     }
 
     const handleAllInitialDataToDisplay = useCallback(() => {

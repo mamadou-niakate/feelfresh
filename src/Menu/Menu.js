@@ -12,7 +12,6 @@ import MenuPagination from './MenuPagination';
 
 const useStyles = makeStyles({
    root: {
-        padding:40,
         backgroundColor: '#FFF7E8',
     }
 });
