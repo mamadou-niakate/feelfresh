@@ -32,8 +32,13 @@ export default function MenuPagination() {
         setPageData(currentPage)
     },[currentPage, setPageData])
 
+    // only render when change of dataToPaginate
     useEffect(() => {
-        setPages(Math.ceil(dataToPaginate.length / nbItemsPerPage));        
+        setCurrentPage(1)
+    },[dataToPaginate])
+
+    useEffect(() => {
+        setPages(Math.ceil(dataToPaginate.length / nbItemsPerPage)); 
     },[dataToDisplay,dataToPaginate.length])
 
     return (
