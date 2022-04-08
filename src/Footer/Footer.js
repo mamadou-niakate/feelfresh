@@ -2,7 +2,9 @@ import React from 'react'
 import { Grid } from '@mui/material'
 import { makeStyles } from '@mui/styles';
 import { Typography } from '@mui/material'
+import MuiLink from '@mui/material/Link'
 import { FaSnapchat, FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
+import { Link } from 'react-scroll';
 const useStyles = makeStyles({
    root: {
         // display: 'flex',
@@ -32,24 +34,31 @@ const useStyles = makeStyles({
     },
     link: {
         textDecoration: 'none',
-        color: '#fff', 
+        color: '#FFF7E8', 
         textAlign:'left',
     },
     text: {
-        color: '#fff', 
+        color: '#FFF7E8', 
         textAlign:'left',
         wordBreak: 'break-all',
     },
     footerSectionTitle: {
-        color: '#fff',
+        color: '#FFF7E8',
         fontWeight: 'bold',
         textAlign: 'left',
         margin: '20px 0 20px 0 !important',
     },
     socialNetworkIcon: {
-        color: '#fff',
+        color: '#FFF7E8',
         fontSize: '2rem',
         padding: '10px 10px 10px 0px ',
+    },
+    mainLink: {
+        cursor:'pointer'
+    },
+    devInfo: {
+        color: '#FFF7E8',
+        textDecoration: 'none'
     }
 });
 
@@ -93,21 +102,34 @@ const Footer = () => {
                     <Typography variant='h5' className={classes.footerSectionTitle}>
                         Infos Utils
                     </Typography>
-                    <Typography className={classes.text} component='h6' variant='h6'> Témoignages de nos clients  </Typography>
-                    <Typography className={classes.text} component='h6' variant='h6'>  A Propos de nous </Typography>
-                    <Typography className={classes.text} component='h6' variant='h6'> Nos Plats </Typography>
-                    <Typography className={classes.text} component='h6' variant='h6'> Contacter le développeur </Typography>
+                    <Link to='testimonial' smooth={true} className={classes.mainLink}>
+                        <Typography className={classes.text} component='h6' variant='h6'> Témoignages de nos clients  </Typography>
+                    </Link>
+                    <Link to='about' smooth={true} className={classes.mainLink}>
+                        <Typography className={classes.text} component='h6' variant='h6'>  A Propos de nous </Typography>
+                    </Link>
+                    <Link to='menu' smooth={true} className={classes.mainLink}>
+                        <Typography className={classes.text} component='h6' variant='h6'> Nos Plats </Typography>
+                    </Link>
+                    <Typography className={classes.text} component='h6' variant='h6'> 
+                        <MuiLink href='mailto:mamadouniakate10@yahoo.fr' className={classes.devInfo}>
+                            Contacter le développeur
+                        </MuiLink>
+                    </Typography>
                 </Grid>
                 <Grid item xs={12} md={4}>
                     <Typography variant='h5' className={classes.footerSectionTitle}>
                         Où Nous Trouver  ?
                     </Typography>
                     <Typography className={classes.text} component='h6' variant='h6'> 
-                        <strong>Adresse : </strong>  
-                        <span>Rue 413 Entre Le Palais Des Sports Et La Place Can Proche De Guaduman </span>
+                        <strong>Téléphone : </strong> +223 70 03 13 13
                     </Typography>
                     <Typography className={classes.text} component='h6' variant='h6'> 
-                        <strong>Horraire : </strong>  <br/>
+                        <strong>Adresse : </strong> <br/>
+                        <span>Rue 413, entre le Palais des Sports et la Place Can Proche de Guaduman </span>
+                    </Typography>
+                    <Typography className={classes.text} component='h6' variant='h6'> 
+                        <strong>Horaires d'ouverture : </strong>  <br/>
                         Lundi - Vendredi : 9:00 - 18:00 <br/>
                         Samedi : 9:00 - 14:00 <br/>
                         Dimanche : Fermé
