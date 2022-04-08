@@ -1,8 +1,19 @@
 import { Box, Checkbox, FormControlLabel, FormGroup, Grid, Typography } from '@mui/material';
 import React, { useCallback, useEffect, useState } from 'react'
 import { useAppContext } from '../store/AppContext'
+// import { makeStyles } from '@mui/styles';
+// import { RiCheckboxBlankCircleFill, RiCheckboxCircleFill } from 'react-icons/ri';
+// import { BsFillCheckCircleFill } from 'react-icons/bs';
+
+// const useStyles = makeStyles({
+//     checkBox: {
+//         fonSize: '11.5rem',
+//         color: '##686D76',
+//     }
+// });
 
 const MenuFilter = () => {
+    // const classes = useStyles();
     const [filterKeys, setFilterKeys] = useState([])
     const [displayAll, setDisplayAll] = useState(true)
 
@@ -65,7 +76,8 @@ const MenuFilter = () => {
                                 onChange={handleAllInitialDataToDisplay} 
                                 name={'Tous'}
                                 color='success'
-                                
+                                // checkedIcon={<BsFillCheckCircleFill/>}
+                                // icon={<RiCheckboxBlankCircleFill/>}
                             /> 
                         }
                         label={<Typography style={{ textTransform: 'capitalize'}}> Tous </Typography>}
@@ -81,7 +93,9 @@ const MenuFilter = () => {
                                             onChange={() => handleFilterKeysCheck(filterKey)} 
                                             name={filterKey}
                                             color='success'
-                                            
+                                            // checkedIcon={<BsFillCheckCircleFill />}
+                                            // icon={<RiCheckboxBlankCircleFill className={classes.checkBox}/>}
+                                        
                                         /> 
                                     }
                                     label={<Typography style={{ textTransform: 'capitalize'}}>{filterKey}</Typography>}
