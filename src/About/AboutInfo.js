@@ -3,6 +3,7 @@ import { makeStyles } from '@mui/styles';
 import { Typography, Button, Grid } from '@mui/material';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import { Link } from 'react-scroll';
+import { restaurant } from '../jsonfile';
 
 const useStyles = makeStyles({
    root: {
@@ -36,15 +37,14 @@ const AboutInfo = () => {
     const classes = useStyles();
     return (
         <Grid container justifyContent={'center'} alignItems='center' wrap='wrap' className={classes.root}>
-            <Grid item xs={12} md={4}>
+            <Grid item xs={12} md={4.5}>
                 <div>
                     <div className={classes.aboutText}>
                         <Typography component={'h1'} variant='h1' className={classes.aboutTitle}> 
                             <span style={{ color: 'orange'}}> Feel </span> <span>Fresh</span> 
                         </Typography>
-                        <Typography component={'h5'} variant='h5' style={{ textAlign: 'left', color: '#686D76'}}>
-                            We are a team of three developers who are passionate about
-                            creating web applications.
+                        <Typography component={'h6'} variant='h6' style={{ textAlign: 'left', color: '#686D76'}}>
+                            {restaurant.description}
                         </Typography>
                     </div>
                     <Link to='location'  spy={true} smooth={true}>
@@ -61,9 +61,7 @@ const AboutInfo = () => {
                                 textTransform: 'none'
                             }}
                         >
-                            
                                 <LocationOnIcon/> Notre emplacement
-                            
                         </Button>
                     </Link>
                 </div>

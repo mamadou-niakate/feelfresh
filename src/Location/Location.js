@@ -19,7 +19,7 @@ const useStyles = makeStyles({
         color: '#686D76',
     },
     map: {
-        width: '100%',
+        width: '90%',
     }
 });
 const Location =  React.forwardRef(() => {
@@ -35,7 +35,7 @@ const Location =  React.forwardRef(() => {
                     <LocationDetails />
                 </Grid>
                 <Grid item xs={12} sm={5}>
-                    <img src={'/images/map1.svg'} alt='location' className={classes.map}/>
+                    <img src={'/images/maliba.svg'} alt='location' className={classes.map}/>
                 </Grid>
             </Grid>
         </Box>

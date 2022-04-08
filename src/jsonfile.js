@@ -389,3 +389,47 @@ export const menus = {
     ]
 
 }
+
+// Restaurant information
+export const restaurant = {
+    name: "Feel Fresh",
+    phone: "0661234567",
+    email: "mamadouniakate10@yahoo.fr",
+    address: {
+        street: "Rue 413 Entre Le Palais Des Sports Et La Place Can Proche De Guaduman",
+        porte: "1",
+        city: "Bamako",
+        zipCode: "22330",
+        country: "Mali",
+        neighborhood: "ACI 2000"
+    },
+    cordinates: {
+        lat: "12.34",
+        lng: "56.78"
+    },
+    website: "http://feelfresh.netlify.app/",
+    schedule: ["Lundi - Vendredi: 11h - 23h", "Samedi: 11h - 23h", "Dimanche: 11h - 23h"],
+    slogan: "Venez déguster nos produits frais",
+    description: `Feel Fresh est un restaurant de la capitale malienne,
+                  situé dans le quartier de l'ACI 2000. Il propose
+                  des produits frais, des plats et boissons fraîches, des desserts 
+                  et des boissons à la carte. Il est également un lieu de dégustation
+                  en famille, entre amis et collègues`,
+    socialNetwork: [
+        {
+            name: "Facebook",
+            url: "https://www.facebook.com/feelfresh.restaurant/",
+            icon: "FaFacebook"
+        },
+        {
+            name: "Instagram",
+            url: "https://www.instagram.com/feelfresh.restaurant/",
+            icon: "FaInstagram"
+        },
+        {
+            name: "FaTwitter",
+            url: "https://twitter.com/feelfresh_resto",
+            icon: "FaTwitter"
+        }
+    ],
+}

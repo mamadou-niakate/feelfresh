@@ -3,8 +3,10 @@ import { Grid } from '@mui/material'
 import { makeStyles } from '@mui/styles';
 import { Typography } from '@mui/material'
 import MuiLink from '@mui/material/Link'
-import { FaSnapchat, FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
 import { Link } from 'react-scroll';
+import { restaurant } from '../jsonfile'
+import * as Icons from 'react-icons/fa';
+
 const useStyles = makeStyles({
    root: {
         // display: 'flex',
@@ -33,6 +35,8 @@ const useStyles = makeStyles({
         }
     },
     link: {
+        display:'flex',
+        alignItems:'center',
         textDecoration: 'none',
         color: '#FFF7E8', 
         textAlign:'left',
@@ -41,6 +45,7 @@ const useStyles = makeStyles({
         color: '#FFF7E8', 
         textAlign:'left',
         wordBreak: 'break-all',
+        margin: '0 0 10px 0',
     },
     footerSectionTitle: {
         color: '#FFF7E8',
@@ -50,7 +55,7 @@ const useStyles = makeStyles({
     },
     socialNetworkIcon: {
         color: '#FFF7E8',
-        fontSize: '2rem',
+        fontSize: '1.5rem',
         padding: '10px 10px 10px 0px ',
     },
     mainLink: {
@@ -72,30 +77,18 @@ const Footer = () => {
                         Suivez-nous sur les réseaux sociaux
                     </Typography>
                     <div className={classes.socialNetwork}>
-                        <Typography component={'h6'} variant='h6'>
-                            <a href="https://www.facebook.com/" className={classes.link} target='_blank' rel='noreferrer'>
-                                <FaFacebook  className={classes.socialNetworkIcon}/>
-                                <span> Facebook </span>
-                            </a>
-                        </Typography>
-                        <Typography component={'h6'} variant='h6'>
-                            <a href="https://www.instagram.com/" className={classes.link} target='_blank' rel='noreferrer'>
-                                <FaInstagram className={classes.socialNetworkIcon}/>
-                                <span> Instagram </span>
-                            </a>
-                        </Typography>
-                        <Typography component={'h6'} variant='h6'>
-                            <a href="https://www.twitter.com/" className={classes.link} target='_blank' rel='noreferrer'>
-                                <FaTwitter className={classes.socialNetworkIcon}/>
-                                <span> Twitter </span>
-                            </a>
-                        </Typography>
-                        <Typography component={'h6'} variant='h6'>
-                            <a href="https://wwww.snapchat.com/" className={classes.link} target='_blank' rel='noreferrer'>
-                                <FaSnapchat className={classes.socialNetworkIcon}/>
-                                <span> Snapchat </span>
-                            </a>
-                        </Typography>
+                        {restaurant.socialNetwork.map(({name, icon, url}, index) => {
+                            return (
+                                <MuiLink href={url} target='_blank' rel='noopener noreferrer' key={index} className={classes.link}>
+                                    <Typography>
+                                        {React.createElement(Icons[icon], {className: classes.socialNetworkIcon})}
+                                    </Typography>
+                                    <Typography>
+                                        {name}
+                                    </Typography>
+                                </MuiLink>
+                            )
+                        })}
                     </div>
                 </Grid>
                 <Grid item xs={12} md={4} className={classes.infoUtil}>
@@ -103,15 +96,15 @@ const Footer = () => {
                         Infos Utils
                     </Typography>
                     <Link to='testimonial' smooth={true} className={classes.mainLink}>
-                        <Typography className={classes.text} component='h6' variant='h6'> Témoignages de nos clients  </Typography>
+                        <Typography className={classes.text}> Témoignages de nos clients  </Typography>
                     </Link>
                     <Link to='about' smooth={true} className={classes.mainLink}>
-                        <Typography className={classes.text} component='h6' variant='h6'>  A Propos de nous </Typography>
+                        <Typography className={classes.text}>  A Propos de nous </Typography>
                     </Link>
                     <Link to='menu' smooth={true} className={classes.mainLink}>
-                        <Typography className={classes.text} component='h6' variant='h6'> Nos Plats </Typography>
+                        <Typography className={classes.text}> Nos Plats </Typography>
                     </Link>
-                    <Typography className={classes.text} component='h6' variant='h6'> 
+                    <Typography className={classes.text}> 
                         <MuiLink href='mailto:mamadouniakate10@yahoo.fr' className={classes.devInfo}>
                             Contacter le développeur
                         </MuiLink>
@@ -121,18 +114,20 @@ const Footer = () => {
                     <Typography variant='h5' className={classes.footerSectionTitle}>
                         Où Nous Trouver  ?
                     </Typography>
-                    <Typography className={classes.text} component='h6' variant='h6'> 
-                        <strong>Téléphone : </strong> +223 70 03 13 13
+                    <Typography className={classes.text}> 
+                        <strong>Téléphone : </strong> {restaurant.phone}
                     </Typography>
-                    <Typography className={classes.text} component='h6' variant='h6'> 
+                    <Typography className={classes.text}> 
                         <strong>Adresse : </strong> <br/>
-                        <span>Rue 413, entre le Palais des Sports et la Place Can Proche de Guaduman </span>
+                        <span>{restaurant.address.street} </span>
                     </Typography>
-                    <Typography className={classes.text} component='h6' variant='h6'> 
+                    <Typography className={classes.text}> 
                         <strong>Horaires d'ouverture : </strong>  <br/>
-                        Lundi - Vendredi : 9:00 - 18:00 <br/>
-                        Samedi : 9:00 - 14:00 <br/>
-                        Dimanche : Fermé
+                        {restaurant.schedule.map((item, index) => (
+                            <span key={index}>
+                                {item} <br/>
+                            </span>
+                        ))}
                     </Typography>
                 </Grid>
             </Grid>

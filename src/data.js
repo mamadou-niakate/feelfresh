@@ -596,6 +596,14 @@ export const testimonials = [
     "created": "2017-03-08T17:09:21.627Z"
   },
   {
+    "_id": "58c03ac18060197ca0b5d51",
+    "author": "Muriella Zafindramoma",
+    "store": "58c03a958060197ca0b52d50",
+    "text": "I tried this place last week and it was incredible! Amazing selection of local and imported brews and the food is to die for! ",
+    "rating": 5,
+    "created": "2017-03-08T17:09:21.627Z"
+  },
+  {
     "_id": "58c08780bbb1a51e0d43a050",
     "author": "Ouwa NKT",
     "store": "58c065dbbbb1a51e0d43a04f",

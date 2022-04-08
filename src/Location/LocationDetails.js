@@ -1,5 +1,6 @@
 import { List, ListItem, Paper, Typography } from '@mui/material'
 import React from 'react'
+import { restaurant } from '../jsonfile'
 
 export const LocationDetails = () => {
   return (
@@ -23,49 +24,57 @@ export const LocationDetails = () => {
           <ListItem divider>
             <List>
               <ListItem>
-                <Typography component={'h4'} variant='h4'><strong>Adresse :</strong> </Typography>
+                <Typography component={'h5'} variant='h5'><strong>Adresse :</strong> </Typography>
               </ListItem>
               <ListItem>
-                <Typography component={'h6'} variant='h6'>
-                  <strong>Pays :</strong> Mali
+                <Typography>
+                  <strong>Pays :</strong> { restaurant.address.country }
                 </Typography>
               </ListItem>
               <ListItem>
-                <Typography component={'h6'} variant='h6'>
-                  <strong>Ville :</strong> Bamako
+                <Typography>
+                  <strong>Ville :</strong> { restaurant.address.city }
                 </Typography>
               </ListItem>
               <ListItem>
-                <Typography component={'h6'} variant='h6'>
-                  <strong>Quartier :</strong> ACI 2000
+                <Typography>
+                  <strong>Quartier :</strong> { restaurant.address.neighborhood }
                 </Typography>
               </ListItem>
               <ListItem>
-                <Typography component={'h6'} variant='h6'>
-                  <strong>Rue :</strong> Rue 413 Entre Le Palais Des Sports Et La Place Can Proche De Guaduman, Bamako Mali
+                <Typography>
+                  <strong>Rue :</strong> {restaurant.address.street}
                 </Typography>
               </ListItem>
             </List>
           </ListItem>
+          <ListItem divider>
+              <List>
+                <ListItem>
+                  <Typography component={'h5'} variant='h5'><strong>Horaires d'ouverture :</strong> </Typography>
+                </ListItem>
+                  {restaurant.schedule.map((item, index) => {
+                    const [date, time] = item.split(':');
+                    return (
+                      <ListItem key={index}>
+                        <Typography>
+                            <strong>{date} : </strong> {time}
+                        </Typography>
+                      </ListItem>
+                    )
+                  })}
+              </List>
+          </ListItem>
           <ListItem>
               <List>
                 <ListItem>
-                  <Typography component={'h4'} variant='h4'><strong>Horaires d'ouverture :</strong> </Typography>
+                  <Typography component={'h5'} variant='h5'><strong>Contact :</strong> </Typography>
                 </ListItem>
                 <ListItem>
-                  <Typography component={'h6'} variant='h6'>
-                    Lundi - Vendredi : 9h - 18h
-                  </Typography>
+                  <Typography> <strong> Téléphone : </strong> {restaurant.phone}</Typography>
                 </ListItem>
                 <ListItem>
-                  <Typography component={'h6'} variant='h6'>
-                    Samedi : 9h - 14h
-                  </Typography>
-                </ListItem>
-                <ListItem>
-                  <Typography component={'h6'} variant='h6'>
-                    Dimanche : Fermé
-                  </Typography>
+                  <Typography> <strong> Email : </strong>  {restaurant.email}  </Typography>
                 </ListItem>
               </List>
           </ListItem>
