@@ -28,7 +28,7 @@ const Menu =  React.forwardRef(() => {
         <Box className={classes.root} name='menu'>
             <Container>
                 <SectionTitle title={'Nos Menus'} />
-                <SectionSubtitle subTitle={'Venez tester la fraicheur de nos sucréries'} />
+                <SectionSubtitle subTitle={'Venez tester la fraicheur de nos sucreries'} />
                 <MenuFilter />
                 <Grid container spacing={4}>
                     {dataToDisplay?.map((menuItem, index) => (

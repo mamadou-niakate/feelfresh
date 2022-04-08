@@ -6,7 +6,7 @@ import { Link } from 'react-scroll';
 
 const useStyles = makeStyles({
    root: {
-        paddingTop:65,
+        height: '100%'
     },
     aboutTitle: {
         fontWeight: 'bold',

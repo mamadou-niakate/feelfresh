@@ -5,7 +5,7 @@ import AboutInfo from './AboutInfo';
 
 const useStyles = makeStyles({
    root: {
-        height: 600,
+        height: 730,
         backgroundColor: '#FFF7E8',
     }
 });
