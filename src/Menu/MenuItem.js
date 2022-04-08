@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { Card, CardContent, CardMedia, Typography } from '@mui/material';
-// import './styles.css';
 
 import { motion } from 'framer-motion'
 
