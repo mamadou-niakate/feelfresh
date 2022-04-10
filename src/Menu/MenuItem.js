@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { Card, CardContent, CardMedia, CardActions, Typography, Divider } from '@mui/material';
 
 import { motion } from 'framer-motion'
-import { useAppContext } from '../store/AppContext';
+// import { useAppContext } from '../store/AppContext';
 // import MenuDetails from './MenuDetails';
 
 export default function FadeInSection({ menuItem }) {
