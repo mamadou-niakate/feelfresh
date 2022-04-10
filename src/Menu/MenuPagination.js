@@ -21,7 +21,14 @@ export default function MenuPagination() {
     const { state:{ dataToDisplay, dataToPaginate }, dispatch } = useAppContext();
     
     const handlePageChange = (_event, page) => {
-        setCurrentPage(page)
+        setCurrentPage(() => {
+
+            if(page === 1) {
+                scroller.scrollTo('menu');
+            }
+            
+            return page
+        })
     }
 
     const setPageData = useCallback((page) => {
@@ -33,8 +40,8 @@ export default function MenuPagination() {
     useEffect(() => {
         setPageData(currentPage)
         
-        // need to evoid to scroll directly to the top of the menu section
-        // at page load, so we scroll to the top of the menu section only after
+        // need to evoid to scroll directly to the top of the page at page load
+        // so we scroll to the top of the menu section only after
         // pagination page is different from 1
         if(currentPage !== 1){
             scroller.scrollTo('menu')
