@@ -3,15 +3,15 @@ import { Card, CardContent, CardMedia, CardActions, Typography, Divider } from '
 
 import { motion } from 'framer-motion'
 import { useAppContext } from '../store/AppContext';
-import MenuDetails from './MenuDetails';
+// import MenuDetails from './MenuDetails';
 
 export default function FadeInSection({ menuItem }) {
   
-  const { state:{ openModal }, dispatch } = useAppContext();
+  // const { state:{ openModal }, dispatch } = useAppContext();
 
-  const handleOpenModal = () => {
-      dispatch({type: 'SET_OPEN_MODAL', payload:true})
-  }
+  // const handleOpenModal = () => {
+  //     dispatch({type: 'SET_OPEN_MODAL', payload:true})
+  // }
 
   const [isVisible, setVisible] =useState(false);
   const domRef =useRef(null);
@@ -53,7 +53,7 @@ export default function FadeInSection({ menuItem }) {
           }
         }}
         style={{ height: '100%' }}
-        onClick={handleOpenModal}
+        // onClick={handleOpenModal}
       >
         <Card 
           className={`fade-in-section ${isVisible ? 'is-visible' : ''}`} 
@@ -76,7 +76,7 @@ export default function FadeInSection({ menuItem }) {
           </CardActions>
         </Card>
       </motion.div>
-      {openModal && <MenuDetails menu={menuItem} />}
+      {/* {openModal && <MenuDetails menu={menuItem} />} */}
     </>
   );
 }
