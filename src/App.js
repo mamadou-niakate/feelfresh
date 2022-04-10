@@ -9,7 +9,6 @@ import { Testimonial } from './Testimanial/Testimonial';
 import Header from './Appbar/Appbar'
 import { Element } from 'react-scroll'
 
-
 function App() {
   return (
     <div className="App">

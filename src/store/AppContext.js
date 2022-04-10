@@ -5,6 +5,8 @@ const SET_MENUS = 'SET_MENUS';
 const SET_DATA_TO_DISPLAY = 'SET_DATA_TO_DISPLAY'
 const SET_INITIAL_DATA_TO_DISPLAY = 'SET_INITIAL_DATA_TO_DISPLAY';
 const DATA_TO_PAGINATE = 'DATA_TO_PAGINATE';
+const SET_OPEN_MODAL = 'SET_OPEN_MODAL';
+const SET_CLOSE_MODAL = 'SET_CLOSE_MODAL';
 
 const AppContext = createContext()
 
@@ -38,7 +40,8 @@ const initialState = {
     menus: {},
     dataToDisplay: [],
     dataToDisplayLength:0,
-    dataToPaginate: []
+    dataToPaginate: [],
+    menuDetails: {},
 }
 const reducer = (state, action) => {
     switch(action.type) {
@@ -61,6 +64,12 @@ const reducer = (state, action) => {
         }
         case DATA_TO_PAGINATE : {
             return {...state, dataToPaginate:action.payload}
+        }
+        case SET_OPEN_MODAL : {
+            return {...state, openModal:action.payload}
+        }
+        case SET_CLOSE_MODAL : {
+            return {...state, openModal:action.payload}
         }
         default: return {...state};
     }
