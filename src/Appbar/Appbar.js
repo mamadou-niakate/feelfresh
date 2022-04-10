@@ -9,27 +9,40 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import MuiButton from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-// import { makeStyles } from '@mui/styles'
+import { makeStyles } from '@mui/styles'
 import { useAppContext } from '../store/AppContext';
 import { Link } from 'react-scroll'
+import { Grid } from '@mui/material';
+import CallIcon from '@mui/icons-material/Call';
+import * as Icons from 'react-icons/fa';
+import { restaurant } from '../jsonfile';
+import MuiLink from '@mui/material/Link';
 
-// const useStyles = makeStyles(({
-//   active: {
-//     borderBottom: '2px solid #61AB43',
-//   },
-// }));
+const useStyles = makeStyles(({
+  link: {},
+}));
+
+const settings = [1,2,3]
 
 const ResponsiveAppBar = () => {
-  // const classes = useStyles();
+  const classes = useStyles();
   const { state:{ navLinks } } = useAppContext()
   const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
+  const handleOpenUserMenu = (event) => {
+    setAnchorElUser(event.currentTarget);
+  };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
+  };
+
+  const handleCloseUserMenu = () => {
+    setAnchorElUser(null);
   };
 
   return (
@@ -124,6 +137,28 @@ const ResponsiveAppBar = () => {
                   <Typography />
                 </MuiButton>
             ))}
+          </Box>
+          <Box sx={{ flexGrow: 0.2 }}>
+            <Grid container justifyContent={'space-evenly'} alignItems='center'>
+              {restaurant.socialNetwork.map(({ icon, url}, index) => {
+                return (
+                  <Grid item>
+                    <MuiLink href={url} target='_blank' rel='noopener noreferrer' key={index} className={classes.link}>
+                        <IconButton sx={{  color: "GrayText" }}>
+                            {React.createElement(Icons[icon], {className: classes.socialNetworkIcon})}
+                        </IconButton>
+                    </MuiLink>
+                  </Grid>
+                )
+              })}   
+              <Grid item>
+                <MuiLink href={'tel:061234517'} target='_blank' rel='noopener noreferrer'>
+                  <IconButton sx={{  color: "GrayText" }}>
+                    <CallIcon />
+                  </IconButton>
+                </MuiLink>
+              </Grid>
+            </Grid>
           </Box>
         </Toolbar>
       </Container>

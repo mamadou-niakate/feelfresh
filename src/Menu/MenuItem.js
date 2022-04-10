@@ -61,18 +61,18 @@ export default function FadeInSection({ menuItem }) {
         >
           <CardMedia sx={{ height: 300, objectFit: 'cover' }} component="img" image={menuItem.imageURL || ''} alt="random"  />
           <CardContent sx={{ flexGrow: 1 }}>
-            <Typography gutterBottom variant="h5" component="h2">
+            <Typography gutterBottom variant="h5" component="h5">
                 {menuItem.name}
             </Typography>
             <Typography>
-                { menuItem.composants?.join(',') }
+                { menuItem.composants?.join(', ') }
             </Typography>
           </CardContent>
           <Divider />
-          <CardActions style={{ margin: '0 35% 0 35%', paddingBottom: 20, fontWeight:'bold'}}>
-            {/* <Button size="small">View</Button>
-            <Button size="small">Edit</Button> */}
-            {menuItem.price} {menuItem.currency}
+          <CardActions style={{ margin: '0 35% 0 35%', padding: '10px 0 10px 0', fontWeight:'bold'}}>
+            <Typography gutterBottom variant="h6" component="h6">
+              {menuItem.price} {menuItem.currency}
+            </Typography>
           </CardActions>
         </Card>
       </motion.div>
