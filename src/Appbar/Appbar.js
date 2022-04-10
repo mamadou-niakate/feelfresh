@@ -22,27 +22,17 @@ const useStyles = makeStyles(({
   link: {},
 }));
 
-const settings = [1,2,3]
-
 const ResponsiveAppBar = () => {
   const classes = useStyles();
   const { state:{ navLinks } } = useAppContext()
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
   };
 
   return (
@@ -152,7 +142,7 @@ const ResponsiveAppBar = () => {
                 )
               })}   
               <Grid item>
-                <MuiLink href={'tel:061234517'} target='_blank' rel='noopener noreferrer'>
+                <MuiLink href={`tel:${restaurant.phone}`} target='_blank' rel='noopener noreferrer'>
                   <IconButton sx={{  color: "GrayText" }}>
                     <CallIcon />
                   </IconButton>
