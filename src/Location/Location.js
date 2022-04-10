@@ -25,7 +25,7 @@ const useStyles = makeStyles({
 const Location =  React.forwardRef(() => {
     const classes = useStyles();
     return (
-        <Box className={classes.root} name='location'>
+        <Box className={classes.root}>
             <div className={classes.locationTitleContainer}>
                 <SectionTitle title={'Emplacement'} />
                 <SectionSubtitle subTitle={'Nous sommes à Bamako dans le quartier chic de l\'ACI 2000'} />

@@ -64,8 +64,7 @@ export const Testimonial =  React.forwardRef(() => {
             justifyContent={'center'} 
             alignItems='center' 
             wrap='wrap' 
-            className={classes.testimonial} 
-            name='testimonials'
+            className={classes.testimonial}
         >
             <Grid item xs={12} lg={6} md={6}>
                 <SectionTitle title={'Témoignages'} />

@@ -25,7 +25,7 @@ const Menu =  React.forwardRef(() => {
     }, [dispatch])
     
     return (
-        <Box className={classes.root} name='menu'>
+        <Box className={classes.root}>
             <Container>
                 <SectionTitle title={'Nos Menus'} />
                 <SectionSubtitle subTitle={'Venez tester la fraicheur de nos sucreries'} />

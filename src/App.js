@@ -7,16 +7,26 @@ import Location from './Location/Location';
 import Menu from './Menu/Menu';
 import { Testimonial } from './Testimanial/Testimonial';
 import Header from './Appbar/Appbar'
+import { Element } from 'react-scroll'
+
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <About/>
+      <Element name='about'>
+        <About/>
+      </Element>
       <Figure />
-      <Menu/>
-      <Testimonial/>
-      <Location/>
+      <Element name='menu'>
+        <Menu />
+      </Element>
+      <Element name='testimonials'>
+        <Testimonial/>
+      </Element>
+      <Element name='location'>
+        <Location />
+      </Element>
       <Footer />
     </div>
   )

@@ -2,6 +2,8 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { Pagination, Stack, Grid } from '@mui/material';
 import { useAppContext } from '../store/AppContext';
 import { makeStyles } from '@mui/styles';
+// import { animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { scroller } from 'react-scroll';
 
 const useStyles = makeStyles({
     root: {
@@ -30,15 +32,23 @@ export default function MenuPagination() {
 
     useEffect(() => {
         setPageData(currentPage)
+        
+        // need to evoid to scroll directly to the top of the menu section
+        // at page load, so we scroll to the top of the menu section only after
+        // pagination page is different from 1
+        if(currentPage !== 1){
+            scroller.scrollTo('menu')
+        }
+
     },[currentPage, setPageData])
 
     // only render when change of dataToPaginate
     useEffect(() => {
-        setCurrentPage(1)
+        setCurrentPage(1) 
     },[dataToPaginate])
 
     useEffect(() => {
-        setPages(Math.ceil(dataToPaginate.length / nbItemsPerPage)); 
+        setPages(Math.ceil(dataToPaginate.length / nbItemsPerPage));
     },[dataToDisplay,dataToPaginate.length])
 
     return (

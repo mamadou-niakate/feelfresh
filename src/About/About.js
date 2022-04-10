@@ -16,7 +16,7 @@ const About = React.forwardRef(() => {
     const classes = useStyles();
     
     return (
-        <Box className={classes.root} name='about'>
+        <Box className={classes.root}>
             <AboutInfo />
         </Box>
     ) 
