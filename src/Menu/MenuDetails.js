@@ -1,12 +1,14 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import { useAppContext } from '../store/AppContext';
 import { makeStyles } from '@mui/styles';
 import Backdrop from '@mui/material/Backdrop';
 import Fade from '@mui/material/Fade';
+import Button from '@mui/material/Button'
 import QuiltedImageList from './component/ImageList';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import VerticalTabs from './component/MenuDetailsInfo';
 
 const useStyles = makeStyles({
     modalContentContainer: {
@@ -17,6 +19,7 @@ const useStyles = makeStyles({
         backgroundColor: '#fff',
         width: '100%',
         height: '100%',
+        border:'none'
     },
     imageListContainer: {
         display: 'flex',
@@ -46,19 +49,18 @@ export default function MenuDetails() {
                 BackdropProps={{
                     timeout: 500,
                 }}
+                keepMounted
             >
                 <Fade in={openModal} className={classes.modalContentContainer}>
                     <Box className={classes.modalContentContainer}>
-                        <div style={{ padding: '5%'}}>
+                        <div style={{ padding: '2%'}}>
+                            <Button onClick={handleCloseModal}>
+                                <ArrowBackIcon /> Retour
+                            </Button>
                             <div>
                                 <QuiltedImageList />
                             </div>
-                            <Typography id="transition-modal-title" variant="h6" component="h2">
-                            Text in a modal
-                            </Typography>
-                            <Typography id="transition-modal-description" sx={{ mt: 2 }}>
-                            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-                            </Typography>
+                            <VerticalTabs />
                         </div>
                     </Box>
                 </Fade>

@@ -5,6 +5,8 @@ export const menus = {
             "name": "Sunset",
             "composants": ["Citron", "Pomme","Banane"],
             pictures: [],
+            price: 1200,
+            currency: 'fcfa',
             imageURL: "https://media.istockphoto.com/photos/raspberry-smoothie-picture-id699196682?k=20&m=699196682&s=612x612&w=0&h=yhLyv5hkDqbc3CsVfaSAI4gnHM-HI27bnVK9nxcb6tI=",
         },
         {
@@ -12,6 +14,8 @@ export const menus = {
             "name": "Banana Tropic",
             "composants": ["Mangue", "Orange","Banane"],
             pictures: [],
+            price: 1200,
+            currency: 'fcfa',
             imageURL: "https://www.somewhatsimple.com/wp-content/uploads/2017/04/tropical_banana_smoothie_6.jpg",
         },
         {
@@ -19,6 +23,8 @@ export const menus = {
             "name": "Dactary",
             "composants": ["Mangue", "Ananas", "Orange","Banane"],
             pictures: [],
+            price: 1200,
+            currency: 'fcfa',
             imageURL: "https://www.grainedemoutarde.fr/pub/media/catalog/product/cache/518dd6ef39761fcf8adf36a7ece46aac/r/e/rendered_7.jpg",
         },
         {
@@ -26,6 +32,8 @@ export const menus = {
             "name": "Blue Berry",
             "composants": ["Fruits rouges", "Pomme", "Menthe Fraîche"],
             pictures: [],
+            price: 1200,
+            currency: 'fcfa',
             imageURL: "https://www.dinneratthezoo.com/wp-content/uploads/2018/05/blueberry-smoothie-5.jpg",
         },
         {
@@ -33,6 +41,8 @@ export const menus = {
             "name": "Lucky",
             "composants": ["Pomme", "Banane", "Fraise"],
             pictures: [],
+            price: 1200,
+            currency: 'fcfa',
             imageURL: "https://www.grainedemoutarde.fr/pub/media/catalog/product/cache/518dd6ef39761fcf8adf36a7ece46aac/r/e/rendered_7.jpg",
         },
         {
@@ -40,6 +50,8 @@ export const menus = {
             "name": "Savana",
             "composants": ["Coco", "Banane", "Fraise", "Orange"],
             pictures: [],
+            price: 1200,
+            currency: 'fcfa',
             imageURL: "https://res.cloudinary.com/hv9ssmzrz/image/fetch/c_fill,f_auto,h_488,q_auto,w_650/https://s3-eu-west-1.amazonaws.com/images-ca-1-0-1-eu/recipe_photos/original/198366/smoothie-abricot-banane.jpg",
         },
         {
@@ -47,6 +59,8 @@ export const menus = {
             "name": "Exotic",
             "composants": ["Gingembre", "Ananas", "Orange"],
             pictures: [],
+            price: 1200,
+            currency: 'fcfa',
             imageURL: "https://www.atelierdeschefs.com/media/recette-e13205-smoothie-de-fruits-exotiques.jpg",
         },
         {
@@ -54,6 +68,8 @@ export const menus = {
             "name": "Delicious",
             "composants": ["Ananas", "Pomme", "Coco"],
             pictures: [],
+            price: 1200,
+            currency: 'fcfa',
             imageURL: "https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2020/07/Turmeric-Smoothie-3.jpg",
         },
         {
@@ -61,6 +77,8 @@ export const menus = {
             "name": "Balalaïka",
             "composants": ["Fraise", "Pomme", "Ananas"],
             pictures: [],
+            price: 1200,
+            currency: 'fcfa',
             imageURL: "https://www.recettesmania.com/images/recipe/recettes-de-cocktails-et-boissons-les-meilleurs-idees/2021/03/recettes-de-cocktails-et-boissons-les-meilleurs-idees-west-indies-banana.jpg",
         },
         {
@@ -68,6 +86,8 @@ export const menus = {
             "name": "Mojito Framboise",
             "composants": ["Framboise", "Citron", "Pomme", "Menthe"],
             pictures: [],
+            price: 1200,
+            currency: 'fcfa',
             imageURL: "https://larecette.net/wp-content/uploads/2016/07/iStock-995386804-1152x769.jpg",
         },
         {
@@ -75,6 +95,8 @@ export const menus = {
             "name": "Mojito Pomme",
             "composants": [ "Citron", "Pomme", "Menthe"],
             pictures: [],
+            price: 1200,
+            currency: 'fcfa',
             imageURL: "https://www.fourchette-et-bikini.fr/sites/default/files/styles/article_960x540/public/migration-images/c7e66f9195b62bbe1247c02a3fb6f663.webp?itok=ENP9QckT",
         },
         {
@@ -82,6 +104,8 @@ export const menus = {
             "name": "After",
             "composants": [ "Fremboise", "Pomme", "Banana"],
             pictures: [],
+            price: 1200,
+            currency: 'fcfa',
             imageURL: "https://www.foxandbriar.com/wp-content/uploads/2017/03/Post-Workout-Smoothie-6.jpg",
         },
         {
@@ -89,6 +113,8 @@ export const menus = {
             "name": "Fruity",
             "composants": [ "Fraise", "Mangue", "Pomme"],
             pictures: [],
+            price: 1200,
+            currency: 'fcfa',
             imageURL: "https://static.colruyt.be/culinair/Kookboek_SM5_1/Fruity_smoothie_p325_MR.jpg",
         },
         {
@@ -96,6 +122,8 @@ export const menus = {
             "name": "Fraisilicious",
             "composants": [ "Fraise", "Banane", "Orange", "Miel"],
             pictures: [],
+            price: 1200,
+            currency: 'fcfa',
             imageURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQG0eAwjKxekoEEzqvLOSrV6IxPA3dKI1mCY13A1qpNcke24Sz0nxCxUsjYaZYYNZdg7mA&usqp=CAU",
         },
         {
@@ -103,6 +131,8 @@ export const menus = {
             "name": "Cocozu",
             "composants": [ "Anana", "Coco", "Banane", "Orange"],
             pictures: [],
+            price: 1200,
+            currency: 'fcfa',
             imageURL: "https://static.takeaway.com/images/restaurants/fr/0O37O37N/products/9115780_crepr_food_smoothiemimai.png?timestamp=1642503993",
         },
     ],
@@ -112,6 +142,8 @@ export const menus = {
             "name": "Milkshake",
             "composants": ["Vanille"],
             pictures: [],
+            price: 1200,
+            currency: 'fcfa',
             imageURL: "https://www.recette360.com/wp-content/uploads/2017/05/Milkshake-Vanille-avec-thermomix.jpg"
         },
         {
@@ -119,6 +151,8 @@ export const menus = {
             "name": "Milkshake",
             "composants": [ "Fraise"],
             pictures: [],
+            price: 1200,
+            currency: 'fcfa',
             imageURL: "https://img.cuisineaz.com/660x660/2013/12/20/i71969-milkshake-fraise.jpg"
         },
         {
@@ -126,6 +160,8 @@ export const menus = {
             "name": "Milkshake",
             "composants": ["Mangue"],
             pictures: [],
+            price: 1200,
+            currency: 'fcfa',
             imageURL: "https://www.regal.fr/sites/art-de-vivre/files/milkshake-mangue_th.jpg"
         },
         {
@@ -133,6 +169,8 @@ export const menus = {
             "name": "Milkshake",
             "composants": ["Ananas"],
             pictures: [],
+            price: 1200,
+            currency: 'fcfa',
             imageURL: "https://d24p7azk0guj8o.cloudfront.net/recettes/6061985f9c4a581d22e7ab39bb838bc33a6b127599ea2.jpg"
         },
         {
@@ -140,6 +178,8 @@ export const menus = {
             "name": "Milkshake",
             "composants": ["Fruits rouges"],
             pictures: [],
+            price: 1200,
+            currency: 'fcfa',
             imageURL: "https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/vimdb/128022.jpg"
         },
         {
@@ -147,6 +187,8 @@ export const menus = {
             "name": "Milkshake",
             "composants": ["Framboise"],
             pictures: [],
+            price: 1200,
+            currency: 'fcfa',
             imageURL: "https://img.cuisineaz.com/660x660/2015/05/26/i58266-milk-shake-aux-framboises.jpg"
         },
         {
@@ -154,6 +196,8 @@ export const menus = {
             "name": "Milkshake",
             "composants": ["Framboise", "Banane"],
             pictures: [],
+            price: 1200,
+            currency: 'fcfa',
             imageURL: "https://i.notrefamille.com/1800x0/smart/2020/09/24/9012-large.jpg"
         },
         {
@@ -161,6 +205,8 @@ export const menus = {
             "name": "Milkshake",
             "composants": ["Ananas", "Banane"],
             pictures: [],
+            price: 1200,
+            currency: 'fcfa',
             imageURL: "https://img.cuisineaz.com/660x660/2015/06/29/i70579-milkshake-a-l-exotique.jpg"
         },
         {
@@ -168,6 +214,8 @@ export const menus = {
             "name": "Milkshake",
             "composants": ["Fraise", "Banane"],
             pictures: [],
+            price: 1200,
+            currency: 'fcfa',
             imageURL: "https://www.recette360.com/wp-content/uploads/2018/08/Milkshake-fraise-banane-au-thermomix.jpg"
         },
         {
@@ -175,6 +223,8 @@ export const menus = {
             "name": "Milkshake",
             "composants": ["Fraise", "Mangue"],
             pictures: [],
+            price: 1200,
+            currency: 'fcfa',
             imageURL: "https://img.cuisineaz.com/660x660/2018/08/22/i141831-.jpeg"
         },
         {
@@ -182,6 +232,8 @@ export const menus = {
             "name": "Milkshake",
             "composants": ["Mangue", "Banane"],
             pictures: [],
+            price: 1200,
+            currency: 'fcfa',
             imageURL: "https://www.recette360.com/wp-content/uploads/2020/06/Smoothie-banane-mangue-au-thermomix.jpg"
         },
     ],
@@ -191,6 +243,8 @@ export const menus = {
             "name": "Nappages",
             "composants": ["Caramel", "Chocolat", "Fraise", "Abricot"],
             pictures: [],
+            price: 1200,
+            currency: 'fcfa',
             imageURL: "https://www.puratos.fr/content/dam/france/images/patisserie-chocolat/tartes/TARTE%20ASIE.jpg/_jcr_content/renditions/original"
         },
         {
@@ -198,6 +252,8 @@ export const menus = {
             "name": "Toppings",
             "composants": ["Cacahuette", "Noisette", "Coco", "Fruits rouges"],
             pictures: [],
+            price: 1200,
+            currency: 'fcfa',
             imageURL: "https://mm-static-cdn.com/contents/cms/a/screen-sm/cddcd45b-ff10-491b-a91e-6359ed42ca6b/teaser4col-mood-muesli-toppings-nutcrunch.jpg"
         },
     ],
@@ -207,6 +263,8 @@ export const menus = {
             "name": "Vitaminé",
             "composants": ["Carotte", "Orange", "Citron"],
             pictures: [],
+            price: 1200,
+            currency: 'fcfa',
             imageURL: ""
         },
         
@@ -215,6 +273,8 @@ export const menus = {
             "name": "Protecteur",
             "composants": ["Miel", "Citron", "Orange", "Gingembre"],
             pictures: [],
+            price: 1200,
+            currency: 'fcfa',
             imageURL: ""
         },
         {
@@ -222,6 +282,8 @@ export const menus = {
             "name": "Feel fresh",
             "composants": ["Pomme", "Concombre", "Citron", "Menthe fraiche"],
             pictures: [],
+            price: 1200,
+            currency: 'fcfa',
             imageURL: ""
         },
         {
@@ -229,6 +291,8 @@ export const menus = {
             "name": "Musclé",
             "composants": ["Coco", "Gingembre", "Citron", "Pomme"],
             pictures: [],
+            price: 1200,
+            currency: 'fcfa',
             imageURL: ""
         },
         {
@@ -236,6 +300,8 @@ export const menus = {
             "name": "Energiser",
             "composants": ["Carotte", "Orange", "Gingembre"],
             pictures: [],
+            price: 1200,
+            currency: 'fcfa',
             imageURL: ""
         }
     ],
@@ -245,6 +311,8 @@ export const menus = {
             "name": "Glace aux fruits",
             "composants": ["Fraise"],
             pictures: [],
+            price: 1200,
+            currency: 'fcfa',
             imageURL: "https://recettes.de/images/blogs/les-joyaux-de-sherazade/glace-a-la-fraise.640x480.jpg"
         },
         {
@@ -252,6 +320,8 @@ export const menus = {
             "name": "Glace aux fruits",
             "composants": ["Banane"],
             pictures: [],
+            price: 1200,
+            currency: 'fcfa',
             imageURL: "https://recette.supertoinette.com/150209/m/creme-glacee-a-la-banane.jpg"
         },
         {
@@ -259,6 +329,8 @@ export const menus = {
             "name": "Glace aux fruits",
             "composants": ["Mangue"],
             pictures: [],
+            price: 1200,
+            currency: 'fcfa',
             imageURL: "https://ellemijotequelquechose.com/wp-content/uploads/2019/07/Glace-%C3%A0-la-mangue-sans-sorbeti%C3%A8re.jpg"
         },
         {
@@ -266,6 +338,8 @@ export const menus = {
             "name": "Glace aux fruits",
             "composants": ["Ananas"],
             pictures: [],
+            price: 1200,
+            currency: 'fcfa',
             imageURL: "https://www.recette360.com/wp-content/uploads/2019/07/Sorbet-ananas-au-thermomix.jpg"
         },
         {
@@ -273,6 +347,8 @@ export const menus = {
             "name": "Glace aux fruits",
             "composants": ["Fruits rouges"],
             pictures: [],
+            price: 1200,
+            currency: 'fcfa',
             imageURL: "https://www.guydemarle.com/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBclpPIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--daf57fb9847a30f76d3e4813aa276837aea35e5d/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld1k2QzNKbGMybDZaVWtpRGpFMU1EQjRNVFV3TUFZNkJrVlUiLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--3fc61d6304cc6214f7d9184e8eb99bd25324c309/sorbet-aux-fruits-rouges-a-l-italienne-0.jpg"
         },
         {
@@ -280,6 +356,8 @@ export const menus = {
             "name": "Glace aux fruits",
             "composants": ["Framboise"],
             pictures: [],
+            price: 1200,
+            currency: 'fcfa',
             imageURL: "https://img.cuisineaz.com/660x660/2013/12/20/i98098-creme-glacee-aux-framboises.jpg"
         },
         {
@@ -287,6 +365,8 @@ export const menus = {
             "name": "Glace aux fruits",
             "composants": ["Framboise", "Banane"],
             pictures: [],
+            price: 1200,
+            currency: 'fcfa',
             imageURL: "https://cac.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Fcac.2F2018.2F09.2F25.2F5dea65cb-31cd-4ded-8a58-1ac23752462c.2Ejpeg/750x562/quality/80/crop-from/center/cr/wqkgQ2FybmV0L1N1Y3LDqSBzYWzDqXYgLyBDdWlzaW5lIEFjdHVlbGxl/souffle-glace-aux-framboises.jpeg"
         },
         {
@@ -294,6 +374,8 @@ export const menus = {
             "name": "Glace aux fruits",
             "composants": ["Annans","Banane"],
             pictures: [],
+            price: 1200,
+            currency: 'fcfa',
             imageURL: "https://photos.smugmug.com/Begirl-Blog/Photos/Glace-ananas/i-3Lnk2rQ/0/89f3ddf9/L/glace%20ananas%20banane%202-L.jpg"
         },
         {
@@ -301,6 +383,8 @@ export const menus = {
             "name": "Glace aux fruits",
             "composants": ["Fraise","Banane"],
             pictures: [],
+            price: 1200,
+            currency: 'fcfa',
             imageURL: ""
         },
         {
@@ -308,6 +392,8 @@ export const menus = {
             "name": "Glace aux fruits",
             "composants": ["Fraise","Mangue"],
             pictures: [],
+            price: 1200,
+            currency: 'fcfa',
             imageURL: ""
         },
         
@@ -316,6 +402,8 @@ export const menus = {
             "name": "Glace aux fruits",
             "composants": ["Mangue", "Banane"],
             pictures: [],
+            price: 1200,
+            currency: 'fcfa',
             imageURL: ""
         },
     ],
@@ -324,12 +412,16 @@ export const menus = {
             id: 1,
             "name": "Tiramisu",
             pictures: [],
+            price: 1200,
+            currency: 'fcfa',
             imageURL: "https://www.elle.be/fr/wp-content/uploads/2020/04/tiramisu.jpg"
         },
         {
             id: 2,
             name: "Salade de fruit",
             pictures: [],
+            price: 1200,
+            currency: 'fcfa',
             imageURL: "https://cdn.pratico-pratiques.com/app/uploads/sites/3/2019/11/27115447/salade-de-fruits.jpg"
         }
     ],
@@ -369,21 +461,29 @@ export const menus = {
         {
             id: 1,
             name: 'Cafet noir',
+            price: 1000,
+            currency: 'fcfa',
             imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/A_small_cup_of_coffee.JPG/280px-A_small_cup_of_coffee.JPG",
         },
         {
             id: 2,
             name: 'Thé à la menthe',
+            price: 1000,
+            currency: 'fcfa',
             imageURL: "https://cuisine-test.com/wp-content/uploads/2019/02/th%C3%A9-%C3%A0-la-menthe-marocain.jpg",
         },
         {
             id: 3,
             name: 'Thé au citron',
+            price: 1000,
+            currency: 'fcfa',
             imageURL: "https://www.capsules-compatibles.com/2739-large_default/boisson-instantanee-the-citron-compatible-nespresso-.jpg",
         },
         {
             id: 4,
             name: 'Thé à la menthe Lipton',
+            price: 1000,
+            currency: 'fcfa',
             imageURL: "https://www.france-export-fv.com/WebRoot/Orange/Shops/6449c484-4b17-11e1-a012-000d609a287c/5725/1FE6/9E5E/4F72/9804/0A0C/0595/FB2E/thes.jpg",
         }
     ]

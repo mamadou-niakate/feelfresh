@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { Card, CardContent, CardMedia, Typography } from '@mui/material';
+import { Card, CardContent, CardMedia, CardActions, Typography, Divider } from '@mui/material';
 
 import { motion } from 'framer-motion'
 import { useAppContext } from '../store/AppContext';
@@ -68,10 +68,12 @@ export default function FadeInSection({ menuItem }) {
                 { menuItem.composants?.join(',') }
             </Typography>
           </CardContent>
-          {/* <CardActions>
-            <Button size="small">View</Button>
-            <Button size="small">Edit</Button>
-          </CardActions> */}
+          <Divider />
+          <CardActions style={{ margin: '0 35% 0 35%', paddingBottom: 20, fontWeight:'bold'}}>
+            {/* <Button size="small">View</Button>
+            <Button size="small">Edit</Button> */}
+            {menuItem.price} {menuItem.currency}
+          </CardActions>
         </Card>
       </motion.div>
       {openModal && <MenuDetails menu={menuItem} />}
