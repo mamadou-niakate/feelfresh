@@ -57,6 +57,11 @@ const useStyles = makeStyles({
         textAlign: 'left',
         margin: '20px 0 20px 0 !important',
     },
+    socialNetworkIcon: {
+        color: '#FFF7E8',
+        fontSize: '1.5rem',
+        padding: '10px 10px 10px 0px ',
+    },
     mainLink: {
         cursor:'pointer'
     },
@@ -79,7 +84,7 @@ const Footer = () => {
                             return (
                                 <MuiLink href={url} target='_blank' rel='noopener noreferrer' key={index} className={classes.link}>
                                     <Typography>
-                                        {React.createElement(Icons[icon])}
+                                        {React.createElement(Icons[icon], {className: classes.socialNetworkIcon})}
                                     </Typography>
                                     <Typography className={classes.linkText}> {name} </Typography>
                                 </MuiLink>

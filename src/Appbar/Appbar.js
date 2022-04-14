@@ -23,6 +23,10 @@ const useStyles = makeStyles(({
     fontSize: '10rem',
     color: "GrayText"
   },
+  socialNetwork: { 
+    color: 'GrayText', 
+    fontSize: '1.2rem' 
+  }
 }));
 
 const ResponsiveAppBar = () => {
@@ -138,7 +142,7 @@ const ResponsiveAppBar = () => {
                   <Grid item>
                     <MuiLink href={url} target='_blank' rel='noopener noreferrer' key={index}>
                         <IconButton className={classes.link}>
-                            {React.createElement(Icons[icon])}
+                            {React.createElement(Icons[icon], {className: classes.socialNetwork})}
                         </IconButton>
                     </MuiLink>
                   </Grid>
@@ -147,7 +151,7 @@ const ResponsiveAppBar = () => {
               <Grid item>
                 <MuiLink href={`tel:${restaurant.phone}`} target='_blank' rel='noopener noreferrer'>
                   <IconButton className={classes.link}>
-                    <CallIcon />
+                    <CallIcon className={classes.socialNetwork} />
                   </IconButton>
                 </MuiLink>
               </Grid>
