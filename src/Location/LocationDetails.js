@@ -13,7 +13,7 @@ export const LocationDetails = () => {
         alignSelf: 'center', 
         borderRadius: 20, 
         backgroundColor: 'transparent',
-        color: '#657786'
+        // color: '#657786'
       }}
     >
         <List>

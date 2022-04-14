@@ -9,7 +9,8 @@ const useStyles = makeStyles({
     root: {
         // backgroundColor: '#F2F2F2',
         backgroundColor: '#F5F8FA',
-        color: '#657786',
+        // backgroundColor: '#FFF7E8',
+        // color: '#657786',
     },
    location: {
         height: '100%',
