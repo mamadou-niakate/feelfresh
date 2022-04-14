@@ -59,7 +59,7 @@ export default function FadeInSection({ menuItem }) {
           className={`fade-in-section ${isVisible ? 'is-visible' : ''}`} 
           sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
         >
-          <CardMedia sx={{ height: 300, objectFit: 'cover' }} component="img" image={menuItem.imageURL || ''} alt="random"  />
+          <CardMedia sx={{ height: 300, objectFit: 'cover' }} component="img" image={menuItem.imageURL || '/images/steak.png'} alt={menuItem.name}  />
           <CardContent sx={{ flexGrow: 1 }}>
             <Typography gutterBottom variant="h5" component="h5">
                 {menuItem.name}
