@@ -37,15 +37,19 @@ const useStyles = makeStyles({
     link: {
         display:'flex',
         alignItems:'center',
-        textDecoration: 'none',
+        textDecoration: 'none !important',
+    },
+    linkText: {
         color: '#FFF7E8', 
         textAlign:'left',
+        textDecoration: 'none !important',
     },
     text: {
         color: '#FFF7E8', 
         textAlign:'left',
         wordBreak: 'break-all',
         margin: '0 0 10px 0',
+        textDecoration: 'none',
     },
     footerSectionTitle: {
         color: '#FFF7E8',
@@ -53,17 +57,11 @@ const useStyles = makeStyles({
         textAlign: 'left',
         margin: '20px 0 20px 0 !important',
     },
-    socialNetworkIcon: {
-        color: '#FFF7E8',
-        fontSize: '1.5rem',
-        padding: '10px 10px 10px 0px ',
-    },
     mainLink: {
         cursor:'pointer'
     },
     devInfo: {
         color: '#FFF7E8',
-        textDecoration: 'none'
     }
 });
 
@@ -81,11 +79,9 @@ const Footer = () => {
                             return (
                                 <MuiLink href={url} target='_blank' rel='noopener noreferrer' key={index} className={classes.link}>
                                     <Typography>
-                                        {React.createElement(Icons[icon], {className: classes.socialNetworkIcon})}
+                                        {React.createElement(Icons[icon])}
                                     </Typography>
-                                    <Typography>
-                                        {name}
-                                    </Typography>
+                                    <Typography className={classes.linkText}> {name} </Typography>
                                 </MuiLink>
                             )
                         })}
@@ -103,12 +99,12 @@ const Footer = () => {
                     </Link>
                     <Link to='menu' smooth={true} className={classes.mainLink}>
                         <Typography className={classes.text}> Nos Plats </Typography>
-                    </Link>
-                    <Typography className={classes.text}> 
-                        <MuiLink href='mailto:mamadouniakate10@yahoo.fr' className={classes.devInfo}>
+                    </Link> 
+                    <MuiLink href='mailto:mamadouniakate10@yahoo.fr' className={classes.linkText}>
+                        <Typography className={classes.devInfo}>
                             Contacter le développeur
-                        </MuiLink>
-                    </Typography>
+                        </Typography>
+                    </MuiLink>
                 </Grid>
                 <Grid item xs={12} md={4}>
                     <Typography variant='h5' className={classes.footerSectionTitle}>

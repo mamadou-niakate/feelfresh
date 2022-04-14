@@ -19,7 +19,10 @@ import { restaurant } from '../jsonfile';
 import MuiLink from '@mui/material/Link';
 
 const useStyles = makeStyles(({
-  link: {},
+  link: {
+    fontSize: '10rem',
+    color: "GrayText"
+  },
 }));
 
 const ResponsiveAppBar = () => {
@@ -133,9 +136,9 @@ const ResponsiveAppBar = () => {
               {restaurant.socialNetwork.map(({ icon, url}, index) => {
                 return (
                   <Grid item>
-                    <MuiLink href={url} target='_blank' rel='noopener noreferrer' key={index} className={classes.link}>
-                        <IconButton sx={{  color: "GrayText" }}>
-                            {React.createElement(Icons[icon], {className: classes.socialNetworkIcon})}
+                    <MuiLink href={url} target='_blank' rel='noopener noreferrer' key={index}>
+                        <IconButton className={classes.link}>
+                            {React.createElement(Icons[icon])}
                         </IconButton>
                     </MuiLink>
                   </Grid>
@@ -143,7 +146,7 @@ const ResponsiveAppBar = () => {
               })}   
               <Grid item>
                 <MuiLink href={`tel:${restaurant.phone}`} target='_blank' rel='noopener noreferrer'>
-                  <IconButton sx={{  color: "GrayText" }}>
+                  <IconButton className={classes.link}>
                     <CallIcon />
                   </IconButton>
                 </MuiLink>
