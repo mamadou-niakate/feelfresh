@@ -6,8 +6,9 @@ import CountUp from 'react-countup';
 
 const useStyles = makeStyles({
    root: {
-         display: 'flex',
-         alignItems: 'center',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
         height: 300,
         margin: 'auto',
         backgroundColor: '#FFFFF',
@@ -42,9 +43,9 @@ const Figure = () => {
             {figures.map(({id, number, title}) => (
                 <Grid key={id} item xs={12} sm={3} ref={figureRef}>
                     <CountUp
-                        start={-875.039}
+                        start={0}
                         end={number}
-                        duration={2.75}
+                        duration={5}
                     >
                         {({ countUpRef, start }) => (
                             <>

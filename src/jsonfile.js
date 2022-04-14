@@ -530,6 +530,11 @@ export const restaurant = {
             name: "FaTwitter",
             url: "https://twitter.com/feelfresh_resto",
             icon: "FaTwitter"
+        },
+        {
+            name: "Snapchat",
+            url: "https://www.snapchat.com/add/feelfresh.restaurant",
+            icon: "FaSnapchat"
         }
     ],
 }

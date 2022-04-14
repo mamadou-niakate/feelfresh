@@ -566,22 +566,17 @@ export const sections = [
 export const figures = [
   {
     id: '1',
-    number: 20172,
+    number: 100,
     title: 'Order Confirmation',
   },
   {
-    id: '2',
-    number: 46351,
-    title: 'Order wax deliveried',
-  },
-  {
     id: '3',
-    number: 74625,
+    number: 75,
     title: 'Order shipped',
   },
   {
     id: '4',
-    number: 84625,
+    number: 132,
     title: 'Order recipes',
   },
 ]
