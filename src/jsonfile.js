@@ -518,12 +518,12 @@ export const restaurant = {
     socialNetwork: [
         {
             name: "Facebook",
-            url: "https://www.facebook.com/feelfresh.restaurant/",
+            url: "https://www.facebook.com/gafouu.ddp",
             icon: "FaFacebook"
         },
         {
             name: "Instagram",
-            url: "https://www.instagram.com/feelfresh.restaurant/",
+            url: "https://www.instagram.com/feelfresh223/",
             icon: "FaInstagram"
         },
         {
