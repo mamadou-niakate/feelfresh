@@ -7,16 +7,15 @@ import SectionSubtitle from '../shared/SectionSubtitle';
 
 const useStyles = makeStyles({
     root: {
-        backgroundColor: '#F2F2F2',
+        // backgroundColor: '#F2F2F2',
+        backgroundColor: '#F5F8FA',
+        color: '#657786',
     },
    location: {
         height: '100%',
     },
     locationTitleContainer: {
         padding: 20
-    },
-    locationTitle: {
-        color: '#686D76',
     },
     map: {
         width: '90%',
