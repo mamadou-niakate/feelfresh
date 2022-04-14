@@ -80,7 +80,7 @@ const MenuFilter = () => {
                                 // icon={<RiCheckboxBlankCircleFill/>}
                             /> 
                         }
-                        label={<Typography style={{ textTransform: 'capitalize'}}> Tous </Typography>}
+                        label={<Typography style={{ textTransform: 'capitalize', color:'GrayText'}}> Tous </Typography>}
                     />
                     {filterKeys.map(({filterKey, isFilterKeySelected}, index) => {
                         return (
@@ -98,7 +98,7 @@ const MenuFilter = () => {
                                         
                                         /> 
                                     }
-                                    label={<Typography style={{ textTransform: 'capitalize'}}>{filterKey}</Typography>}
+                                    label={<Typography style={{ textTransform: 'capitalize', color:'GrayText'}}>{filterKey}</Typography>}
                                 />
                             </Grid>
                         )
