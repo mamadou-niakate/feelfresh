@@ -49,15 +49,7 @@ const reducer = (state, action) => {
             return {...state, menus:action.payload}
         }
         case SET_DATA_TO_DISPLAY : {
-            const selectedFilterKeys = action.payload;
-            const dataToDisplay = Object.entries(state.menus).reduce((menu, [menuName, menuContents]) => {
-                const isKeySelected = selectedFilterKeys.find(key => key?.includes(menuName))
-                if(isKeySelected) {
-                    return [...menu, ...menuContents]
-                }
-                return [...menu]
-            },[])
-            return {...state, dataToDisplay, dataToPaginate:dataToDisplay}
+            return {...state, dataToPaginate:action.payload}
         }
         case SET_INITIAL_DATA_TO_DISPLAY : {
             return {...state, dataToDisplay:action.payload}

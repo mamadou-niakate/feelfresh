@@ -1,19 +1,8 @@
 import { Box, Checkbox, FormControlLabel, FormGroup, Grid, Typography } from '@mui/material';
 import React, { useCallback, useEffect, useState } from 'react'
 import { useAppContext } from '../store/AppContext'
-// import { makeStyles } from '@mui/styles';
-// import { RiCheckboxBlankCircleFill, RiCheckboxCircleFill } from 'react-icons/ri';
-// import { BsFillCheckCircleFill } from 'react-icons/bs';
-
-// const useStyles = makeStyles({
-//     checkBox: {
-//         fonSize: '11.5rem',
-//         color: '##686D76',
-//     }
-// });
 
 const MenuFilter = () => {
-    // const classes = useStyles();
     const [filterKeys, setFilterKeys] = useState([])
     const [displayAll, setDisplayAll] = useState(true)
 
@@ -23,40 +12,33 @@ const MenuFilter = () => {
      * Add isFilterKeySelected property to each item and set it to false
      */
     const getFilterKeys = useCallback(() => {
-        const keys = Object.keys(menus);
-        const keysSelectabled = keys.reduce((keys, key) => {
-            return [...keys, {filterKey:key, isFilterKeySelected: false}]
-        },[])
-        setFilterKeys(keysSelectabled)
+        const keys = Object.keys(menus).map(key => {
+            return {filterKey:key, isFilterKeySelected: false}
+        })
+        setFilterKeys(keys)
     },[menus]);
 
     const handleFilterKeysCheck = (filterKey) => {
-        const updatedFilterKeys = filterKeys.map((oldFilterKey) => {
-            if(oldFilterKey.filterKey.includes(filterKey)) {
-                const newFilterKey = {...oldFilterKey, isFilterKeySelected: !oldFilterKey.isFilterKeySelected};
-                return newFilterKey;
+        const dataOfSelectedFilterKey = menus[filterKey];
+        const resetPreviousFilterKeys = filterKeys.map(key => {
+            if(key.filterKey !== filterKey) {
+                key.isFilterKeySelected = false;
+            } else {
+                key.isFilterKeySelected = !key.isFilterKeySelected;
             }
-            return oldFilterKey;
+            return key
         })
-        setFilterKeys(updatedFilterKeys);
-        const selectedFilterKeys = updatedFilterKeys.map(ftk => ftk.isFilterKeySelected ? ftk.filterKey : undefined);
-        dispatch({type: 'SET_DATA_TO_DISPLAY', payload:selectedFilterKeys});
+        dispatch({type: 'SET_DATA_TO_DISPLAY', payload:dataOfSelectedFilterKey});
         setDisplayAll(false)
-
-        // check 'Tous' checkbox in case nothing is checked
-        const isNothingChecked = updatedFilterKeys.find(key => key.isFilterKeySelected);
-        if(!isNothingChecked) {
-            handleAllInitialDataToDisplay();
-        }
+        setFilterKeys(resetPreviousFilterKeys)
     }
 
     const handleAllInitialDataToDisplay = useCallback(() => {
         setDisplayAll(true);
         getFilterKeys()
 
-        const initialStateData = Object.entries(menus).reduce((allMenus,[_key, values]) => {
-            return [...allMenus, ...values];
-        },[]);
+        const initialStateData = Object.values(menus).flat();
+
         dispatch({type: 'SET_INITIAL_DATA_TO_DISPLAY', payload:initialStateData})
         dispatch({type: 'DATA_TO_PAGINATE', payload:initialStateData})
     },[dispatch, menus, getFilterKeys])
@@ -76,8 +58,6 @@ const MenuFilter = () => {
                                 onChange={handleAllInitialDataToDisplay} 
                                 name={'Tous'}
                                 color='success'
-                                // checkedIcon={<BsFillCheckCircleFill/>}
-                                // icon={<RiCheckboxBlankCircleFill/>}
                             /> 
                         }
                         label={<Typography style={{ textTransform: 'capitalize', color:'GrayText'}}> Tous </Typography>}
@@ -93,9 +73,6 @@ const MenuFilter = () => {
                                             onChange={() => handleFilterKeysCheck(filterKey)} 
                                             name={filterKey}
                                             color='success'
-                                            // checkedIcon={<BsFillCheckCircleFill />}
-                                            // icon={<RiCheckboxBlankCircleFill className={classes.checkBox}/>}
-                                        
                                         /> 
                                     }
                                     label={<Typography style={{ textTransform: 'capitalize', color:'GrayText'}}>{filterKey}</Typography>}
