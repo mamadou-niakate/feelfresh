@@ -1,209 +1,180 @@
 export const data = [
   {
-    "id":0,
-    "name": "Crock Pot Roast",
-    "ingredients": [
+    id: 0,
+    name: "Crock Pot Roast",
+    ingredients: [
       {
-        "quantity": "1",
-        "name": " beef roast",
-        "type": "Meat"
+        quantity: "1",
+        name: " beef roast",
+        type: "Meat",
       },
       {
-        "quantity": "1 package",
-        "name": "brown gravy mix",
-        "type": "Baking"
+        quantity: "1 package",
+        name: "brown gravy mix",
+        type: "Baking",
       },
       {
-        "quantity": "1 package",
-        "name": "dried Italian salad dressing mix",
-        "type": "Condiments"
+        quantity: "1 package",
+        name: "dried Italian salad dressing mix",
+        type: "Condiments",
       },
       {
-        "quantity": "1 package",
-        "name": "dry ranch dressing mix",
-        "type": "Condiments"
+        quantity: "1 package",
+        name: "dry ranch dressing mix",
+        type: "Condiments",
       },
       {
-        "quantity": "1/2 cup",
-        "name": "water",
-        "type": "Drinks"
-      }
+        quantity: "1/2 cup",
+        name: "water",
+        type: "Drinks",
+      },
     ],
-    pictures: [
-
-    ],
-    "steps": [
+    pictures: [],
+    steps: [
       "Place beef roast in crock pot.",
       "Mix the dried mixes together in a bowl and sprinkle over the roast.",
       "Pour the water around the roast.",
-      "Cook on low for 7-9 hours."
+      "Cook on low for 7-9 hours.",
     ],
-    "timers": [
-      0,
-      0,
-      0,
-      420
-    ],
-    "imageURL": "http://img.sndimg.com/food/image/upload/w_266/v1/img/recipes/27/20/8/picVfzLZo.jpg",
-    "originalURL": "http://www.food.com/recipe/to-die-for-crock-pot-roast-27208"
+    timers: [0, 0, 0, 420],
+    imageURL:
+      "http://img.sndimg.com/food/image/upload/w_266/v1/img/recipes/27/20/8/picVfzLZo.jpg",
+    originalURL: "http://www.food.com/recipe/to-die-for-crock-pot-roast-27208",
   },
   {
-    "id":1,
-    "name": "Roasted Asparagus",
-    "ingredients": [
+    id: 1,
+    name: "Roasted Asparagus",
+    ingredients: [
       {
-        "quantity": "1 lb",
-        "name": " asparagus",
-        "type": "Produce"
+        quantity: "1 lb",
+        name: " asparagus",
+        type: "Produce",
       },
       {
-        "quantity": "1 1/2 tbsp",
-        "name": "olive oil",
-        "type": "Condiments"
+        quantity: "1 1/2 tbsp",
+        name: "olive oil",
+        type: "Condiments",
       },
       {
-        "quantity": "1/2 tsp",
-        "name": "kosher salt",
-        "type": "Baking"
-      }
+        quantity: "1/2 tsp",
+        name: "kosher salt",
+        type: "Baking",
+      },
     ],
-    pictures: [
-
-    ],
-    "steps": [
+    pictures: [],
+    steps: [
       "Preheat oven to 425°F.",
       "Cut off the woody bottom part of the asparagus spears and discard.",
-      "With a vegetable peeler, peel off the skin on the bottom 2-3 inches of the spears (this keeps the asparagus from being all.\",string.\", and if you eat asparagus you know what I mean by that).",
+      'With a vegetable peeler, peel off the skin on the bottom 2-3 inches of the spears (this keeps the asparagus from being all.",string.", and if you eat asparagus you know what I mean by that).',
       "Place asparagus on foil-lined baking sheet and drizzle with olive oil.",
       "Sprinkle with salt.",
       "With your hands, roll the asparagus around until they are evenly coated with oil and salt.",
       "Roast for 10-15 minutes, depending on the thickness of your stalks and how tender you like them.",
       "They should be tender when pierced with the tip of a knife.",
       "The tips of the spears will get very brown but watch them to prevent burning.",
-      "They are great plain, but sometimes I serve them with a light vinaigrette if we need something acidic to balance out our meal."
+      "They are great plain, but sometimes I serve them with a light vinaigrette if we need something acidic to balance out our meal.",
     ],
-    "timers": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      10,
-      0,
-      0,
-      0
-    ],
-    "imageURL": "http://img.sndimg.com/food/image/upload/w_266/v1/img/recipes/50/84/7/picMcSyVd.jpg",
-    "originalURL": "http://www.food.com/recipe/roasted-asparagus-50847"
+    timers: [0, 0, 0, 0, 0, 0, 10, 0, 0, 0],
+    imageURL:
+      "http://img.sndimg.com/food/image/upload/w_266/v1/img/recipes/50/84/7/picMcSyVd.jpg",
+    originalURL: "http://www.food.com/recipe/roasted-asparagus-50847",
   },
   {
-    "id":2,
-    "name": "Big Night Pizza",
-    "ingredients": [
+    id: 2,
+    name: "Big Night Pizza",
+    ingredients: [
       {
-        "quantity": "5 teaspoons",
-        "name": "yeast",
-        "type": "Baking"
+        quantity: "5 teaspoons",
+        name: "yeast",
+        type: "Baking",
       },
       {
-        "quantity": "5 cups",
-        "name": "flour",
-        "type": "Baking"
+        quantity: "5 cups",
+        name: "flour",
+        type: "Baking",
       },
       {
-        "quantity": "4 tablespoons",
-        "name": "vegetable oil",
-        "type": "Baking"
+        quantity: "4 tablespoons",
+        name: "vegetable oil",
+        type: "Baking",
       },
       {
-        "quantity": "2 tablespoons",
-        "name": "sugar",
-        "type": "Baking"
+        quantity: "2 tablespoons",
+        name: "sugar",
+        type: "Baking",
       },
       {
-        "quantity": "2 teaspoons",
-        "name": "salt",
-        "type": "Baking"
+        quantity: "2 teaspoons",
+        name: "salt",
+        type: "Baking",
       },
       {
-        "quantity": "2 cups",
-        "name": "hot water",
-        "type": "Misc"
+        quantity: "2 cups",
+        name: "hot water",
+        type: "Misc",
       },
       {
-        "quantity": "1/4 cup",
-        "name": "pizza sauce",
-        "type": "Misc"
+        quantity: "1/4 cup",
+        name: "pizza sauce",
+        type: "Misc",
       },
       {
-        "quantity": "3/4 cup",
-        "name": "mozzarella cheese",
-        "type": "Dairy"
-      }
+        quantity: "3/4 cup",
+        name: "mozzarella cheese",
+        type: "Dairy",
+      },
     ],
-    pictures: [
-
-    ],
-    "steps": [
+    pictures: [],
+    steps: [
       "Add hot water to yeast in a large bowl and let sit for 15 minutes.",
       "Mix in oil, sugar, salt, and flour and let sit for 1 hour.",
       "Knead the dough and spread onto a pan.",
       "Spread pizza sauce and sprinkle cheese.",
       "Add any optional toppings as you wish.",
       "Bake at 400 deg Fahrenheit for 15 minutes.",
-      "Enjoy!"
+      "Enjoy!",
     ],
-    "timers": [
-      15,
-      60,
-      0,
-      0,
-      0,
-      15,
-      0
-    ],
-    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/c/c7/Spinach_pizza.jpg"
+    timers: [15, 60, 0, 0, 0, 15, 0],
+    imageURL:
+      "http://upload.wikimedia.org/wikipedia/commons/c/c7/Spinach_pizza.jpg",
   },
   {
-    "id":3,
-    "name": "Cranberry and Apple Stuffed Acorn Squash Recipe",
-    "ingredients": [
+    id: 3,
+    name: "Cranberry and Apple Stuffed Acorn Squash Recipe",
+    ingredients: [
       {
-        "quantity": "2",
-        "name": "acorn squash",
-        "type": "Produce"
+        quantity: "2",
+        name: "acorn squash",
+        type: "Produce",
       },
       {
-        "quantity": "1",
-        "name": "boiling water",
-        "type": "Drinks"
+        quantity: "1",
+        name: "boiling water",
+        type: "Drinks",
       },
       {
-        "quantity": "2",
-        "name": "apples chopped into 1.4 inch pieces",
-        "type": "Produce"
+        quantity: "2",
+        name: "apples chopped into 1.4 inch pieces",
+        type: "Produce",
       },
       {
-        "quantity": "1/2 cup",
-        "name": "dried cranberries",
-        "type": "Produce"
+        quantity: "1/2 cup",
+        name: "dried cranberries",
+        type: "Produce",
       },
       {
-        "quantity": "1 teaspoon",
-        "name": "cinnamon",
-        "type": "Baking"
+        quantity: "1 teaspoon",
+        name: "cinnamon",
+        type: "Baking",
       },
       {
-        "quantity": "2 tablespoons",
-        "name": "melted butter",
-        "type": "Dairy"
-      }
+        quantity: "2 tablespoons",
+        name: "melted butter",
+        type: "Dairy",
+      },
     ],
-    pictures: [
-
-    ],
-    "steps": [
+    pictures: [],
+    steps: [
       "Cut squash in half, remove seeds.",
       "Place squash in baking dish, cut-side down.",
       "Pour 1/4-inch water into dish.",
@@ -211,50 +182,40 @@ export const data = [
       "In large bowl, combine remaining ingredients.",
       "Remove squash from oven, fill with mix.",
       "Bake for 30-40 more minutes, until squash tender.",
-      "Enjoy!"
+      "Enjoy!",
     ],
-    "timers": [
-      0,
-      0,
-      0,
-      30,
-      0,
-      0,
-      30,
-      0
-    ],
-    "imageURL": "http://elanaspantry.com/wp-content/uploads/2008/10/acorn_squash_with_cranberry.jpg",
-    "originalURL": ""
+    timers: [0, 0, 0, 30, 0, 0, 30, 0],
+    imageURL:
+      "http://elanaspantry.com/wp-content/uploads/2008/10/acorn_squash_with_cranberry.jpg",
+    originalURL: "",
   },
   {
-    "id":4,
-    "name": "Mic's Yorkshire Puds",
-    "ingredients": [
+    id: 4,
+    name: "Mic's Yorkshire Puds",
+    ingredients: [
       {
-        "quantity": "200g",
-        "name": "plain flour",
-        "type": "Baking"
+        quantity: "200g",
+        name: "plain flour",
+        type: "Baking",
       },
       {
-        "quantity": "3",
-        "name": "eggs",
-        "type": "Dairy"
+        quantity: "3",
+        name: "eggs",
+        type: "Dairy",
       },
       {
-        "quantity": "300ml",
-        "name": "milk",
-        "type": "Dairy"
+        quantity: "300ml",
+        name: "milk",
+        type: "Dairy",
       },
       {
-        "quantity": "3 tbsp",
-        "name": "vegetable oil",
-        "type": "Condiments"
-      }
+        quantity: "3 tbsp",
+        name: "vegetable oil",
+        type: "Condiments",
+      },
     ],
-    pictures: [
-
-    ],
-    "steps": [
+    pictures: [],
+    steps: [
       "Put the flour and some seasoning into a large bowl.",
       "Stir in eggs, one at a time.",
       "Whisk in milk until you have a smooth batter.",
@@ -263,91 +224,81 @@ export const data = [
       "Pour the oil into the holes of a 8-hole muffin tin.",
       "Heat tin in the oven for 5 minutes.",
       "Ladle the batter mix into the tin.",
-      "Bake for 30 minutes until well browned and risen."
+      "Bake for 30 minutes until well browned and risen.",
     ],
-    "timers": [
-      0,
-      0,
-      0,
-      30,
-      0,
-      0,
-      5,
-      0,
-      30
-    ],
-    "imageURL": "http://upload.wikimedia.org/wikipedia/commons/f/f9/Yorkshire_Pudding.jpg",
-    "originalURL": "http://upload.wikimedia.org/wikipedia/commons/f/f9/Yorkshire_Pudding.jpg"
+    timers: [0, 0, 0, 30, 0, 0, 5, 0, 30],
+    imageURL:
+      "http://upload.wikimedia.org/wikipedia/commons/f/f9/Yorkshire_Pudding.jpg",
+    originalURL:
+      "http://upload.wikimedia.org/wikipedia/commons/f/f9/Yorkshire_Pudding.jpg",
   },
   {
-    "id":5,
-    "name": "Old-Fashioned Oatmeal Cookies",
-    "ingredients": [
+    id: 5,
+    name: "Old-Fashioned Oatmeal Cookies",
+    ingredients: [
       {
-        "quantity": "1 cup",
-        "name": "raisins",
-        "type": "Produce"
+        quantity: "1 cup",
+        name: "raisins",
+        type: "Produce",
       },
       {
-        "quantity": "1",
-        "name": "cup water",
-        "type": "Drinks"
+        quantity: "1",
+        name: "cup water",
+        type: "Drinks",
       },
       {
-        "quantity": "3/4 cup",
-        "name": "shortening",
-        "type": "Baking"
+        quantity: "3/4 cup",
+        name: "shortening",
+        type: "Baking",
       },
       {
-        "quantity": "1 1/2 cups",
-        "name": "sugar",
-        "type": "Baking"
+        quantity: "1 1/2 cups",
+        name: "sugar",
+        type: "Baking",
       },
       {
-        "quantity": "2 1/2 cups",
-        "name": "flour",
-        "type": "Baking"
+        quantity: "2 1/2 cups",
+        name: "flour",
+        type: "Baking",
       },
       {
-        "quantity": "1 tsp.",
-        "name": "soda",
-        "type": "Baking"
+        quantity: "1 tsp.",
+        name: "soda",
+        type: "Baking",
       },
       {
-        "quantity": "1 tsp.",
-        "name": "salt",
-        "type": "Baking"
+        quantity: "1 tsp.",
+        name: "salt",
+        type: "Baking",
       },
       {
-        "quantity": "1 tsp.",
-        "name": "cinnamon",
-        "type": "Baking"
+        quantity: "1 tsp.",
+        name: "cinnamon",
+        type: "Baking",
       },
       {
-        "quantity": "1/2 tsp.",
-        "name": "baking powder",
-        "type": "Baking"
+        quantity: "1/2 tsp.",
+        name: "baking powder",
+        type: "Baking",
       },
       {
-        "quantity": "1/2 tsp.",
-        "name": "cloves",
-        "type": "Baking"
+        quantity: "1/2 tsp.",
+        name: "cloves",
+        type: "Baking",
       },
       {
-        "quantity": "2 cups",
-        "name": "oats",
-        "type": "Baking"
+        quantity: "2 cups",
+        name: "oats",
+        type: "Baking",
       },
       {
-        "quantity": "1/2 cup",
-        "name": "chopped nuts",
-        "type": "Baking"
-      }
+        quantity: "1/2 cup",
+        name: "chopped nuts",
+        type: "Baking",
+      },
     ],
-    pictures: [
-
-    ],
-    "steps": [
+    pictures: [],
+    steps: [
       "Simmer raisins and water over medium heat until raisins are plump, about 15 minutes.",
       "Drain raisins, reserving the liquid.",
       "Add enough water to reserved liquid to measure 1/2 cup.",
@@ -357,82 +308,70 @@ export const data = [
       "Blend in remaining ingredients.",
       "Drop dough by rounded teaspoonfuls about 2 inches apart onto ungreased baking sheet.",
       "Bake 8 to 10 minutes or until light brown.",
-      "About 6 1/2 dozen cookies."
+      "About 6 1/2 dozen cookies.",
     ],
-    "timers": [
-      15,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      8,
-      0
-    ],
-    "imageURL": "http://s3.amazonaws.com/gmi-digital-library/65caecf7-a8f7-4a09-8513-2659cf92871e.jpg",
-    "originalURL": "#"
+    timers: [15, 0, 0, 0, 0, 0, 0, 0, 8, 0],
+    imageURL:
+      "http://s3.amazonaws.com/gmi-digital-library/65caecf7-a8f7-4a09-8513-2659cf92871e.jpg",
+    originalURL: "#",
   },
   {
-    "id":6,
-    "name": "Blueberry Oatmeal Squares",
-    "ingredients": [
+    id: 6,
+    name: "Blueberry Oatmeal Squares",
+    ingredients: [
       {
-        "quantity": "2-1/2 cups",
-        "name": "rolled oats, (not instant)",
-        "type": "Baking"
+        quantity: "2-1/2 cups",
+        name: "rolled oats, (not instant)",
+        type: "Baking",
       },
       {
-        "quantity": "1-1/4 cups",
-        "name": "all-purpose flour",
-        "type": "Baking"
+        quantity: "1-1/4 cups",
+        name: "all-purpose flour",
+        type: "Baking",
       },
       {
-        "quantity": "1 tbsp",
-        "name": "grated orange rind",
-        "type": "Produce"
+        quantity: "1 tbsp",
+        name: "grated orange rind",
+        type: "Produce",
       },
       {
-        "quantity": "1/4 tsp",
-        "name": "salt",
-        "type": "Baking"
+        quantity: "1/4 tsp",
+        name: "salt",
+        type: "Baking",
       },
       {
-        "quantity": "1 cup",
-        "name": "cold butter, cubed",
-        "type": "Baking"
+        quantity: "1 cup",
+        name: "cold butter, cubed",
+        type: "Baking",
       },
       {
-        "quantity": "3/4 cup",
-        "name": "packed brown sugar",
-        "type": "Baking"
+        quantity: "3/4 cup",
+        name: "packed brown sugar",
+        type: "Baking",
       },
       {
-        "quantity": "3 cups",
-        "name": "fresh blueberries",
-        "type": "Produce"
+        quantity: "3 cups",
+        name: "fresh blueberries",
+        type: "Produce",
       },
       {
-        "quantity": "1/2 cup",
-        "name": "granulated sugar",
-        "type": "Baking"
+        quantity: "1/2 cup",
+        name: "granulated sugar",
+        type: "Baking",
       },
       {
-        "quantity": "1/3 cup",
-        "name": "orange juice",
-        "type": "Produce"
+        quantity: "1/3 cup",
+        name: "orange juice",
+        type: "Produce",
       },
       {
-        "quantity": "4 tsp",
-        "name": "cornstarch",
-        "type": "Baking"
-      }
+        quantity: "4 tsp",
+        name: "cornstarch",
+        type: "Baking",
+      },
     ],
-    pictures: [
-
-    ],
-    "steps": [
+    pictures: [],
+    steps: [
       "Filling: In saucepan, bring blueberries, sugar and orange juice to boil; reduce heat and simmer until tender, about 10 minutes.",
       "Whisk cornstarch with 2 tbsp (25 mL) water; whisk into blueberries and boil, stirring, until thickened, about 1 minute.",
       "Place plastic wrap directly on surface; refrigerate until cooled, about 1 hour.",
@@ -440,90 +379,81 @@ export const data = [
       "Press half into 8-inch (2 L) square parchment paper–lined metal cake pan; spread with blueberry filling.",
       "Bake in centre of 350°F oven until light golden, about 45 minutes.",
       "Let cool on rack before cutting into squares.",
-      "(Make-ahead: Cover and refrigerate for up to 2 days or overwrap with heavy-duty foil and freeze for up to 2 weeks.)"
+      "(Make-ahead: Cover and refrigerate for up to 2 days or overwrap with heavy-duty foil and freeze for up to 2 weeks.)",
     ],
-    "timers": [
-      10,
-      1,
-      60,
-      0,
-      0,
-      45,
-      0,
-      0
-    ],
-    "imageURL": "https://media.istockphoto.com/photos/juicy-hamburger-on-white-background-picture-id1206323282?k=20&m=1206323282&s=612x612&w=0&h=yatlq6BHRCCvoTzFZLSwaJc0O8Quct_tRPWtH0dj9Fc=",
-    "originalURL": "http://www.canadianliving.com/food/blueberry_oatmeal_squares.php"
+    timers: [10, 1, 60, 0, 0, 45, 0, 0],
+    imageURL:
+      "https://media.istockphoto.com/photos/juicy-hamburger-on-white-background-picture-id1206323282?k=20&m=1206323282&s=612x612&w=0&h=yatlq6BHRCCvoTzFZLSwaJc0O8Quct_tRPWtH0dj9Fc=",
+    originalURL:
+      "http://www.canadianliving.com/food/blueberry_oatmeal_squares.php",
   },
   {
-    "id":7,
-    "name": "Curried chicken salad",
-    "ingredients": [
+    id: 7,
+    name: "Curried chicken salad",
+    ingredients: [
       {
-        "quantity": "3",
-        "name": "skinless, boneless chicken breasts, halved lengthwise",
-        "type": "Meat"
+        quantity: "3",
+        name: "skinless, boneless chicken breasts, halved lengthwise",
+        type: "Meat",
       },
       {
-        "quantity": "1/2 cup",
-        "name": "mayonnaise",
-        "type": "Baking"
+        quantity: "1/2 cup",
+        name: "mayonnaise",
+        type: "Baking",
       },
       {
-        "quantity": "1 tbsp",
-        "name": "lemon zest",
-        "type": "Produce"
+        quantity: "1 tbsp",
+        name: "lemon zest",
+        type: "Produce",
       },
       {
-        "quantity": "1 tbsp ",
-        "name": "lemon juice",
-        "type": "Produce"
+        quantity: "1 tbsp ",
+        name: "lemon juice",
+        type: "Produce",
       },
       {
-        "quantity": "1 1/2 tsp",
-        "name": "curry powder",
-        "type": "Baking"
+        quantity: "1 1/2 tsp",
+        name: "curry powder",
+        type: "Baking",
       },
       {
-        "quantity": "1/4 tsp",
-        "name": "salt",
-        "type": "Baking"
+        quantity: "1/4 tsp",
+        name: "salt",
+        type: "Baking",
       },
       {
-        "quantity": "2",
-        "name": "ripe mangoes, diced",
-        "type": "Produce"
+        quantity: "2",
+        name: "ripe mangoes, diced",
+        type: "Produce",
       },
       {
-        "quantity": "1/4 cup",
-        "name": "dried cranberries",
-        "type": "Produce"
+        quantity: "1/4 cup",
+        name: "dried cranberries",
+        type: "Produce",
       },
       {
-        "quantity": "2",
-        "name": "green onions, thinly sliced",
-        "type": "Produce"
+        quantity: "2",
+        name: "green onions, thinly sliced",
+        type: "Produce",
       },
       {
-        "quantity": "1",
-        "name": "celery stalk, finely chopped",
-        "type": "Produce"
+        quantity: "1",
+        name: "celery stalk, finely chopped",
+        type: "Produce",
       },
       {
-        "quantity": "6 leaves",
-        "name": "Boston lettuce",
-        "type": "Produce"
+        quantity: "6 leaves",
+        name: "Boston lettuce",
+        type: "Produce",
       },
       {
-        "quantity": "6",
-        "name": "English muffins, toasted",
-        "type": "Misc"
-      }
+        quantity: "6",
+        name: "English muffins, toasted",
+        type: "Misc",
+      },
     ],
-    pictures: [
-
-    ],
-    "steps": [
+    pictures: [],
+    steps: [
       "ARRANGE chicken in a single layer in a large pot.",
       "Add water to just cover.",
       "Bring to a boil over medium-high.",
@@ -532,102 +462,78 @@ export const data = [
       "STIR mayo with lemon zest, juice, curry and salt in large bowl.",
       "Using 2 forks, shred chicken, then stir into mayo mixture with mango, cranberries, green onions and celery.",
       "Divide among muffins with lettuce leaves",
-      "Sandwich with tops"
+      "Sandwich with tops",
     ],
-    "timers": [
-      0,
-      0,
-      0,
-      6,
-      0,
-      0,
-      0,
-      0,
-      0
-    ],
-    "imageURL": "http://www.chatelaine.com/wp-content/uploads/2013/05/Curried-chicken-salad.jpg",
-    "originalURL": "http://www.chatelaine.com/recipe/stovetop-cooking-method/curried-chicken-salad/"
-  }
-]
+    timers: [0, 0, 0, 6, 0, 0, 0, 0, 0],
+    imageURL:
+      "http://www.chatelaine.com/wp-content/uploads/2013/05/Curried-chicken-salad.jpg",
+    originalURL:
+      "http://www.chatelaine.com/recipe/stovetop-cooking-method/curried-chicken-salad/",
+  },
+];
 
 export const sections = [
-  { title: 'Technology', url: '#' },
-  { title: 'Design', url: '#' },
-  { title: 'Culture', url: '#' },
-  { title: 'Business', url: '#' },
-  { title: 'Politics', url: '#' },
-  { title: 'Opinion', url: '#' },
-  { title: 'Science', url: '#' },
-  { title: 'Health', url: '#' },
-  { title: 'Style', url: '#' },
-  { title: 'Travel', url: '#' },
+  { title: "Technology", url: "#" },
+  { title: "Design", url: "#" },
+  { title: "Culture", url: "#" },
+  { title: "Business", url: "#" },
+  { title: "Politics", url: "#" },
+  { title: "Opinion", url: "#" },
+  { title: "Science", url: "#" },
+  { title: "Health", url: "#" },
+  { title: "Style", url: "#" },
+  { title: "Travel", url: "#" },
 ];
 
 export const figures = [
   {
-    id: '1',
+    id: "1",
     number: 100,
-    title: 'Order Confirmation',
+    title: "Order Confirmation",
   },
   {
-    id: '3',
+    id: "3",
     number: 75,
-    title: 'Order shipped',
+    title: "Order shipped",
   },
   {
-    id: '4',
+    id: "4",
     number: 132,
-    title: 'Order recipes',
+    title: "Order recipes",
   },
-]
+];
 
 export const testimonials = [
   {
-    "_id": "58c03ac18060197ca0b52d51",
-    "author": "Danko Konaté",
-    "store": "58c03a958060197ca0b52d50",
-    "text": "I tried this place last week and it was incredible! Amazing selection of local and imported brews and the food is to die for! ",
-    "rating": 5,
-    "created": "2017-03-08T17:09:21.627Z"
+    _id: "58c03ac18060197ca0b52d51",
+    author: "Danko Konaté",
+    store: "58c03a958060197ca0b52d50",
+    text: "I tried this place last week and it was incredible! Amazing selection of local and imported brews and the food is to die for! ",
+    rating: 5,
+    created: "2017-03-08T17:09:21.627Z",
   },
   {
-    "_id": "58c03ac18060197ca0b5d51",
-    "author": "Muriella Zafindramoma",
-    "store": "58c03a958060197ca0b52d50",
-    "text": "I tried this place last week and it was incredible! Amazing selection of local and imported brews and the food is to die for! ",
-    "rating": 5,
-    "created": "2017-03-08T17:09:21.627Z"
+    _id: "58c03ac18060197ca0b5d51",
+    author: "Muriella Zafindramoma",
+    store: "58c03a958060197ca0b52d50",
+    text: "I tried this place last week and it was incredible! Amazing selection of local and imported brews and the food is to die for! ",
+    rating: 5,
+    created: "2017-03-08T17:09:21.627Z",
   },
   {
-    "_id": "58c08780bbb1a51e0d43a050",
-    "author": "Ouwa NKT",
-    "store": "58c065dbbbb1a51e0d43a04f",
-    "text": "Always a great spot to grab a coffee with a friend. ",
-    "rating": 5,
-    "created": "2017-03-08T22:36:48.575Z"
+    _id: "58c08780bbb1a51e0d43a050",
+    author: "Ouwa NKT",
+    store: "58c065dbbbb1a51e0d43a04f",
+    text: "Always a great spot to grab a coffee with a friend. ",
+    rating: 5,
+    created: "2017-03-08T22:36:48.575Z",
   },
   {
-    "_id": "58c087acbbb1a51e0d43a052",
-    "author": "Lucas Stoebner",
-    "store": "58c060e98060197ca0b52d5d",
-    "text": "Tried this place with my wife last week and it was incredible. ",
-    "rating": 4,
-    "created": "2017-03-08T22:37:32.829Z"
+    _id: "58c087b9bbb1a51e0d43a053",
+    author: "Molla Niakaté",
+    store: "58c0609b8060197ca0b52d5c",
+    text: "Pretty good soups. ",
+    rating: 3,
+    created: "2017-03-08T22:37:45.917Z",
   },
-  {
-    "_id": "58c087b9bbb1a51e0d43a053",
-    "author": "Molla Niakaté",
-    "store": "58c0609b8060197ca0b52d5c",
-    "text": "Pretty good soups. ",
-    "rating": 3,
-    "created": "2017-03-08T22:37:45.917Z"
-  },
-  {
-    "_id": "58c0880bbbb1a51e0d43a056",
-    "author": "Félix Legrelle",
-    "store": "58c05f928060197ca0b52d59",
-    "text": "🐔🐔🐔🐔\r\n\r\n🐔🐔🐔🐔🐔\r\n🐔🐔🐔🐔🐔🐔🐔 \r\n🐔🐔🐔\r\n\r\nbok bok bok",
-    "rating": 5,
-    "created": "2017-03-08T22:39:07.295Z"
-  }
-]
+];

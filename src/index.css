@@ -25,15 +25,12 @@ code {
 
 .css-1poimk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper 
 ul
-li 
-.active 
+a.active > li > p
  {
   border-bottom: 2px solid #2EB086;
 }
 
-div.MuiBox-root.css-1t6c9ts  
-button 
-a.active > p 
+div.MuiBox-root.css-1t6c9ts a.active > button
 {
   border-bottom: 3px solid #2EB086;
 }
